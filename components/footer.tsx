@@ -1,7 +1,7 @@
-import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
-import Image from "next/image"
-import Link from "next/link"
-import { Mail } from 'lucide-react';
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,17 +10,41 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <Image src="/texas-acm-logo.svg" alt="Texas ACM Logo" width={120} height={40} className="h-8 w-auto" />
+              <Image
+                src="/texasacm-logo-white.svg"
+                alt="Texas ACM Logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+              />
             </Link>
-            <p className="text-gray-400 mb-4">The Association for Computing Machinery at UT Austin</p>
+            <p className="text-gray-400 mb-4">
+              The Association for Computing Machinery at UT Austin
+            </p>
             <div className="flex space-x-4">
-              <Link href="https://instagram.com/texas_acm" className="text-gray-400 hover:text-white">
-               <FaInstagram size={20} />
+              <Link
+                href="https://www.instagram.com/texas_acm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <FaInstagram size={20} />
               </Link>
-              <Link href="https://linkedin.com" className="text-gray-400 hover:text-white">
+              <Link
+                href="https://www.linkedin.com/company/utexas-acm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <FaLinkedin size={20} />
               </Link>
-              <Link href="https://github.com" className="text-gray-400 hover:text-white">
+              {/* TODO: decide if we want to include a github link or not */}
+              <Link
+                href="https://github.com/caseycharleston/texasacm-website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <FaGithub size={20} />
               </Link>
             </div>
@@ -35,7 +59,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/resources"
+                  className="text-gray-400 hover:text-white"
+                >
                   Resources
                 </Link>
               </li>
@@ -45,7 +72,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/sponsorship" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/sponsorship"
+                  className="text-gray-400 hover:text-white"
+                >
                   Sponsorship
                 </Link>
               </li>
@@ -56,22 +86,34 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/resources" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/resources"
+                  className="text-gray-400 hover:text-white"
+                >
                   CS A to Z Guide
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/resources"
+                  className="text-gray-400 hover:text-white"
+                >
                   Resume Book
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/resources"
+                  className="text-gray-400 hover:text-white"
+                >
                   Technical Interview Prep
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/resources"
+                  className="text-gray-400 hover:text-white"
+                >
                   Internship Guide
                 </Link>
               </li>
@@ -92,7 +134,10 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li className="text-gray-400 hover:text-white">
-                <Link href="mailto:president@texasacm.org" className='flex items-center gap-2'>
+                <Link
+                  href="mailto:president@texasacm.org"
+                  className="flex items-center gap-2"
+                >
                   <Mail size={16} className="min-h-4 min-w-4" />
                   president@texasacm.org
                 </Link>
@@ -111,12 +156,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Texas ACM. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-          </div>
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Texas ACM. All rights reserved.
+          </p>
+          <div className="flex gap-4 mt-4 md:mt-0"></div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
