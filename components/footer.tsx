@@ -1,6 +1,7 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react"
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Image from "next/image"
 import Link from "next/link"
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -14,16 +15,13 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">The Association for Computing Machinery at UT Austin</p>
             <div className="flex space-x-4">
               <Link href="https://instagram.com/texas_acm" className="text-gray-400 hover:text-white">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
+               <FaInstagram size={20} />
               </Link>
               <Link href="https://linkedin.com" className="text-gray-400 hover:text-white">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
+                <FaLinkedin size={20} />
               </Link>
               <Link href="https://github.com" className="text-gray-400 hover:text-white">
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
+                <FaGithub size={20} />
               </Link>
             </div>
           </div>
@@ -93,10 +91,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-gray-400" />
-                <Link href="mailto:contact@texasacm.org" className="text-gray-400 hover:text-white">
-                  contact@texasacm.org
+              <li className="text-gray-400 hover:text-white">
+                <Link href="mailto:president@texasacm.org" className='flex items-center gap-2'>
+                  <Mail size={16} className="min-h-4 min-w-4" />
+                  president@texasacm.org
                 </Link>
               </li>
               <li>
@@ -115,12 +113,6 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Texas ACM. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-white text-sm">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-white text-sm">
-              Terms of Service
-            </Link>
           </div>
         </div>
       </div>
