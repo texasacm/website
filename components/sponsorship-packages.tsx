@@ -1,58 +1,57 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check } from "lucide-react"
 
 export default function SponsorshipPackages() {
-  const sponsorshipTiers = [
+  // Define each row of the table here.
+  // If a feature is included for a tier, set it to `true`; if not, `false`.
+  // If the feature is more descriptive (e.g., "4 - 12" events), just store a string.
+  const tableRows = [
     {
-      name: "Bronze",
-      price: "$1,000",
-      description: "Basic visibility and recruiting opportunities",
-      features: ["Logo on website", "1 recruiting event per year", "Resume book access", "Social media recognition"],
+      label: "Number of Recruiting Events",
+      gold: "4",
+      silver: "2",
     },
     {
-      name: "Silver",
-      price: "$2,500",
-      description: "Enhanced visibility and engagement opportunities",
-      features: [
-        "All Bronze benefits",
-        "2 recruiting events per year",
-        "Workshop or tech talk opportunity",
-        "Newsletter features",
-        "Medium logo placement",
-      ],
+      label: "Priority for septembmer events",
+      gold: true,
+      silver: false,
     },
     {
-      name: "Gold",
-      price: "$5,000",
-      description: "Premium partnership with extensive benefits",
-      features: [
-        "All Silver benefits",
-        "3 recruiting events per year",
-        "Hackathon sponsorship",
-        "Exclusive networking session",
-        "Large logo placement",
-        "Featured job postings",
-      ],
+      label: "Access to demographics and emails of event attendees",
+      gold: true,
+      silver: false,
     },
     {
-      name: "Platinum",
-      price: "$10,000+",
-      description: "Elite partnership with maximum exposure",
-      features: [
-        "All Gold benefits",
-        "Unlimited recruiting events",
-        "Named event sponsorship",
-        "Custom partnership benefits",
-        "Premium logo placement",
-        "Year-round promotion",
-      ],
+      label: "Access to ACM-wide resume book",
+      gold: true,
+      silver: false,
+    },
+    {
+      label: "Corporate banquet ticket & banquet resume book",
+      gold: true,
+      silver: true,
+    },
+    {
+      label: "Access to on-campus marketing channels",
+      gold: true,
+      silver: true,
+    },
+    {
+      label: "Access to 1,000+ Members on Our Digital Platforms",
+      gold: true,
+      silver: true,
+    },
+    {
+      label: "Distribute Merch to ACM Members",
+      gold: true,
+      silver: true,
     },
   ]
 
   return (
     <section className="py-16 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8">
+        {/* "Why Partner With Us?" section remains unchanged */}
         <div className="max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold mb-6">Why Partner With Us?</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -72,55 +71,72 @@ export default function SponsorshipPackages() {
               <Check className="h-5 w-5 text-green-500 mt-0.5" />
               <span>Brand visibility to a large, engaged student audience</span>
             </li>
-            <li className="flex items-start gap-2">
-              <Check className="h-5 w-5 text-green-500 mt-0.5" />
-              <span>Opportunities to host technical workshops and presentations</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Check className="h-5 w-5 text-green-500 mt-0.5" />
-              <span>Support the development of future tech leaders</span>
-            </li>
           </ul>
         </div>
 
+        {/* Sponsorship Packages Table */}
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-8">Sponsorship Packages</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sponsorshipTiers.map((tier, index) => (
-              <Card key={index} className={tier.name === "Gold" ? "border-primary shadow-lg" : ""}>
-                {tier.name === "Gold" && (
-                  <div className="bg-primary text-primary-foreground text-center py-1 text-sm font-medium">
-                    Most Popular
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle>{tier.name}</CardTitle>
-                  <CardDescription>{tier.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold mb-4">{tier.price}</div>
-                  <ul className="space-y-2">
-                    {tier.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="h-4 w-4 text-green-500 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full" variant={tier.name === "Gold" ? "default" : "outline"}>
-                    Contact Us
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border border-gray-200">
+              <thead className="bg-gray-200">
+                <tr>
+                  {/* Left header cell can be empty or hold a label like "Features" */}
+                  <th className="py-4 px-4 text-gray-700 font-semibold w-1/3"></th>
+                  {/* Gold column */}
+                  <th className="py-4 px-4 text-center">
+                    <div className="text-xl font-bold text-yellow-600">GOLD</div>
+                    <div className="text-sm text-gray-700">$7,000</div>
+                  </th>
+                  {/* Silver column */}
+                  <th className="py-4 px-4 text-center">
+                    <div className="text-xl font-bold text-gray-500">SILVER</div>
+                    <div className="text-sm text-gray-700">$2,500</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableRows.map((row, index) => (
+                  <tr key={index} className="border-b last:border-b-0">
+                    {/* Feature label */}
+                    <td className="py-3 px-4 font-medium text-gray-700">
+                      {row.label}
+                    </td>
+                    {/* Gold cell */}
+                    <td className="py-3 px-4 text-center">
+                      {typeof row.gold === "boolean" ? (
+                        row.gold ? (
+                          <Check className="h-5 w-5 text-green-500 inline-block" />
+                        ) : (
+                          <span className="text-gray-400">—</span>
+                        )
+                      ) : (
+                        <span>{row.gold}</span>
+                      )}
+                    </td>
+                    {/* Silver cell */}
+                    <td className="py-3 px-4 text-center">
+                      {typeof row.silver === "boolean" ? (
+                        row.silver ? (
+                          <Check className="h-5 w-5 text-green-500 inline-block" />
+                        ) : (
+                          <span className="text-gray-400">—</span>
+                        )
+                      ) : (
+                        <span>{row.silver}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           <div className="mt-12 text-center">
             <h3 className="text-2xl font-bold mb-4">Interested in Partnering with Us?</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              We'd love to discuss how we can create a partnership that meets your recruiting and branding goals while
+              We’d love to discuss how we can create a partnership that meets your recruiting and branding goals while
               supporting our mission to prepare students for successful careers in tech.
             </p>
             <Button size="lg" asChild>
@@ -132,4 +148,3 @@ export default function SponsorshipPackages() {
     </section>
   )
 }
-

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CalendarIcon } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CalendarIcon } from "lucide-react";
 
 export default function GoogleCalendar() {
   return (
@@ -10,15 +10,15 @@ export default function GoogleCalendar() {
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
             <p className="text-gray-700">
-              Check out our calendar for all upcoming events. You can add our calendar to your Google Calendar to stay
-              updated.
+              Check out our calendar for all upcoming events. You can add our
+              calendar to your Google Calendar to stay updated.
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
             <div className="aspect-video w-full">
               <iframe
-                src="https://calendar.google.com/calendar/embed?src=texasacm%40gmail.com&ctz=America%2FChicago"
+                src="https://calendar.google.com/calendar/embed?src=utacm.org_tblt9l9gskpcunjovsjfh8ei0g%40group.calendar.google.com&ctz=America%2FChicago"
                 style={{ border: 0 }}
                 width="100%"
                 height="100%"
@@ -32,7 +32,7 @@ export default function GoogleCalendar() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild className="flex items-center gap-2">
               <a
-                href="https://calendar.google.com/calendar/u/0?cid=dGV4YXNhY21AZ21haWwuY29t"
+                href="https://calendar.google.com/calendar/u/0/r?cid=utacm.org_tblt9l9gskpcunjovsjfh8ei0g@group.calendar.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,11 +40,18 @@ export default function GoogleCalendar() {
                 Add to Google Calendar
               </a>
             </Button>
-            <Button variant="outline">Download iCal File</Button>
+            <Button asChild variant="outline">
+              <a
+                href="https://calendar.google.com/calendar/ical/utacm.org_tblt9l9gskpcunjovsjfh8ei0g%40group.calendar.google.com/public/basic.ics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download iCal (.ics) File
+              </a>
+            </Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
