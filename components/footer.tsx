@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail } from "lucide-react";
@@ -38,7 +38,6 @@ export default function Footer() {
               >
                 <FaLinkedin size={20} />
               </Link>
-              {/* TODO: decide if we want to include a github link or not */}
               <Link
                 href="https://github.com/caseycharleston/texasacm-website"
                 target="_blank"
@@ -46,6 +45,14 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white"
               >
                 <FaGithub size={20} />
+              </Link>
+              <Link
+                href="https://discord.gg/tspJCpFFKx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <FaDiscord size={20} />
               </Link>
             </div>
           </div>

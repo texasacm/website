@@ -13,9 +13,9 @@ export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const images = [
+    hero_slides_dir + "/family_feud_25.JPG", 
     hero_slides_dir + "/acm_retreat_24.jpg", 
     hero_slides_dir + "/acm_thanksgiving_24.jpg", 
-    hero_slides_dir + "/family_feud_25.JPG", 
     hero_slides_dir + "/pancakes_and_professors_24.jpg",
     hero_slides_dir + "/paycom_fa24.jpeg"
   ];
