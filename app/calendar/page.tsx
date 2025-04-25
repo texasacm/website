@@ -1,11 +1,11 @@
-import EventsHero from "@/components/events-hero"
-import GoogleCalendar from "@/components/google-calendar"
+import CalendarHero from "@/components/calendar-hero"
 import Footer from "@/components/footer"
+import GoogleCalendar from "@/components/google-calendar"
 
 export default function CalendarPage() {
   return (
     <main className="min-h-screen">
-      <EventsHero />
+      <CalendarHero />
       <GoogleCalendar />
       <Footer />
     </main>

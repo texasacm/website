@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar"
 
-export default function EventsHero() {
+export default function CalendarHero() {
   return (
     <section className="relative pt-20 pb-12 bg-primary">
       <Navbar />

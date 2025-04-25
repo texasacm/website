@@ -33,7 +33,7 @@ export default function Navbar() {
             {[
               { href: "/about", label: "About" },
               { href: "/resources", label: "Resources" },
-              { href: "/events", label: "Events" },
+              { href: "/calendar", label: "Calendar" },
               { href: "/partnership", label: "Partnership" },
             ].map(({ href, label }) => (
               <Link
