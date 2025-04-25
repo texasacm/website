@@ -102,7 +102,7 @@ const officers: Officer[] = [
   {
     name: "Brayden Strong",
     position: "Senior Academics Officer",
-    image: "/placeholder.svg?height=300&width=300",
+    image: headshot_dir + "/academic_so_brayden.jpeg",
     bio: "Junior double-majoring in Computer Science and Mathematics.",
     socials: [
       { url: "https://twitter.com/jordanlee", icon: <FaTwitter size={20} /> },

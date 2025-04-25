@@ -7,14 +7,23 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar"
 
+const hero_slides_dir = "/home-page-slides"
+
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
-  const images = ["/hero-1.jpg", "/hero-2.jpg", "/hero-3.jpg"]
+
+  const images = [
+    hero_slides_dir + "/acm_retreat_24.jpg", 
+    hero_slides_dir + "/acm_thanksgiving_24.jpg", 
+    hero_slides_dir + "/family_feud_25.JPG", 
+    hero_slides_dir + "/pancakes_and_professors_24.jpg",
+    hero_slides_dir + "/paycom_fa24.jpeg"
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length)
-    }, 5000)
+    }, 10000)
     return () => clearInterval(interval)
   }, [images.length])
 
@@ -40,7 +49,7 @@ export default function Hero() {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
