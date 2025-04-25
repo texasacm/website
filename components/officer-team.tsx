@@ -25,7 +25,7 @@ const officers: Officer[] = [
     name: "Nidhi Pabbathi",
     position: "President",
     image: headshot_dir + "/pres_nidhi.jpg",
-    bio: "Placeholder.",
+    bio: "bingus.",
     socials: [
       { url: "https://twitter.com/janedoe", icon: <FaTwitter size={20} /> },
       { url: "https://linkedin.com/in/janedoe", icon: <FaLinkedin size={20} /> },
