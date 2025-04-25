@@ -11,7 +11,7 @@ export default function ResourcesList() {
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="faq" className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="faq">ACM FAQ</TabsTrigger>
+              <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="cs-guide">CS A to Z</TabsTrigger>
               <TabsTrigger value="resume">Resume Book</TabsTrigger>
             </TabsList>
@@ -49,7 +49,7 @@ export default function ResourcesList() {
                     <h4 className="text-xl font-semibold mb-2">How can I get involved beyond basic membership?</h4>
                     <p className="text-gray-700">
                       There are many ways to get more involved! You can join a committee, help organize events, run for
-                      an officer position, or lead a project. Reach out to any current officer to learn more about these
+                      an officer position, or lead an initiative. Reach out to any current officer to learn more about these
                       opportunities.
                     </p>
                   </div>
@@ -57,9 +57,28 @@ export default function ResourcesList() {
                   <div>
                     <h4 className="text-xl font-semibold mb-2">Does ACM help with internships and job placements?</h4>
                     <p className="text-gray-700">
-                      Yes! We host company info sessions, resume workshops, mock interviews, and networking events
+                      Yes! We host company info sessions, resume workshops, and networking events
                       specifically designed to help members secure internships and full-time positions. Our corporate
                       partners often recruit directly from our membership.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Where do I apply to be an officer?</h4>
+                    <p className="text-gray-700">
+                      Officer applications for Junior positions open up at the beginning of each fall semester for 
+                      Corporate, Marketing, and Finance. In the Spring, we hold elections to form ACM's Executive Board consisting of the
+                       President, Vice President, Treasurer, and two At-Large positions. After the elections, applications for Senior Officer
+                       and internal officer positions will open up near the end of the Spring semester.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">How do ACM elections work?</h4>
+                    <p className="text-gray-700">
+                      ACM elections use ranked-choice voting to elect candidates. Voting takes place only on election day, 
+                      the date of which is announced in advance. The only requirement there is to vote is you must have attended at least 3 ACM events that academic year.
+                      For more specific questions, reach out to the executive team.
                     </p>
                   </div>
                 </div>
@@ -157,9 +176,8 @@ export default function ResourcesList() {
               <div className="bg-white rounded-xl p-8 shadow-sm">
                 <h3 className="text-2xl font-bold mb-6">ACM Resume Book</h3>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div>
                   <div>
-                    <h4 className="text-xl font-semibold mb-2">For Students</h4>
                     <p className="text-gray-700 mb-4">
                       Submit your resume to be included in our resume book, which is shared with our corporate partners
                       and sponsors. This is a great way to get your resume in front of recruiters from top tech
@@ -169,35 +187,12 @@ export default function ResourcesList() {
                       <div className="bg-gray-50 p-4 rounded-lg">
                         <h5 className="font-semibold mb-1">Submission Requirements</h5>
                         <ul className="list-disc pl-5 space-y-1 text-sm">
-                          <li>Must be a current ACM member</li>
                           <li>PDF format only</li>
                           <li>Maximum 1 page</li>
                           <li>Updated within the last 6 months</li>
                         </ul>
                       </div>
                       <Button className="w-full">Submit Your Resume</Button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2">For Companies</h4>
-                    <p className="text-gray-700 mb-4">
-                      Access our curated collection of resumes from talented UT Austin computer science students. Our
-                      resume book is available to corporate partners and sponsors.
-                    </p>
-                    <div className="space-y-4">
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-semibold mb-1">Resume Book Benefits</h5>
-                        <ul className="list-disc pl-5 space-y-1 text-sm">
-                          <li>Pre-screened, high-quality candidates</li>
-                          <li>Updated each semester</li>
-                          <li>Organized by graduation year and specialization</li>
-                          <li>Direct contact information included</li>
-                        </ul>
-                      </div>
-                      <Button variant="outline" className="w-full">
-                        Request Access
-                      </Button>
                     </div>
                   </div>
                 </div>

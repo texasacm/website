@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 interface SocialLink {
   url: string;
@@ -18,7 +19,7 @@ interface Officer {
   socials: SocialLink[];
 }
 
-const headshot_dir = "/officer-headshots-2025-26"
+const headshot_dir = "/officer-headshots-2025-26";
 
 const officers: Officer[] = [
   {
@@ -214,65 +215,88 @@ export default function OfficerTeam() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {officers.map((officer, idx) => (
-              <div key={idx}>
-                <Card className="overflow-hidden">
-                  <div className="relative">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <div className="aspect-square relative cursor-pointer">
-                          <Image
-                            src={officer.image}
-                            alt={officer.name}
-                            fill
-                            className="object-cover"
-                          />
+              <Card key={idx} className="overflow-hidden">
+                <Dialog>
+                   {/* Required for console to play nice with dialog. */}
+                  <VisuallyHidden>
+                    <DialogTitle>
+                      Hidden
+                    </DialogTitle>
+                  </VisuallyHidden>
+
+                  <DialogTrigger asChild>
+                    <div className="aspect-square relative cursor-pointer">
+                      <Image
+                        src={officer.image}
+                        alt={officer.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-2xl">
+
+                    <div className="flex flex-col sm:flex-row gap-6">
+                      {/* Left: large image */}
+                      <div className="sm:w-1/2 w-full h-64 relative">
+                        <Image
+                          src={officer.image}
+                          alt={officer.name}
+                          fill
+                          className="object-cover rounded"
+                        />
+                      </div>
+
+                      {/* Right: name & position above socials & bio */}
+                      <div className="sm:w-1/2 w-full flex flex-col">
+                        <h3 className="text-2xl font-bold">{officer.name}</h3>
+                        <p className="text-sm text-gray-500 mb-4">{officer.position}</p>
+
+                        <div className="flex space-x-4 mb-6">
+                          {officer.socials.map((social, i) => (
+                            <a
+                              key={i}
+                              href={social.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:opacity-80"
+                            >
+                              {social.icon}
+                            </a>
+                          ))}
                         </div>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-2xl">
-                        <div className="flex flex-col sm:flex-row gap-6">
-                          <div className="sm:w-1/3">
-                            <Image
-                              src={officer.image}
-                              alt={officer.name}
-                              width={300}
-                              height={300}
-                              className="object-cover rounded"
-                            />
-                          </div>
-                          <div className="sm:w-2/3">
-                            <h3 className="text-2xl font-bold mb-2">{officer.name}</h3>
-                            <p className="text-gray-500 mb-4">{officer.position}</p>
-                            <div className="flex space-x-4 mb-4">
-                              {officer.socials.map((social, i) => (
-                                <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                                  {social.icon}
-                                </a>
-                              ))}
-                            </div>
-                            <p className="text-gray-700">{officer.bio}</p>
-                          </div>
-                        </div>
-                        <DialogClose asChild>
-                          <Button variant="outline" className="mt-6">
-                            Close
-                          </Button>
-                        </DialogClose>
-                      </DialogContent>
-                    </Dialog>
-                  </div>
-                  <CardHeader className="mt-4 text-center">
-                    <CardTitle>{officer.name}</CardTitle>
-                    <CardDescription>{officer.position}</CardDescription>
-                  </CardHeader>
-                  <div className="flex justify-center space-x-4 py-4">
-                    {officer.socials.map((social, i) => (
-                      <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
-                        {social.icon}
-                      </a>
-                    ))}
-                  </div>
-                </Card>
-              </div>
+
+                        <p className="text-gray-700 flex-grow">{officer.bio}</p>
+                      </div>
+                    </div>
+
+                    <DialogClose asChild>
+                      <Button variant="outline" className="mt-6 w-full">
+                        Close
+                      </Button>
+                    </DialogClose>
+                  </DialogContent>
+                </Dialog>
+
+                <CardHeader className="mt-4 text-center">
+                  <CardTitle>{officer.name}</CardTitle>
+                  <CardDescription>{officer.position}</CardDescription>
+                </CardHeader>
+                <div className="flex justify-center space-x-4 py-4">
+                  {officer.socials.map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </Card>
             ))}
           </div>
         </div>
