@@ -1,7 +1,7 @@
-import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -65,6 +65,11 @@ export default function Footer() {
                   About
                 </Link>
               </li>
+              <li>
+                <Link href="/events" className="text-gray-400 hover:text-white">
+                  Events
+                </Link>
+              </li>           
               <li>
                 <Link
                   href="/resources"

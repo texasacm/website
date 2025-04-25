@@ -32,6 +32,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-6">
             {[
               { href: "/about", label: "About" },
+              { href: "/events", label: "Events" },
               { href: "/resources", label: "Resources" },
               { href: "/calendar", label: "Calendar" },
               { href: "/partnership", label: "Partnership" },
@@ -62,6 +63,7 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {[
               { href: "/about", label: "About" },
+              { href: "/events", label: "Events" },
               { href: "/resources", label: "Resources" },
               { href: "/calendar", label: "Calendar" },
               { href: "/partnership", label: "Partnership" },
