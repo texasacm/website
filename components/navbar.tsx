@@ -34,7 +34,7 @@ export default function Navbar() {
               { href: "/about", label: "About" },
               { href: "/resources", label: "Resources" },
               { href: "/events", label: "Events" },
-              { href: "/sponsorship", label: "Sponsorship" },
+              { href: "/partnership", label: "Partnership" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
@@ -64,7 +64,7 @@ export default function Navbar() {
               { href: "/about", label: "About" },
               { href: "/resources", label: "Resources" },
               { href: "/calendar", label: "Calendar" },
-              { href: "/sponsorship", label: "Sponsorship" },
+              { href: "/partnership", label: "Partnership" },
             ].map(({ href, label }) => (
               <Link
                 key={href}

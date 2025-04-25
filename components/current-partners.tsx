@@ -3,14 +3,14 @@ import type { FC, JSX } from "react"
 
 type Tier = "Gold" | "Silver" | "Bronze"
 
-interface Sponsor {
+interface Partner {
   name: string
   logo: string
   tier: Tier
   url: string
 }
 
-const currentSponsors: Sponsor[] = [
+const currentPartners: Partner[] = [
   {
     name: "Paycom",
     logo: "/paycom.png",
@@ -31,7 +31,7 @@ const currentSponsors: Sponsor[] = [
   },
 ]
 
-export const CurrentSponsors: FC = (): JSX.Element => {
+export const CurrentPartners: FC = (): JSX.Element => {
   // map each tier to a text color
   const tierColors: Record<Tier, string> = {
     Gold: "text-yellow-600",
@@ -39,11 +39,11 @@ export const CurrentSponsors: FC = (): JSX.Element => {
     Bronze: "text-amber-600",
   }
 
-  // group sponsors by tier
-  const sponsorsByTier = currentSponsors.reduce<Partial<Record<Tier, Sponsor[]>>>(
-    (acc, sponsor) => {
-      if (!acc[sponsor.tier]) acc[sponsor.tier] = []
-      acc[sponsor.tier]!.push(sponsor)
+  // group partners by tier
+  const partnersByTier = currentPartners.reduce<Partial<Record<Tier, Partner[]>>>(
+    (acc, partner) => {
+      if (!acc[partner.tier]) acc[partner.tier] = []
+      acc[partner.tier]!.push(partner)
       return acc
     },
     {}
@@ -57,11 +57,11 @@ export const CurrentSponsors: FC = (): JSX.Element => {
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-12">
-            Our Current Sponsors
+            Our Current Partners
           </h3>
 
           {tierOrder.map((tier) => {
-            const list = sponsorsByTier[tier]
+            const list = partnersByTier[tier]
             if (!list || list.length === 0) return null
 
             return (
@@ -69,16 +69,16 @@ export const CurrentSponsors: FC = (): JSX.Element => {
                 <h4
                   className={`text-xl font-semibold mb-6 ${tierColors[tier]}`}
                 >
-                  {tier} Sponsors
+                  {tier} Partners
                 </h4>
                 <div className="flex flex-wrap justify-center gap-12">
-                  {list.map((sponsor) => (
+                  {list.map((partner) => (
                     <div
-                      key={sponsor.name}
+                      key={partner.name}
                       className="flex flex-col items-center"
                     >
                       <a
-                        href={sponsor.url}
+                        href={partner.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
@@ -91,17 +91,16 @@ export const CurrentSponsors: FC = (): JSX.Element => {
                         "
                       >
                         <Image
-                          src={sponsor.logo}
-                          alt={`${sponsor.name} logo`}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
                           width={150}
                           height={150}
                           className="object-contain"
                         />
                       </a>
                       <div className="mt-4 text-center">
-                        <p className="font-medium text-lg">{sponsor.name}</p>
-                        <p className="text-xs text-gray-500">
-                        </p>
+                        <p className="font-medium text-lg">{partner.name}</p>
+                        <p className="text-xs text-gray-500"></p>
                       </div>
                     </div>
                   ))}
@@ -115,4 +114,4 @@ export const CurrentSponsors: FC = (): JSX.Element => {
   )
 }
 
-export default CurrentSponsors
+export default CurrentPartners

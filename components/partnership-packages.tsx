@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 
-export default function SponsorshipPackages() {
+export default function PartnershipPackages() {
   const tableRows = [
     { label: "Number of Recruiting Events", gold: "4", silver: "2" },
     { label: "Priority for September events", gold: true, silver: false },
@@ -42,9 +42,8 @@ export default function SponsorshipPackages() {
           </ul>
         </div>
 
-        {/* Sponsorship Packages Table */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-6">Sponsorship Packages</h3>
+          <h3 className="text-2xl font-bold text-center mb-6">Partnership Packages</h3>
 
           <div className="overflow-x-auto">
             <table className="text-left border border-gray-200">

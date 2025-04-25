@@ -1,14 +1,14 @@
-import SponsorshipHero from "@/components/sponsorship-hero"
-import SponsorshipPackages from "@/components/sponsorship-packages"
-import CurrentSponsors from "@/components/current-sponsors"
+import CurrentPartners from "@/components/current-partners"
 import Footer from "@/components/footer"
+import PartnershipHero from "@/components/partnership-hero"
+import PartnershipPackages from "@/components/partnership-packages"
 
-export default function SponsorshipPage() {
+export default function PartnershipPage() {
   return (
     <main className="min-h-screen">
-      <SponsorshipHero />
-      <SponsorshipPackages />
-      <CurrentSponsors />
+      <PartnershipHero />
+      <PartnershipPackages />
+      <CurrentPartners />
       <Footer />
     </main>
   )

@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar"
 
-export default function SponsorshipHero() {
+export default function PartnershipHero() {
   return (
     <section className="relative pt-20 pb-12 bg-primary">
       <Navbar />

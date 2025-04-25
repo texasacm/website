@@ -75,7 +75,7 @@ export default function Hero() {
               variant="outline"
               className="text-lg bg-transparent text-white border-white hover:bg-white/10"
             >
-              <Link href="/sponsorship">Sponsorship Inquiries</Link>
+              <Link href="/partnership">Partnership Inquiries</Link>
             </Button>
           </div>
         </motion.div>

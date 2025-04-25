@@ -73,10 +73,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sponsorship"
+                  href="/partnership"
                   className="text-gray-400 hover:text-white"
                 >
-                  Sponsorship
+                  Partnership
                 </Link>
               </li>
             </ul>
