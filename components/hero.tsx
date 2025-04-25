@@ -52,10 +52,10 @@ export default function Hero() {
           className="max-w-3xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Hey! 👋 We're Texas ACM.
+            Hey there! We're Texas ACM.
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
-            The largest computer science student organization at UT Austin
+            The largest computer science student organization at UT Austin 🤘
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg">
