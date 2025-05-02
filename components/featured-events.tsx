@@ -45,7 +45,7 @@ export default function FeaturedEvents() {
           </div>
         <div className="text-center mt-10">
           <Button asChild>
-            <Link href="/events">View All Events</Link>
+            <Link href="/calendar">View All Events</Link>
           </Button>
         </div>
     </section>
