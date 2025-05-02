@@ -8,10 +8,9 @@ export default function GoogleCalendar() {
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
+            <h2 className="text-2xl font-bold mb-4">Event Calendar</h2>
             <p className="text-gray-700">
-              Check out our calendar for all upcoming events. You can add our
-              calendar to your Google Calendar to stay updated.
+              Check out our calendar for all upcoming events. Add our calendar to yours to stay updated!
             </p>
           </div>
 
