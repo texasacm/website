@@ -64,7 +64,7 @@ export default function Hero() {
             Hey there! We're Texas ACM.
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
-            The largest computer science student organization at UT Austin 🤘
+            The largest computer science student organization @ UT Austin 🤘
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg">
@@ -73,17 +73,14 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="text-lg bg-transparent text-white border-white hover:bg-white/10"
+              className="text-lg bg-white text-black border-white hover:bg-white/90"
             >
               <Link href="/about">Learn More</Link>
             </Button>
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="text-lg bg-transparent text-white border-white hover:bg-white/10"
-            >
+              className="text-lg bg-white text-black border-white hover:bg-white/90"            >
               <Link href="/partnership">Partnership Inquiries</Link>
             </Button>
           </div>
