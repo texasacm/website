@@ -29,6 +29,12 @@ const currentPartners: Partner[] = [
     tier: "Bronze",
     url: "https://www.pwc.com",
   },
+  {
+    name: "YPropel",
+    logo: "/ypropel.png",
+    tier: "Bronze",
+    url: "https://www.ypropel.com/",
+  },
 ]
 
 export const CurrentPartners: FC = (): JSX.Element => {
