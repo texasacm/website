@@ -4,10 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function WhatWeDo() {
   return (
-    // Restore bottom padding so there's white space before the orange bar
-    <section className="bg-white pb-16 pt-16">
+    <section className="bg-white py-16">
       <div className="container px-4 sm:px-6 lg:px-8">
-        {/* Mission */}
         <div className="mx-auto mb-12 max-w-3xl">
           <h2 className="mb-6 text-3xl font-bold">Our Mission 🚀</h2>
           <p className="mb-6 text-lg text-gray-700">

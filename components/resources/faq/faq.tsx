@@ -6,7 +6,7 @@ import {
 
 export default function FAQ() {
   return (
-    <section className="space-y-6">
+    <section className="py-16">
       <div className="mx-60 rounded-xl bg-white p-8 shadow-sm">
         <h3 className="mb-6 text-2xl font-bold">Frequently Asked Questions</h3>
         <div className="space-y-6">

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ResumeBook() {
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <h3 className="mb-6 text-2xl font-bold text-center">ACM Resume Book</h3>
       <p className="mb-4 text-gray-700">
             Submit your resume to be included in our resume book,

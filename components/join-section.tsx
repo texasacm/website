@@ -19,7 +19,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 export default function JoinSection() {
   return (
-    <section id="join" className="bg-gray-50 py-20">
+    <section id="join" className="bg-gray-50 py-16">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">
