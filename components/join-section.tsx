@@ -1,57 +1,59 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import EmailSignupForm from '@/components/EmailSignupForm';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import EmailSignupForm from "@/components/EmailSignupForm";
+} from '@/components/ui/card';
+import Link from 'next/link';
 import {
   FaDiscord,
-  FaLinkedin,
-  FaInstagram,
-  FaGithub,
   FaFacebook,
-  FaTwitter,
-} from "react-icons/fa";
-import {
-  FaXTwitter
-} from "react-icons/fa6";
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+} from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function JoinSection() {
   return (
-    <section id="join" className="py-20 bg-gray-50">
+    <section id="join" className="bg-gray-50 py-20">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
             Stay Connected with Texas ACM
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Become a part of the largest computer science student organization at UT Austin
+          <p className="mx-auto max-w-3xl text-xl text-gray-600">
+            Become a part of the largest computer science student organization
+            at UT Austin
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           {/* First Card: Mailing List & Discord */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-center">
+              <CardTitle className="text-center text-2xl">
                 The two best ways to stay up-to-date with ACM Events:
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {/* Mailing List Section */}
-                <div className="bg-white p-6 rounded-lg border flex flex-col justify-center items-center">
-                  <h3 className="font-semibold text-lg mb-4">Join our mailing list:</h3>
+                <div className="flex flex-col items-center justify-center rounded-lg border bg-white p-6">
+                  <h3 className="mb-4 text-lg font-semibold">
+                    Join our mailing list:
+                  </h3>
                   <EmailSignupForm />
                 </div>
 
                 {/* Discord Section */}
-                <div className="bg-white p-6 rounded-lg border flex flex-col justify-center items-center">
-                  <h3 className="font-semibold text-lg mb-2">Join our Discord:</h3>
+                <div className="flex flex-col items-center justify-center rounded-lg border bg-white p-6">
+                  <h3 className="mb-2 text-lg font-semibold">
+                    Join our Discord:
+                  </h3>
                   <Button asChild className="bg-primary text-white">
                     <Link
                       href="https://discord.gg/tspJCpFFKx"
@@ -82,13 +84,13 @@ export default function JoinSection() {
           {/* Second Card: Social Media Links */}
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">
+              <CardTitle className="text-center text-2xl">
                 Our Socials
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex justify-center items-center space-x-6">
-              <Link
+              <div className="flex items-center justify-center space-x-6">
+                <Link
                   href="https://www.instagram.com/texas_acm"
                   target="_blank"
                   rel="noopener noreferrer"

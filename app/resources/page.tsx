@@ -1,6 +1,6 @@
-import Footer from "@/components/footer"
-import ResourcesHero from "@/components/resources/resources-hero"
-import ResourcesList from "@/components/resources/resources-list"
+import Footer from '@/components/footer';
+import ResourcesHero from '@/components/resources/resources-hero';
+import ResourcesList from '@/components/resources/resources-list';
 
 export default function ResourcesPage() {
   return (
@@ -9,6 +9,5 @@ export default function ResourcesPage() {
       <ResourcesList />
       <Footer />
     </main>
-  )
+  );
 }
-

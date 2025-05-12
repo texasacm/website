@@ -1,10 +1,10 @@
 // app/components/FeaturedEvents.tsx
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import Link from "next/link";
-import React from "react";
-import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { format } from 'date-fns';
+import { CalendarIcon } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+import { Button } from './ui/button';
 
 export interface CalendarDateTime {
   dateTime?: string;
@@ -27,12 +27,12 @@ export interface FeaturedEventsProps {
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
   if (events.length === 0) {
     return (
-      <section className="py-20 bg-white">
-        <div className="mt-16 max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Featured Events</h2>
+      <section className="bg-white py-20">
+        <div className="mx-auto mt-16 max-w-5xl text-center">
+          <h2 className="mb-4 text-2xl font-bold">Featured Events</h2>
           <div className="py-4">
             <h3>No Upcoming Events</h3>
-            <p className="mt-1 text-gray-600 italic">but stay tuned! :)</p>
+            <p className="mt-1 italic text-gray-600">but stay tuned! :)</p>
           </div>
           <Button asChild>
             <Link href="/calendar">View Past Events</Link>
@@ -43,10 +43,10 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
   }
 
   return (
-    <section className="py-20 bg-white">
-      <div className="mt-16 max-w-5xl mx-auto">
-        <h2 className="text-2xl font-bold mb-8 text-center">Featured Events</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+    <section className="bg-white py-20">
+      <div className="mx-auto mt-16 max-w-5xl">
+        <h2 className="mb-8 text-center text-2xl font-bold">Featured Events</h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {events.map((event) => {
             const startRaw = event.start.dateTime ?? event.start.date!;
             const endRaw = event.end?.dateTime ?? event.end?.date;
@@ -60,22 +60,22 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                 </CardHeader>
                 <CardContent>
                   {event.description && (
-                    <p className="text-gray-700 mb-4">{event.description}</p>
+                    <p className="mb-4 text-gray-700">{event.description}</p>
                   )}
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     <CalendarIcon className="h-4 w-4" />
                     <span>
-                      {format(startDate, "MMMM d, yyyy")}
+                      {format(startDate, 'MMMM d, yyyy')}
                       {event.start.dateTime && endDate
-                        ? ` • ${format(startDate, "h:mm a")} – ${format(
+                        ? ` • ${format(startDate, 'h:mm a')} – ${format(
                             endDate,
-                            "h:mm a"
+                            'h:mm a',
                           )}`
-                        : ""}
+                        : ''}
                     </span>
                   </div>
                   {event.location && (
-                    <div className="text-sm text-gray-500 mt-1">
+                    <div className="mt-1 text-sm text-gray-500">
                       {event.location}
                     </div>
                   )}
@@ -84,7 +84,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
             );
           })}
         </div>
-        <div className="text-center mt-10">
+        <div className="mt-10 text-center">
           <Button asChild>
             <Link href="/calendar">View All Events</Link>
           </Button>

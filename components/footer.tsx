@@ -1,15 +1,15 @@
-import { Mail } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Mail } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center mb-4">
+            <Link href="/" className="mb-4 flex items-center">
               <Image
                 src="/texasacm-logo-white.svg"
                 alt="Texas ACM Logo"
@@ -18,7 +18,7 @@ export default function Footer() {
                 className="h-8 w-auto"
               />
             </Link>
-            <p className="text-gray-400 mb-4">
+            <p className="mb-4 text-gray-400">
               The Association for Computing Machinery at UT Austin
             </p>
             <div className="flex space-x-4">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white">
@@ -69,7 +69,7 @@ export default function Footer() {
                 <Link href="/events" className="text-gray-400 hover:text-white">
                   Events
                 </Link>
-              </li>           
+              </li>
               <li>
                 <Link
                   href="/resources"
@@ -79,7 +79,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/calendar" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/calendar"
+                  className="text-gray-400 hover:text-white"
+                >
                   Calendar
                 </Link>
               </li>
@@ -95,7 +98,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
+            <h3 className="mb-4 text-lg font-semibold">Resources</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -143,7 +146,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <ul className="space-y-2">
               <li className="text-gray-400 hover:text-white">
                 <Link
@@ -167,11 +170,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-800 pt-8 md:flex-row">
+          <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Texas ACM. All rights reserved.
           </p>
-          <div className="flex gap-4 mt-4 md:mt-0"></div>
+          <div className="mt-4 flex gap-4 md:mt-0"></div>
         </div>
       </div>
     </footer>

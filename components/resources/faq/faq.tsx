@@ -1,14 +1,14 @@
 export default function FAQ() {
   return (
     <section className="space-y-6">
-      <div className="bg-white rounded-xl p-8 shadow-sm mx-60">
-        <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+      <div className="mx-60 rounded-xl bg-white p-8 shadow-sm">
+        <h3 className="mb-6 text-2xl font-bold">Frequently Asked Questions</h3>
 
         <div className="space-y-6">
           <div className="rounded-xl border border-dashed bg-gray-200 p-4">
-            <h4 className="text-xl font-semibold mb-2">What is ACM?</h4>
+            <h4 className="mb-2 text-xl font-semibold">What is ACM?</h4>
             <p className="text-gray-700">
-              The Association for Computing Machinery (ACM) is the world's
+              The Association for Computing Machinery (ACM) is the world&apos;s
               largest educational and scientific computing society. Texas ACM is
               the student chapter at UT Austin, focused on promoting interest in
               computing and providing resources for CS students.
@@ -16,7 +16,7 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               Do I need to be a CS major to join?
             </h4>
             <p className="text-gray-700">
@@ -26,7 +26,7 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               How much does membership cost?
             </h4>
             <p className="text-gray-700">
@@ -36,7 +36,7 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               How can I get involved beyond basic membership?
             </h4>
             <p className="text-gray-700">
@@ -48,7 +48,7 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               Does ACM help with internships and job placements?
             </h4>
             <p className="text-gray-700">
@@ -60,13 +60,13 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               Where do I apply to be an officer?
             </h4>
             <p className="text-gray-700">
               Officer applications for Junior positions open up at the beginning
               of each fall semester for Corporate, Marketing, and Finance. In
-              the Spring, we hold elections to form ACM's Executive Board
+              the Spring, we hold elections to form ACM&apos;s Executive Board
               consisting of the President, Vice President, Treasurer, and two
               At-Large positions. After the elections, applications for Senior
               Officer and internal officer positions will open up near the end
@@ -75,7 +75,7 @@ export default function FAQ() {
           </div>
 
           <div>
-            <h4 className="text-xl font-semibold mb-2">
+            <h4 className="mb-2 text-xl font-semibold">
               How do ACM elections work?
             </h4>
             <p className="text-gray-700">

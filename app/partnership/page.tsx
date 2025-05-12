@@ -1,7 +1,7 @@
-import CurrentPartners from "@/components/current-partners"
-import Footer from "@/components/footer"
-import PartnershipHero from "@/components/partnership-hero"
-import PartnershipPackages from "@/components/partnership-packages"
+import CurrentPartners from '@/components/current-partners';
+import Footer from '@/components/footer';
+import PartnershipHero from '@/components/partnership-hero';
+import PartnershipPackages from '@/components/partnership-packages';
 
 export default function PartnershipPage() {
   return (
@@ -11,6 +11,5 @@ export default function PartnershipPage() {
       <CurrentPartners />
       <Footer />
     </main>
-  )
+  );
 }
-

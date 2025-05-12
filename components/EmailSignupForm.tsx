@@ -1,8 +1,8 @@
 // components/EmailSignupForm.tsx
-"use client"
+'use client';
 
-import * as React from "react"
-import { useForm } from "react-hook-form"
+import * as React from 'react';
+import { useForm } from 'react-hook-form';
 import {
   Form,
   FormField,
@@ -11,18 +11,18 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from "@/components/ui/form"
-import { Button } from "@/components/ui/button"
+} from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
 
-type Inputs = { email: string }
+type Inputs = { email: string };
 
 export default function EmailSignupForm() {
-  const methods = useForm<Inputs>({ defaultValues: { email: "" } })
+  const methods = useForm<Inputs>({ defaultValues: { email: '' } });
 
   const onSubmit = (data: Inputs) => {
-    console.log("got email:", data.email)
+    console.log('got email:', data.email);
     // call your API / newsletter service…
-  }
+  };
 
   return (
     <Form {...methods}>
@@ -41,9 +41,7 @@ export default function EmailSignupForm() {
                   className="w-full rounded border px-3 py-2"
                 />
               </FormControl>
-              <FormDescription>
-                We’ll never share your email.
-              </FormDescription>
+              <FormDescription>We’ll never share your email.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -51,5 +49,5 @@ export default function EmailSignupForm() {
         <Button type="submit">Sign up</Button>
       </form>
     </Form>
-  )
+  );
 }

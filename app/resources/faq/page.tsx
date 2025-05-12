@@ -1,7 +1,6 @@
-import Footer from "@/components/footer"
-import FAQ from "@/components/resources/faq/faq"
-import FAQHero from "@/components/resources/faq/faq-hero"
-import { FaQ } from "react-icons/fa6"
+import Footer from '@/components/footer';
+import FAQ from '@/components/resources/faq/faq';
+import FAQHero from '@/components/resources/faq/faq-hero';
 
 export default function FAQPage() {
   return (
@@ -10,6 +9,5 @@ export default function FAQPage() {
       <FAQ />
       <Footer />
     </main>
-  )
+  );
 }
-
