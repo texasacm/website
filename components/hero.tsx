@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
+import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Navbar from "@/components/navbar"
+import Image from "next/image"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const hero_slides_dir = "/home-page-slides"
 
@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <Navbar />
+      <Header />
 
       {/* Background Images */}
       <div className="absolute inset-0 z-0">

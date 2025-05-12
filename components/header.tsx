@@ -1,13 +1,12 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
-export default function Navbar() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
