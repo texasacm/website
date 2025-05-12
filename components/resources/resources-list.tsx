@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -103,9 +102,7 @@ export default function ResourcesList() {
               </div>
             </TabsContent>
 
-            <TabsContent value="resume">
-
-            </TabsContent>
+            <TabsContent value="resume"></TabsContent>
           </Tabs>
         </div>
       </div>

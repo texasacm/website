@@ -1,17 +1,16 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function ResumeBook() {
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h3 className="mb-6 text-2xl font-bold text-center">ACM Resume Book</h3>
+    <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <h3 className="mb-6 text-center text-2xl font-bold">ACM Resume Book</h3>
       <p className="mb-4 text-gray-700">
-            Submit your resume to be included in our resume book,
-            which is shared with our corporate partners and sponsors.
-            This is a great way to get your resume in front of
-            recruiters from top tech companies.
-          </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        Submit your resume to be included in our resume book, which is shared
+        with our corporate partners and sponsors. This is a great way to get
+        your resume in front of recruiters from top tech companies.
+      </p>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="rounded-xl bg-white p-8 shadow-sm">
           <div className="space-y-4">
             <div className="rounded-lg bg-gray-50 p-4">
