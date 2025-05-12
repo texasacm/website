@@ -23,58 +23,6 @@ export default function Resources() {
             <TabsTrigger value="resume">Resume Book</TabsTrigger>
             <TabsTrigger value="membership">Membership</TabsTrigger>
           </TabsList>
-
-          <TabsContent value="faq" className="space-y-6">
-            <div className="bg-white rounded-xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">What is ACM?</h4>
-                  <p className="text-gray-700">
-                    The Association for Computing Machinery (ACM) is the world's largest educational and scientific
-                    computing society. Texas ACM is the student chapter at UT Austin, focused on promoting interest in
-                    computing and providing resources for CS students.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Do I need to be a CS major to join?</h4>
-                  <p className="text-gray-700">
-                    No! While we primarily serve CS students, we welcome members from all majors who are interested in
-                    computing and technology.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">How much does membership cost?</h4>
-                  <p className="text-gray-700">
-                    Annual membership dues are $30, which gives you access to all member-exclusive events, resources,
-                    and networking opportunities for the entire academic year.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">How can I get involved beyond basic membership?</h4>
-                  <p className="text-gray-700">
-                    There are many ways to get more involved! You can join a committee, help organize events, run for an
-                    officer position, or lead a project. Reach out to any current officer to learn more about these
-                    opportunities.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Does ACM help with internships and job placements?</h4>
-                  <p className="text-gray-700">
-                    Yes! We host company info sessions, resume workshops, mock interviews, and networking events
-                    specifically designed to help members secure internships and full-time positions. Our corporate
-                    partners often recruit directly from our membership.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
-
           <TabsContent value="cs-guide">
             <div className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex items-center justify-between mb-6">
