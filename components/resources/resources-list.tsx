@@ -1,8 +1,8 @@
-import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { FileText, Book, Calendar, Users, Award, Download } from 'lucide-react';
+import { Award, Book, Calendar, Download, Users } from 'lucide-react';
 
 export default function ResourcesList() {
   return (
@@ -104,69 +104,7 @@ export default function ResourcesList() {
             </TabsContent>
 
             <TabsContent value="resume">
-              <div className="rounded-xl bg-white p-8 shadow-sm">
-                <h3 className="mb-6 text-2xl font-bold">ACM Resume Book</h3>
 
-                <div>
-                  <div>
-                    <p className="mb-4 text-gray-700">
-                      Submit your resume to be included in our resume book,
-                      which is shared with our corporate partners and sponsors.
-                      This is a great way to get your resume in front of
-                      recruiters from top tech companies.
-                    </p>
-                    <div className="space-y-4">
-                      <div className="rounded-lg bg-gray-50 p-4">
-                        <h5 className="mb-1 font-semibold">
-                          Submission Requirements
-                        </h5>
-                        <ul className="list-disc space-y-1 pl-5 text-sm">
-                          <li>PDF format only</li>
-                          <li>Maximum 1 page</li>
-                          <li>Updated within the last 6 months</li>
-                        </ul>
-                      </div>
-                      <Button className="w-full">Submit Your Resume</Button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 rounded-lg bg-gray-50 p-6">
-                  <h4 className="mb-2 text-xl font-semibold">
-                    Resume Resources
-                  </h4>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                      href="#"
-                      className="flex items-center gap-1 text-primary hover:underline"
-                    >
-                      <FileText size={16} />
-                      Resume Template
-                    </Link>
-                    <Link
-                      href="#"
-                      className="flex items-center gap-1 text-primary hover:underline"
-                    >
-                      <FileText size={16} />
-                      Resume Writing Guide
-                    </Link>
-                    <Link
-                      href="#"
-                      className="flex items-center gap-1 text-primary hover:underline"
-                    >
-                      <FileText size={16} />
-                      Sample Resumes
-                    </Link>
-                    <Link
-                      href="#"
-                      className="flex items-center gap-1 text-primary hover:underline"
-                    >
-                      <FileText size={16} />
-                      Technical Skills Checklist
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </TabsContent>
           </Tabs>
         </div>
