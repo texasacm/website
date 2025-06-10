@@ -41,7 +41,6 @@ export default function EmailSignupForm() {
                   className="w-full rounded border px-3 py-2"
                 />
               </FormControl>
-              <FormDescription>We’ll never share your email.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
