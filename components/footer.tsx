@@ -102,7 +102,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/resources"
+                  href="/resources/faq"
+                  className="text-gray-400 hover:text-white"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/a-to-z"
                   className="text-gray-400 hover:text-white"
                 >
                   CS A to Z Guide
@@ -110,26 +118,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/resources"
+                  href="/resources/resume-book"
                   className="text-gray-400 hover:text-white"
                 >
                   Resume Book
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  className="text-gray-400 hover:text-white"
-                >
-                  Technical Interview Prep
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  className="text-gray-400 hover:text-white"
-                >
-                  Internship Guide
                 </Link>
               </li>
               <li>
