@@ -1,24 +1,21 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showResources, setShowResources] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav
-      className={cn(
-        'fixed top-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-md',
-      )}
-    >
+    <nav className={cn('fixed top-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-md')}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -34,22 +31,31 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-6 md:flex">
-            {[
-              { href: '/about', label: 'About' },
-              { href: '/events', label: 'Events' },
-              { href: '/resources', label: 'Resources' },
-              { href: '/calendar', label: 'Calendar' },
-              { href: '/partnership', label: 'Partnership' },
-            ].map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="font-medium text-gray-700 hover:text-primary hover:underline"
-              >
-                {label}
-              </Link>
-            ))}
+          <div className="hidden h-16 items-center md:flex">
+            <div className="h-full flex items-center px-4">
+              <Link href="/about" className="font-medium text-gray-700 hover:text-primary">About</Link>
+            </div>
+            <div className="h-full flex items-center px-4">
+              <Link href="/events" className="font-medium text-gray-700 hover:text-primary">Events</Link>
+            </div>
+            <div className="relative group h-full">
+              <div className="h-full flex items-center px-4 cursor-pointer">
+                <span className="font-medium text-gray-700 hover:text-primary flex items-center">
+                  Resources <ChevronDown className="ml-1 h-4 w-4" />
+                </span>
+              </div>
+              <div className="absolute left-0 top-full mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex z-50">
+                <Link href="/faq" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
+                <Link href="/resume-book" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Resume Book</Link>
+                <Link href="/a-to-z" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS A to Z</Link>
+              </div>
+            </div>
+            <div className="h-full flex items-center px-4">
+              <Link href="/calendar" className="font-medium text-gray-700 hover:text-primary">Calendar</Link>
+            </div>
+            <div className="h-full flex items-center px-4">
+              <Link href="/partnership" className="font-medium text-gray-700 hover:text-primary">Partnership</Link>
+            </div>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -69,22 +75,23 @@ export default function Header() {
       {isOpen && (
         <div className="bg-white shadow-lg md:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-            {[
-              { href: '/about', label: 'About' },
-              { href: '/events', label: 'Events' },
-              { href: '/resources', label: 'Resources' },
-              { href: '/calendar', label: 'Calendar' },
-              { href: '/partnership', label: 'Partnership' },
-            ].map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline"
-                onClick={toggleMenu}
-              >
-                {label}
-              </Link>
-            ))}
+            <Link href="/about" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>About</Link>
+            <Link href="/events" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Events</Link>
+            <button
+              onClick={() => setShowResources(!showResources)}
+              className="flex w-full items-center justify-between px-3 py-2 font-medium text-gray-700 hover:text-primary"
+            >
+              Resources <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            {showResources && (
+              <div className="ml-4 space-y-1">
+                <Link href="/faq" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>FAQ</Link>
+                <Link href="/resume-book" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>Resume Book</Link>
+                <Link href="/a-to-z" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>CS A to Z</Link>
+              </div>
+            )}
+            <Link href="/calendar" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Calendar</Link>
+            <Link href="/partnership" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Partnership</Link>
           </div>
         </div>
       )}
