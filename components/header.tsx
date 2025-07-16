@@ -43,9 +43,9 @@ export default function Header() {
                 <span className="relative group font-medium text-gray-700 hover:text-primary flex items-center">
                   Resources <ChevronDown className="ml-1 h-4 w-4" />
                   <div className="absolute left-0 top-full mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex z-50">
+                    <Link href="/cs-guide" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS Guide</Link>
                     <Link href="/faq" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
                     <Link href="/resume-book" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Resume Book</Link>
-                    <Link href="/a-to-z" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS A to Z</Link>
                   </div>
                 </span>
               </div>
@@ -85,9 +85,9 @@ export default function Header() {
             </button>
             {showResources && (
               <div className="ml-4 space-y-1">
+                <Link href="/cs-guide" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>CS Guide</Link>
                 <Link href="/faq" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>FAQ</Link>
                 <Link href="/resume-book" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>Resume Book</Link>
-                <Link href="/a-to-z" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>CS A to Z</Link>
               </div>
             )}
             <Link href="/calendar" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Calendar</Link>

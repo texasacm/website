@@ -111,18 +111,18 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/faq"
+                  href="/cs-guide"
                   className="text-gray-400 hover:text-white"
                 >
-                  FAQ
+                  CS Guide
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/a-to-z"
+                  href="/faq"
                   className="text-gray-400 hover:text-white"
                 >
-                  CS A to Z Guide
+                  FAQ
                 </Link>
               </li>
               <li>
