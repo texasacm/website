@@ -39,6 +39,12 @@ export default function Header() {
               <Link href="/events" className="font-medium text-gray-700 hover:text-primary">Events</Link>
             </div>
             <div className="h-full flex items-center px-4">
+              <Link href="/calendar" className="font-medium text-gray-700 hover:text-primary">Calendar</Link>
+            </div>
+            <div className="h-full flex items-center px-4">
+              <Link href="/partnership" className="font-medium text-gray-700 hover:text-primary">Partnership</Link>
+            </div>
+            <div className="h-full flex items-center px-4">
               <div className="h-full flex items-center cursor-pointer">
                 <span className="relative group font-medium text-gray-700 hover:text-primary flex items-center">
                   Resources <ChevronDown className="ml-1 h-4 w-4" />
@@ -50,13 +56,8 @@ export default function Header() {
                 </span>
               </div>
             </div>
-            <div className="h-full flex items-center px-4">
-              <Link href="/calendar" className="font-medium text-gray-700 hover:text-primary">Calendar</Link>
-            </div>
-            <div className="h-full flex items-center px-4">
-              <Link href="/partnership" className="font-medium text-gray-700 hover:text-primary">Partnership</Link>
-            </div>
           </div>
+          
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
@@ -77,6 +78,8 @@ export default function Header() {
           <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <Link href="/about" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>About</Link>
             <Link href="/events" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Events</Link>
+            <Link href="/calendar" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Calendar</Link>
+            <Link href="/partnership" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Partnership</Link>
             <button
               onClick={() => setShowResources(!showResources)}
               className="flex w-full items-center justify-between px-3 py-2 font-medium text-gray-700 hover:text-primary"
@@ -90,8 +93,6 @@ export default function Header() {
                 <Link href="/resume-book" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>Resume Book</Link>
               </div>
             )}
-            <Link href="/calendar" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Calendar</Link>
-            <Link href="/partnership" className="block px-3 py-2 font-medium text-gray-700 hover:text-primary hover:underline" onClick={toggleMenu}>Partnership</Link>
           </div>
         </div>
       )}
