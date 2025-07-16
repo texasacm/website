@@ -1,18 +1,17 @@
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components/ui/card';
 import {
   Dialog,
-  DialogClose,
   DialogContent,
+  DialogDescription,
+  DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger
 } from '@/components/ui/dialog';
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -20,6 +19,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 interface SocialLink {
   url: string;
   icon: React.ReactNode;
+  name: string;
 }
 
 interface Officer {
@@ -39,12 +39,12 @@ const officers: Officer[] = [
     image: headshot_dir + '/pres_nidhi.jpg',
     bio: 'bingus.',
     socials: [
-      { url: 'https://twitter.com/janedoe', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/janedoe', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/janedoe',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/janedoe', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/janedoe', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -53,12 +53,12 @@ const officers: Officer[] = [
     image: headshot_dir + '/vp_gabe.jpeg',
     bio: 'Placeholder.',
     socials: [
-      { url: 'https://twitter.com/johnsmith', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/johnsmith', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/johnsmith',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/johnsmith', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/johnsmith', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -67,12 +67,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Placeholder.',
     socials: [
-      { url: 'https://twitter.com/alexjohnson', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/alexjohnson', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/alexjohnson',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/alexjohnson', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/alexjohnson', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -81,12 +81,12 @@ const officers: Officer[] = [
     image: headshot_dir + '/exec_mansi.jpeg',
     bio: 'Computer Science junior specializing in full-stack development.',
     socials: [
-      { url: 'https://twitter.com/samwilson', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/samwilson', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/samwilson',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/samwilson', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/samwilson', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -95,12 +95,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Senior in Computer Science with a minor in Business.',
     socials: [
-      { url: 'https://twitter.com/taylorbrown', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/taylorbrown', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/taylorbrown',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/taylorbrown', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/taylorbrown', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -109,12 +109,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -123,12 +123,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -137,12 +137,12 @@ const officers: Officer[] = [
     image: headshot_dir + '/academic_so_brayden.jpeg',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -151,12 +151,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -165,12 +165,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -179,12 +179,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -193,12 +193,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -207,12 +207,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -221,12 +221,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -235,12 +235,12 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
     ],
   },
   {
@@ -249,113 +249,93 @@ const officers: Officer[] = [
     image: '/placeholder.svg?height=300&width=300',
     bio: 'Junior double-majoring in Computer Science and Mathematics.',
     socials: [
-      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} /> },
+      { url: 'https://twitter.com/jordanlee', icon: <FaTwitter size={20} />, name: 'Twitter' },
       {
         url: 'https://linkedin.com/in/jordanlee',
-        icon: <FaLinkedin size={20} />,
+        icon: <FaLinkedin size={20} />, name: 'LinkedIn'
       },
-      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} /> },
-    ],
+      { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
+    ]
   },
 ];
+
 
 export default function OfficerTeam() {
   return (
     <section className="bg-white py-16">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-3xl">
-          <h2 className="mb-6 text-3xl font-bold">Leadership Team</h2>
-          <p className="text-lg text-gray-700">
-            Our officers are dedicated to serving the UT Austin CS community and
-            ensuring that Texas ACM provides valuable experiences for all
-            members. Feel free to reach out to any of our officers!
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Leadership Team
+          </h2>
+          <p className="text-lg text-gray-600">
+            Our officers are dedicated to serving the UT Austin CS community.
+            Feel free to reach out!
           </p>
         </div>
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {officers.map((officer, idx) => (
-              <Card key={idx} className="overflow-hidden">
-                <Dialog>
-                  {/* Required for console to play nice with dialog. */}
-                  <VisuallyHidden>
-                    <DialogTitle>Hidden</DialogTitle>
-                  </VisuallyHidden>
-
-                  <DialogTrigger asChild>
-                    <div className="relative aspect-square cursor-pointer">
+            {officers.map((officer) => (
+              <Dialog key={officer.name}>
+                <DialogTrigger asChild>
+                  <Card className="group flex cursor-pointer flex-col overflow-hidden text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className="relative aspect-square w-full">
                       <Image
                         src={officer.image}
-                        alt={officer.name}
+                        alt={`Headshot of ${officer.name}`}
                         fill
                         className="object-cover"
                       />
                     </div>
-                  </DialogTrigger>
-
-                  <DialogContent className="max-w-2xl">
-                    <div className="flex flex-col gap-6 sm:flex-row">
-                      {/* Left: large image */}
-                      <div className="relative h-64 w-full sm:w-1/2">
-                        <Image
-                          src={officer.image}
-                          alt={officer.name}
-                          fill
-                          className="rounded object-cover"
-                        />
-                      </div>
-
-                      {/* Right: name & position above socials & bio */}
-                      <div className="flex w-full flex-col sm:w-1/2">
-                        <h3 className="text-2xl font-bold">{officer.name}</h3>
-                        <p className="mb-4 text-sm text-gray-500">
+                    <CardHeader className="flex-grow">
+                      <CardTitle className="text-xl">{officer.name}</CardTitle>
+                      <CardDescription>{officer.position}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="min-h-80 p-0 sm:max-w-2xl">
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="relative h-80 w-full sm:h-auto sm:w-5/12">
+                      <Image
+                        src={officer.image}
+                        alt={officer.name}
+                        fill
+                        className="object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-tr-none"
+                      />
+                    </div>
+                    <div className="flex flex-col p-6 sm:w-7/12">
+                      <DialogHeader className="text-left">
+                        <DialogTitle className="text-2xl font-bold">
+                          {officer.name}
+                        </DialogTitle>
+                        <DialogDescription className="text-md">
                           {officer.position}
-                        </p>
+                        </DialogDescription>
+                      </DialogHeader>
 
-                        <div className="mb-6 flex space-x-4">
-                          {officer.socials.map((social, i) => (
-                            <a
-                              key={i}
-                              href={social.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="hover:opacity-80"
-                            >
-                              {social.icon}
-                            </a>
-                          ))}
-                        </div>
+                      <p className="my-4 flex-grow text-gray-700">
+                        {officer.bio}
+                      </p>
 
-                        <p className="flex-grow text-gray-700">{officer.bio}</p>
+                      <div className="mt-auto flex space-x-4 pt-4">
+                        {officer.socials.map((social) => (
+                          <a
+                            key={social.url}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 transition-opacity hover:opacity-80"
+                            aria-label={`Visit ${officer.name}'s ${social.name}`}
+                          >
+                            {React.cloneElement(social.icon as React.ReactElement)}
+                          </a>
+                        ))}
                       </div>
                     </div>
-
-                    <DialogClose asChild>
-                      <Button variant="outline" className="mt-6 w-full">
-                        Close
-                      </Button>
-                    </DialogClose>
-                  </DialogContent>
-                </Dialog>
-
-                <CardHeader className="mt-4 text-center">
-                  <CardTitle>{officer.name}</CardTitle>
-                  <CardDescription>{officer.position}</CardDescription>
-                </CardHeader>
-                <div className="flex justify-center space-x-4 py-4">
-                  {officer.socials.map((social, i) => (
-                    <a
-                      key={i}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:opacity-80"
-                    >
-                      {social.icon}
-                    </a>
-                  ))}
-                </div>
-              </Card>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
