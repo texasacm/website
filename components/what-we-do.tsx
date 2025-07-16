@@ -31,7 +31,7 @@ export default function WhatWeDo() {
           <div className="grid gap-8 md:grid-cols-3">
             {/* Industry Pillar */}
             <div className="relative pb-16">
-              <Card>
+              <Card className="h-full shadow-md">
                 <CardHeader>
                   <CardTitle>Industry 🏢</CardTitle>
                 </CardHeader>
@@ -56,7 +56,7 @@ export default function WhatWeDo() {
 
             {/* Academics Pillar */}
             <div className="relative pb-16">
-              <Card>
+              <Card className="h-full shadow-md">
                 <CardHeader>
                   <CardTitle>Academics 📚</CardTitle>
                 </CardHeader>
@@ -81,7 +81,7 @@ export default function WhatWeDo() {
 
             {/* Community Pillar */}
             <div className="relative pb-16">
-              <Card>
+              <Card className="h-full shadow-md">
                 <CardHeader>
                   <CardTitle>Community 🤝</CardTitle>
                 </CardHeader>
