@@ -38,16 +38,16 @@ export default function Header() {
             <div className="h-full flex items-center px-4">
               <Link href="/events" className="font-medium text-gray-700 hover:text-primary">Events</Link>
             </div>
-            <div className="relative group h-full">
-              <div className="h-full flex items-center px-4 cursor-pointer">
-                <span className="font-medium text-gray-700 hover:text-primary flex items-center">
+            <div className="h-full flex items-center px-4">
+              <div className="h-full flex items-center cursor-pointer">
+                <span className="relative group font-medium text-gray-700 hover:text-primary flex items-center">
                   Resources <ChevronDown className="ml-1 h-4 w-4" />
+                  <div className="absolute left-0 top-full mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex z-50">
+                    <Link href="/faq" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
+                    <Link href="/resume-book" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Resume Book</Link>
+                    <Link href="/a-to-z" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS A to Z</Link>
+                  </div>
                 </span>
-              </div>
-              <div className="absolute left-0 top-full mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex z-50">
-                <Link href="/faq" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
-                <Link href="/resume-book" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Resume Book</Link>
-                <Link href="/a-to-z" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS A to Z</Link>
               </div>
             </div>
             <div className="h-full flex items-center px-4">
