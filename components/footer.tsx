@@ -1,7 +1,7 @@
 import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaDiscord, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
@@ -46,14 +46,6 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white"
               >
                 <FaGithub size={20} />
-              </Link>
-              <Link
-                href="https://www.facebook.com/groups/texas.acm/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <FaFacebook size={20} />
               </Link>
               <Link
                   href="https://x.com/utexasACM"
