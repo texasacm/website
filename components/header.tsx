@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -51,6 +51,7 @@ export default function Header() {
                   <div className="absolute left-0 top-full mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex z-50">
                     <Link href="/cs-guide" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">CS Guide</Link>
                     <Link href="/faq" className="block px-4 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">FAQ</Link>
+                    <Link href="/forms" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Forms</Link>
                     <Link href="/resume-book" className="block px-4 rounded-md py-2 text-sm text-gray-700 hover:bg-gray-100">Resume Book</Link>
                   </div>
                 </span>
@@ -90,6 +91,7 @@ export default function Header() {
               <div className="ml-4 space-y-1">
                 <Link href="/cs-guide" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>CS Guide</Link>
                 <Link href="/faq" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>FAQ</Link>
+                <Link href="/forms" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>Forms</Link>
                 <Link href="/resume-book" className="block px-3 py-2 text-sm text-gray-700 hover:text-primary" onClick={toggleMenu}>Resume Book</Link>
               </div>
             )}

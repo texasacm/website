@@ -119,6 +119,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/forms"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Forms
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/resume-book"
                   className="text-gray-400 hover:text-white"
                 >
