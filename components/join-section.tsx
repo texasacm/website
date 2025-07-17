@@ -10,10 +10,9 @@ import {
 import Link from 'next/link';
 import {
   FaDiscord,
-  FaFacebook,
   FaGithub,
   FaInstagram,
-  FaLinkedin,
+  FaLinkedin
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -32,8 +31,8 @@ export default function JoinSection() {
         </div>
 
         <div className="mx-auto max-w-3xl">
-          {/* First Card: Mailing List & Discord */}
-          <Card>
+          {/* Mailing List & Discord Card */}
+          <Card className="shadow-md">
             <CardHeader>
               <CardTitle className="text-center text-2xl">
                 The two best ways to stay up-to-date with ACM Events:
@@ -42,7 +41,7 @@ export default function JoinSection() {
             <CardContent>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {/* Mailing List Section */}
-                <div className="flex flex-col items-center justify-center rounded-lg border bg-white p-6">
+                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-6">
                   <h3 className="mb-4 text-lg font-semibold">
                     Join our mailing list:
                   </h3>
@@ -50,7 +49,7 @@ export default function JoinSection() {
                 </div>
 
                 {/* Discord Section */}
-                <div className="flex flex-col items-center justify-center rounded-lg border bg-white p-6">
+                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-6">
                   <h3 className="mb-2 text-lg font-semibold">
                     Join our Discord:
                   </h3>
@@ -81,56 +80,51 @@ export default function JoinSection() {
               </p>
             </CardFooter>
           </Card>
-          {/* Second Card: Social Media Links */}
-          <Card className="mt-8">
-            <CardHeader>
-              <CardTitle className="text-center text-2xl">
-                Our Socials
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-center space-x-6">
-                <Link
-                  href="https://www.instagram.com/texas_acm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
-                >
-                  <FaInstagram size={32} />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/company/utexas-acm/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
-                >
-                  <FaLinkedin size={32} />
-                </Link>
-                <Link
-                  href="https://github.com/texasacm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
-                >
-                  <FaGithub size={32} />
-                </Link>
-                <Link
-                  href="https://www.facebook.com/groups/texas.acm/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
-                >
-                  <FaFacebook size={32} />
-                </Link>
-                <Link
-                  href="https://x.com/utexasACM"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
-                >
-                  <FaXTwitter size={32} />
-                </Link>
-              </div>
+
+          {/* Social Media Links Section */}
+          <Card className="mt-8 text-center shadow-md">
+            <CardHeader className="mb-4 text-2xl font-bold">Our Socials</CardHeader>
+            <CardContent className="flex items-center justify-center space-x-6">
+              <Link
+                href="https://www.instagram.com/texas_acm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary"
+              >
+                <FaInstagram size={32} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/utexas-acm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary"
+              >
+                <FaLinkedin size={32} />
+              </Link>
+              <Link
+                href="https://github.com/texasacm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary"
+              >
+                <FaGithub size={32} />
+              </Link>
+              <Link
+                href="https://x.com/utexasACM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary"
+              >
+                <FaXTwitter size={32} />
+              </Link>
+              <Link
+                href="https://discord.gg/tspJCpFFKx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary"
+              >
+                <FaDiscord size={32} />
+              </Link>
             </CardContent>
           </Card>
         </div>
