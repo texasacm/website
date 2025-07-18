@@ -10,7 +10,7 @@ export default function ResumeBookHero() {
                     <FileUser className="mx-auto mb-4 h-12 w-12 text-white" />
                     <h1 className="mb-4 text-4xl font-bold text-white">Resume Book</h1>
                     <p className="text-xl text-white/90">
-                        Add your resume to our Resume Book that our corporate partners can access.
+                        Give our corporate sponsors access to your resume.
                     </p>
                 </div>
             </div>

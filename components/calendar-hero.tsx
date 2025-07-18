@@ -10,7 +10,7 @@ export default function CalendarHero() {
                     <CalendarIcon className="mx-auto mb-4 h-12 w-12 text-white" />
                     <h1 className="mb-4 text-4xl font-bold text-white">Event Calendar</h1>
                     <p className="text-xl text-white/90">
-                        Stay up to date with all of our upcoming events and activities
+                        Stay up to date with all of our upcoming events and activities.
                     </p>
                 </div>
             </div>

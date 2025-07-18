@@ -10,7 +10,7 @@ export default function FormsHero() {
                     <TextCursorInput className="mx-auto mb-4 h-12 w-12 text-white" />
                     <h1 className="mb-4 text-4xl font-bold text-white">Important Forms</h1>
                     <p className="text-xl text-white/90">
-                        All essential forms for Texas ACM members
+                        All essential forms for Texas ACM members.
                     </p>
                 </div>
             </div>

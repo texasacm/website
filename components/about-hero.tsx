@@ -10,8 +10,7 @@ export default function AboutHero() {
                     <Info className="mx-auto mb-4 h-12 w-12 text-white" />
                     <h1 className="mb-4 text-4xl font-bold text-white">About Texas ACM</h1>
                     <p className="text-xl text-white/90">
-                        Learn about our mission, what we do, and how we serve the UT Austin CS
-                        community
+                        Learn how Texas ACM serves the UT Austin CS community.
                     </p>
                 </div>
             </div>
