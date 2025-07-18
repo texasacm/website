@@ -10,7 +10,7 @@ export default function FAQHero() {
                         Frequently Asked Questions (FAQ)
                     </h1>
                     <p className="text-xl text-white/90">
-                        Get your commonly answered questions about ACM and UTCS answered here!
+                        Get your commonly answered questions about Texas ACM here!
                     </p>
                 </div>
             </div>
