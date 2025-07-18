@@ -5,13 +5,13 @@ import OfficerHero from '@/components/officer-hero';
 import OfficerTeam from '@/components/officer-team';
 
 export default function AboutPage() {
-  return (
-    <main className="min-h-screen">
-      <AboutHero />
-      <WhatWeDo />
-      <OfficerHero />
-      <OfficerTeam />
-      <Footer />
-    </main>
-  );
+    return (
+        <main className="min-h-screen">
+            <AboutHero />
+            <WhatWeDo />
+            <OfficerHero />
+            <OfficerTeam />
+            <Footer />
+        </main>
+    );
 }

@@ -13,19 +13,19 @@ import { getUpcomingEvents } from '@/lib/calendar';
 export const revalidate = 300;
 
 export default async function EventsPage() {
-  const events = await getUpcomingEvents(2);
+    const events = await getUpcomingEvents(2);
 
-  return (
-    <main className="min-h-screen">
-      <EventsHero />
-      <FeaturedEvents events={events} />
-      <CorporateEventsHero />
-      <CorporateEvents />
-      <AcademicEventsHero />
-      <AcademicEvents />
-      <SocialEventsHero />
-      <SocialEvents />
-      <Footer />
-    </main>
-  );
+    return (
+        <main className="min-h-screen">
+            <EventsHero />
+            <FeaturedEvents events={events} />
+            <CorporateEventsHero />
+            <CorporateEvents />
+            <AcademicEventsHero />
+            <AcademicEvents />
+            <SocialEventsHero />
+            <SocialEvents />
+            <Footer />
+        </main>
+    );
 }
