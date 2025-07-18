@@ -1,6 +1,7 @@
 import EmailSignupForm from '@/components/EmailSignupForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -38,7 +39,7 @@ export default function JoinSection() {
                                 </div>
 
                                 {/* Discord Section */}
-                                <div className="mb-7 flex flex-col items-center justify-center rounded-lg bg-white p-6">
+                                <div className="mb-6 flex flex-col items-center justify-center rounded-lg bg-white p-6">
                                     <h3 className="mb-2 text-lg font-semibold">
                                         Join our Discord:
                                     </h3>
@@ -50,7 +51,8 @@ export default function JoinSection() {
                                         >
                                             <span className="flex items-center space-x-2">
                                                 <FaDiscord size={24} />
-                                                <span>Join ACM Discord</span>
+                                                <span>Join ACM Discord </span>
+                                                <ExternalLink size={16}/>
                                             </span>
                                         </Link>
                                     </Button>
