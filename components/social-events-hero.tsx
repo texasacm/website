@@ -1,6 +1,7 @@
+import { Users } from 'lucide-react';
 import Image from 'next/image';
 
-export default function AcademicEventsHero() {
+export default function SocialEventsHero() {
   return (
     <section className="relative pb-24 pt-40">
       <div className="absolute inset-0 z-0">
@@ -13,12 +14,14 @@ export default function AcademicEventsHero() {
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-4 text-4xl font-bold text-white">Social Events</h1>
-          <p className="text-xl text-white/90">
-            Fostering a sense of community that everyone is free to take part in
-          </p>
+      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col items-center gap-4 rounded-xl bg-black/80 px-8 py-8 shadow-xl max-w-md text-center">
+          <div className="flex flex-col items-center text-red-400">
+            <Users size={48} className="mb-4" />
+            <h1 className="text-4xl font-bold leading-tight text-white">
+              Social Events
+            </h1>
+          </div>
         </div>
       </div>
     </section>

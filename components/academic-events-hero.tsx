@@ -1,3 +1,4 @@
+import { GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 export default function AcademicEventsHero() {
@@ -13,15 +14,14 @@ export default function AcademicEventsHero() {
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-4 text-4xl font-bold text-white">
-            Academic Events
-          </h1>
-          <p className="text-xl text-white/90">
-            Engaging our members with enriching workshops and acadamia
-            meet-and-greets
-          </p>
+      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 shadow-xl">
+        <div className="flex flex-col items-center gap-4 rounded-xl bg-black/80 px-8 py-8 shadow-xl max-w-md text-center">
+          <div className="flex flex-col items-center text-green-400">
+            <GraduationCap size={48} className="mb-4" />
+            <h1 className="text-4xl font-bold leading-tight text-white">
+              Academic Events
+            </h1>
+          </div>
         </div>
       </div>
     </section>
