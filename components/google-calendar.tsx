@@ -9,8 +9,8 @@ export default function GoogleCalendar() {
                     <div className="mb-8">
                         <h2 className="mb-4 text-2xl font-bold">Event Calendar</h2>
                         <p className="text-gray-700">
-                            Check out our calendar for all upcoming events. Add our calendar to
-                            yours to stay updated!
+                            Use the arrows to view future and past events. Add our calendar to yours
+                            to stay updated!
                         </p>
                     </div>
 
@@ -21,8 +21,6 @@ export default function GoogleCalendar() {
                                 style={{ border: 0 }}
                                 width="100%"
                                 height="100%"
-                                frameBorder="0"
-                                scrolling="no"
                                 title="Texas ACM Google Calendar"
                             ></iframe>
                         </div>

@@ -52,7 +52,7 @@ export default function JoinSection() {
                                             <span className="flex items-center space-x-2">
                                                 <FaDiscord size={24} />
                                                 <span>Join ACM Discord </span>
-                                                <ExternalLink size={16}/>
+                                                <ExternalLink size={16} />
                                             </span>
                                         </Link>
                                     </Button>

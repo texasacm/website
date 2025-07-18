@@ -1,10 +1,6 @@
 'use client';
 
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
 import * as React from 'react';
 
@@ -63,7 +59,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         <Collapsible
             open={isOpen}
             onOpenChange={setIsOpen}
-            className="rounded-lg border-b last:border-b-0 shadow-md"
+            className="rounded-lg border-b shadow-md last:border-b-0"
         >
             <CollapsibleTrigger asChild>
                 <button className="flex w-full items-center justify-between p-4 text-left">
@@ -82,4 +78,3 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         </Collapsible>
     );
 }
-
