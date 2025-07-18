@@ -13,25 +13,25 @@ interface Partner {
 const currentPartners: Partner[] = [
     {
         name: 'Paycom',
-        logo: '/paycom.png',
+        logo: '/partners/paycom.png',
         tier: 'Silver',
         url: 'https://www.paycom.com',
     },
     {
         name: 'Intuit',
-        logo: '/intuit.svg',
+        logo: '/partners/intuit.svg',
         tier: 'Bronze',
         url: 'https://www.intuit.com',
     },
     {
         name: 'PwC',
-        logo: '/pwc.png',
+        logo: '/partners/pwc.png',
         tier: 'Bronze',
         url: 'https://www.pwc.com',
     },
     {
         name: 'YPropel',
-        logo: '/ypropel.png',
+        logo: '/partners/ypropel.png',
         tier: 'Bronze',
         url: 'https://www.ypropel.com/',
     },

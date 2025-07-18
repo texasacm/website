@@ -23,17 +23,16 @@ export async function getUpcomingEvents(maxResults = 2): Promise<CalendarEvent[]
 
     console.log('Fetching Google Calendar events from:', url.toString());
 
-    // const res = await fetch(url.toString());
-    // console.log("Response status:", res.status);
+    const res = await fetch(url.toString());
+    console.log("Response status:", res.status);
 
-    // if (!res.ok) {
-    //   console.error("Calendar API error:", await res.text());
-    //   return [];
-    // }
+    if (!res.ok) {
+      console.error("Calendar API error:", await res.text());
+      return [];
+    }
 
-    // const data = (await res.json()) as { items?: CalendarEvent[] };
-    // console.log("Parsed data:", JSON.stringify(data, null, 2));
+    const data = (await res.json()) as { items?: CalendarEvent[] };
+    console.log("Parsed data:", JSON.stringify(data, null, 2));
 
-    // return data.items ?? [];
-    return [];
+    return data.items ?? [];
 }
