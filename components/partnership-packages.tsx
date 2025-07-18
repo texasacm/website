@@ -1,4 +1,13 @@
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from '@/components/ui/table';
 import { Check } from 'lucide-react';
 
 export default function PartnershipPackages() {
@@ -32,7 +41,7 @@ export default function PartnershipPackages() {
     return (
         <section className="bg-white py-16">
             <div className="container px-4 sm:px-6 lg:px-8">
-                {/* Intro */}
+                {/* Intro Section */}
                 <div className="mx-auto mb-12 max-w-3xl">
                     <h2 className="mb-6 text-3xl font-bold">Why Partner With Us?</h2>
                     <p className="mb-6 text-lg text-gray-700">
@@ -46,81 +55,88 @@ export default function PartnershipPackages() {
                     </p>
                     <ul className="space-y-3">
                         <li className="flex items-start gap-2">
-                            <Check className="mt-0.5 h-5 w-5 text-green-500" />
+                            <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                             <span>
                                 Access to top CS talent from one of the nation&apos;s leading
                                 programs
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <Check className="mt-0.5 h-5 w-5 text-green-500" />
+                            <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                             <span>
                                 Direct recruiting opportunities through events and resume book
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <Check className="mt-0.5 h-5 w-5 text-green-500" />
+                            <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                             <span>Brand visibility to a large, engaged student audience</span>
                         </li>
                     </ul>
                 </div>
 
+                {/* Partnership Packages Card */}
                 <div className="mx-auto max-w-4xl">
-                    <h3 className="mb-6 text-center text-2xl font-bold">Partnership Packages</h3>
-
-                    <div className="overflow-x-auto">
-                        <table className="border border-gray-200 text-left">
-                            <thead className="bg-gray-200">
-                                <tr>
-                                    <th className="h-12 w-1/3 px-2 py-1 align-middle font-semibold text-gray-700" />
-                                    <th className="h-12 px-1 py-1 text-center align-middle">
-                                        <div className="text-xl font-bold text-yellow-600">
-                                            GOLD
-                                        </div>
-                                        <div className="text-sm text-gray-700">$7,000</div>
-                                    </th>
-                                    <th className="h-12 px-1 py-1 text-center align-middle">
-                                        <div className="text-xl font-bold text-gray-500">
-                                            SILVER
-                                        </div>
-                                        <div className="text-sm text-gray-700">$2,500</div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {tableRows.map((row, idx) => (
-                                    <tr key={idx} className="border-b last:border-b-0">
-                                        <td className="h-12 px-2 py-1 align-middle font-medium text-gray-700">
-                                            {row.label}
-                                        </td>
-                                        <td className="h-12 px-1 py-1 text-center align-middle">
-                                            {typeof row.gold === 'boolean' ? (
-                                                row.gold ? (
-                                                    <Check className="inline-block h-5 w-5 text-green-500" />
+                    <Card className="shadow-md drop-shadow">
+                        <CardHeader className="text-center">
+                            <CardTitle className="text-2xl font-bold">
+                                Partnership Packages
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead className="w-1/3"></TableHead>
+                                        <TableHead className="text-center">
+                                            <div className="text-xl font-bold text-yellow-600">
+                                                GOLD
+                                            </div>
+                                            <div className="text-sm text-gray-700">$7,000</div>
+                                        </TableHead>
+                                        <TableHead className="text-center">
+                                            <div className="text-xl font-bold text-gray-500">
+                                                SILVER
+                                            </div>
+                                            <div className="text-sm text-gray-700">$2,500</div>
+                                        </TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {tableRows.map((row) => (
+                                        <TableRow key={row.label}>
+                                            <TableCell className="font-medium text-gray-700">
+                                                {row.label}
+                                            </TableCell>
+                                            <TableCell className="text-center">
+                                                {typeof row.gold === 'boolean' ? (
+                                                    row.gold ? (
+                                                        <Check className="mx-auto h-5 w-5 text-green-500" />
+                                                    ) : (
+                                                        <span className="text-gray-400">—</span>
+                                                    )
                                                 ) : (
-                                                    <span className="text-gray-400">—</span>
-                                                )
-                                            ) : (
-                                                <span>{row.gold}</span>
-                                            )}
-                                        </td>
-                                        <td className="h-12 px-1 py-1 text-center align-middle">
-                                            {typeof row.silver === 'boolean' ? (
-                                                row.silver ? (
-                                                    <Check className="inline-block h-5 w-5 text-green-500" />
+                                                    <span className="font-semibold">{row.gold}</span>
+                                                )}
+                                            </TableCell>
+                                            <TableCell className="text-center">
+                                                {typeof row.silver === 'boolean' ? (
+                                                    row.silver ? (
+                                                        <Check className="mx-auto h-5 w-5 text-green-500" />
+                                                    ) : (
+                                                        <span className="text-gray-400">—</span>
+                                                    )
                                                 ) : (
-                                                    <span className="text-gray-400">—</span>
-                                                )
-                                            ) : (
-                                                <span>{row.silver}</span>
-                                            )}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                                    <span className="font-semibold">{row.silver}</span>
+                                                )}
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </CardContent>
+                    </Card>
 
+                    {/* Contact Section */}
                     <div className="mt-12 text-center">
                         <h3 className="mb-4 text-2xl font-bold">
                             Interested in Partnering with Us?
