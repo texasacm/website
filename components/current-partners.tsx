@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { FC, JSX } from 'react';
 
 type Tier = 'Gold' | 'Silver' | 'Bronze';
@@ -79,11 +80,11 @@ export const CurrentPartners: FC = (): JSX.Element => {
                                             key={partner.name}
                                             className="flex flex-col items-center"
                                         >
-                                            <a
+                                            <Link
                                                 href={partner.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex h-60 w-60 cursor-pointer items-center justify-center rounded-lg bg-white p-6 shadow-sm transition-colors duration-200 hover:bg-gray-100 hover:shadow-lg"
+                                                className="flex h-60 w-60 cursor-pointer items-center justify-center rounded-lg bg-white p-6 shadow-md drop-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                                             >
                                                 <Image
                                                     src={partner.logo}
@@ -92,7 +93,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
                                                     height={150}
                                                     className="object-contain"
                                                 />
-                                            </a>
+                                            </Link>
                                             <div className="mt-4 text-center">
                                                 <p className="text-lg font-medium">
                                                     {partner.name}

@@ -349,7 +349,7 @@ export default function OfficerTeam() {
                         {officers.map((officer) => (
                             <Dialog key={officer.name}>
                                 <DialogTrigger asChild>
-                                    <Card className="group flex cursor-pointer flex-col overflow-hidden text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                    <Card className="group flex cursor-pointer flex-col overflow-hidden text-center shadow-md drop-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                                         <div className="relative aspect-square w-full">
                                             <Image
                                                 src={officer.image}
