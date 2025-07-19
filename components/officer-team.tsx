@@ -120,27 +120,8 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Stephanie Nguyen',
-        position: 'Senior Marketing Officer',
-        image: '/placeholder.svg?height=300&width=300',
-        bio: 'Junior double-majoring in Computer Science and Mathematics.',
-        socials: [
-            {
-                url: 'https://twitter.com/jordanlee',
-                icon: <FaTwitter size={20} />,
-                name: 'Twitter',
-            },
-            {
-                url: 'https://linkedin.com/in/jordanlee',
-                icon: <FaLinkedin size={20} />,
-                name: 'LinkedIn',
-            },
-            { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
-        ],
-    },
-    {
         name: 'Casey Charleston',
-        position: 'Senior Corporate Officer',
+        position: 'Senior Academics Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
@@ -177,27 +158,8 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Void Zhou',
-        position: 'Junior Marketing Officer',
-        image: '/placeholder.svg?height=300&width=300',
-        bio: 'Junior double-majoring in Computer Science and Mathematics.',
-        socials: [
-            {
-                url: 'https://twitter.com/jordanlee',
-                icon: <FaTwitter size={20} />,
-                name: 'Twitter',
-            },
-            {
-                url: 'https://linkedin.com/in/jordanlee',
-                icon: <FaLinkedin size={20} />,
-                name: 'LinkedIn',
-            },
-            { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
-        ],
-    },
-    {
         name: 'Victoria Reddy',
-        position: 'Junior Corporate Officer',
+        position: 'Senior Corporate Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
@@ -216,7 +178,7 @@ const officers: Officer[] = [
     },
     {
         name: 'Niken Patel',
-        position: 'Junior Finance Officer',
+        position: 'Senior Finance Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
@@ -234,8 +196,8 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Elliot Ylagan',
-        position: 'Intramural Sports Lead',
+        name: 'Stephanie Nguyen',
+        position: 'Senior Marketing Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
@@ -253,8 +215,8 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Elie Soloveichik',
-        position: 'Technical Lead',
+        name: 'Void Zhou',
+        position: 'Senior Marketing Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
@@ -272,7 +234,64 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Mahesh Bachu',
+        name: 'Naina Middela',
+        position: 'Corporate Officer',
+        image: '/placeholder.svg?height=300&width=300',
+        bio: 'Junior double-majoring in Computer Science and Mathematics.',
+        socials: [
+            {
+                url: 'https://twitter.com/jordanlee',
+                icon: <FaTwitter size={20} />,
+                name: 'Twitter',
+            },
+            {
+                url: 'https://linkedin.com/in/jordanlee',
+                icon: <FaLinkedin size={20} />,
+                name: 'LinkedIn',
+            },
+            { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
+        ],
+    },
+    {
+        name: 'Suhas Voolla',
+        position: 'Corporate Officer',
+        image: '/placeholder.svg?height=300&width=300',
+        bio: 'Junior double-majoring in Computer Science and Mathematics.',
+        socials: [
+            {
+                url: 'https://twitter.com/jordanlee',
+                icon: <FaTwitter size={20} />,
+                name: 'Twitter',
+            },
+            {
+                url: 'https://linkedin.com/in/jordanlee',
+                icon: <FaLinkedin size={20} />,
+                name: 'LinkedIn',
+            },
+            { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
+        ],
+    },
+    {
+        name: 'Frank Hou',
+        position: 'Intramural Sports Chair',
+        image: '/placeholder.svg?height=300&width=300',
+        bio: 'Junior double-majoring in Computer Science and Mathematics.',
+        socials: [
+            {
+                url: 'https://twitter.com/jordanlee',
+                icon: <FaTwitter size={20} />,
+                name: 'Twitter',
+            },
+            {
+                url: 'https://linkedin.com/in/jordanlee',
+                icon: <FaLinkedin size={20} />,
+                name: 'LinkedIn',
+            },
+            { url: 'https://github.com/jordanlee', icon: <FaGithub size={20} />, name: 'GitHub' },
+        ],
+    },
+    {
+        name: 'Rishabh Mittal',
         position: 'Internal Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
@@ -291,7 +310,7 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Andrew Huang',
+        name: 'Jayden Park',
         position: 'Internal Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
@@ -310,7 +329,7 @@ const officers: Officer[] = [
         ],
     },
     {
-        name: 'Joseph Wilson',
+        name: 'Thomas Tran',
         position: 'Internal Officer',
         image: '/placeholder.svg?height=300&width=300',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
