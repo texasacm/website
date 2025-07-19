@@ -13,19 +13,18 @@ export default function GoogleCalendar() {
                             to stay updated!
                         </p>
                     </div>
-
                     <div className="mb-8 overflow-hidden rounded-lg bg-white shadow-md">
-                        <div className="aspect-video w-full">
+                        <div className="aspect-[3/4] w-full sm:aspect-video">
                             <iframe
                                 src="https://calendar.google.com/calendar/embed?src=utacm.org_tblt9l9gskpcunjovsjfh8ei0g%40group.calendar.google.com&ctz=America%2FChicago"
                                 style={{ border: 0 }}
                                 width="100%"
                                 height="100%"
                                 title="Texas ACM Google Calendar"
+                                loading="lazy"
                             ></iframe>
                         </div>
                     </div>
-
                     <div className="flex flex-col justify-center gap-4 sm:flex-row">
                         <Button asChild className="flex items-center gap-2">
                             <a
