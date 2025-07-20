@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLink, FileUser } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ResumeBook() {
@@ -52,7 +52,7 @@ export default function ResumeBook() {
                                 href="https://careerservices.cns.utexas.edu/resources/resumes/templates"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline"
+                                className="text-primary hover:text-primary/80 hover:underline"
                             >
                                 <span className="flex items-center gap-2">
                                     CNS Resume Templates
@@ -63,7 +63,7 @@ export default function ResumeBook() {
                                 href="https://careerservices.cns.utexas.edu/resources/resumes"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline"
+                                className="text-primary hover:text-primary/80 hover:underline"
                             >
                                 <span className="flex items-center gap-2">
                                     CNS Resume Tips
@@ -74,7 +74,7 @@ export default function ResumeBook() {
                                 href="https://utexas.12twenty.com/appointments"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline"
+                                className="text-primary hover:text-primary/80 hover:underline"
                             >
                                 <span className="flex items-center gap-2">
                                     CNS Resume Review
@@ -85,7 +85,7 @@ export default function ResumeBook() {
                                 href="https://discord.gg/TYcVpYVefV"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:underline"
+                                className="text-primary hover:text-primary/80 hover:underline"
                             >
                                 <span className="flex items-center gap-2">
                                     Ask for Resume Tips on Discord

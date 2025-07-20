@@ -1,7 +1,15 @@
-import * as React from 'react';
-import { BookOpen, Briefcase, Code, Compass, GraduationCap, Users } from 'lucide-react';
+import {
+    BookOpen,
+    Briefcase,
+    Code,
+    Compass,
+    ExternalLink,
+    GraduationCap,
+    Users,
+} from 'lucide-react';
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
 
 const guideSections = [
     {
@@ -9,8 +17,8 @@ const guideSections = [
         theme: 'Getting Started at UTCS',
         description: 'Everything you need to know to get through your first year in UTCS.',
         links: [
-            { name: 'First-Year FAQ', href: '#' },
-            { name: 'Introductory Course Flowchart', href: '#' },
+            { name: 'Creating a CS Account', href: '#' },
+            { name: 'How to SSH into Computer Labs', href: '#' },
             { name: 'Essential Developer Tools', href: '#' },
         ],
     },
@@ -92,15 +100,15 @@ export default function CSGuide() {
                                     <ul className="w-full space-y-3">
                                         {section.links.map((link) => (
                                             <li key={link.name}>
-                                                <a
+                                                <Link
                                                     href={link.href}
-                                                    className="group inline-flex items-center font-medium text-blue-600 transition-colors hover:text-blue-800"
+                                                    className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
                                                 >
                                                     {link.name}
-                                                    <span className="ml-2 transition-transform group-hover:translate-x-1">
-                                                        &rarr;
+                                                    <span className="ml-2">
+                                                        <ExternalLink size={16} />
                                                     </span>
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
