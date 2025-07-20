@@ -29,7 +29,6 @@ export default function Header() {
                             />
                         </Link>
                     </div>
-
                     {/* Desktop Navigation */}
                     <div className="hidden h-16 items-center md:flex">
                         <div className="flex h-full items-center px-4">
@@ -42,18 +41,18 @@ export default function Header() {
                         </div>
                         <div className="flex h-full items-center px-4">
                             <Link
-                                href="/events"
-                                className="font-medium text-gray-700 hover:text-primary"
-                            >
-                                Events
-                            </Link>
-                        </div>
-                        <div className="flex h-full items-center px-4">
-                            <Link
                                 href="/calendar"
                                 className="font-medium text-gray-700 hover:text-primary"
                             >
                                 Calendar
+                            </Link>
+                        </div>
+                        <div className="flex h-full items-center px-4">
+                            <Link
+                                href="/events"
+                                className="font-medium text-gray-700 hover:text-primary"
+                            >
+                                Events
                             </Link>
                         </div>
                         <div className="flex h-full items-center px-4">
