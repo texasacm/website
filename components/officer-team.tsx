@@ -31,7 +31,7 @@ const officers: Officer[] = [
     {
         name: 'Nidhi Pabbathi',
         position: 'President',
-        image: headshot_dir + '/pres_nidhi.jpg',
+        image: '/nidhi.jpg',
         bio: 'bingus.',
         socials: [
             { url: 'https://twitter.com/janedoe', icon: <FaTwitter size={20} />, name: 'Twitter' },
@@ -46,7 +46,7 @@ const officers: Officer[] = [
     {
         name: 'Gabriel Keller',
         position: 'Vice President',
-        image: headshot_dir + '/vp_gabe.jpeg',
+        image: '/gabe.jpeg',
         bio: 'Placeholder.',
         socials: [
             {
@@ -65,7 +65,7 @@ const officers: Officer[] = [
     {
         name: 'Diego Contreras',
         position: 'Treasurer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/diego.jpeg',
         bio: 'Placeholder.',
         socials: [
             {
@@ -84,7 +84,7 @@ const officers: Officer[] = [
     {
         name: 'Mansi Madhani',
         position: 'Executive Board Member',
-        image: headshot_dir + '/exec_mansi.jpeg',
+        image: '/mansi.jpeg',
         bio: 'Computer Science junior specializing in full-stack development.',
         socials: [
             {
@@ -103,7 +103,7 @@ const officers: Officer[] = [
     {
         name: 'Praneel Seth',
         position: 'Executive Board Member',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/praneel.PNG',
         bio: 'Senior in Computer Science with a minor in Business.',
         socials: [
             {
@@ -122,7 +122,7 @@ const officers: Officer[] = [
     {
         name: 'Casey Charleston',
         position: 'Senior Academics Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/casey.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -141,7 +141,7 @@ const officers: Officer[] = [
     {
         name: 'Brayden Strong',
         position: 'Senior Academics Officer',
-        image: headshot_dir + '/academic_so_brayden.jpeg',
+        image: '/brayden.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -160,7 +160,7 @@ const officers: Officer[] = [
     {
         name: 'Victoria Reddy',
         position: 'Senior Corporate Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/victoria.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -179,7 +179,7 @@ const officers: Officer[] = [
     {
         name: 'Niken Patel',
         position: 'Senior Finance Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/niken.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -198,7 +198,7 @@ const officers: Officer[] = [
     {
         name: 'Stephanie Nguyen',
         position: 'Senior Marketing Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/stephanie.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -217,7 +217,7 @@ const officers: Officer[] = [
     {
         name: 'Void Zhou',
         position: 'Senior Marketing Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/void.png',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -236,7 +236,7 @@ const officers: Officer[] = [
     {
         name: 'Naina Middela',
         position: 'Corporate Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/naina.jpg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -255,7 +255,7 @@ const officers: Officer[] = [
     {
         name: 'Suhas Voolla',
         position: 'Corporate Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/suhas.jpg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -274,7 +274,7 @@ const officers: Officer[] = [
     {
         name: 'Frank Hou',
         position: 'Intramural Sports Chair',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/frank.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -293,7 +293,7 @@ const officers: Officer[] = [
     {
         name: 'Rishabh Mittal',
         position: 'Internal Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/rishabh.png',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -312,7 +312,7 @@ const officers: Officer[] = [
     {
         name: 'Jayden Park',
         position: 'Internal Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/jayden.jpg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -331,7 +331,7 @@ const officers: Officer[] = [
     {
         name: 'Thomas Tran',
         position: 'Internal Officer',
-        image: '/placeholder.svg?height=300&width=300',
+        image: '/thomas.jpeg',
         bio: 'Junior double-majoring in Computer Science and Mathematics.',
         socials: [
             {
@@ -371,7 +371,7 @@ export default function OfficerTeam() {
                                     <Card className="group flex cursor-pointer flex-col overflow-hidden text-center shadow-md drop-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                                         <div className="relative aspect-square w-full">
                                             <Image
-                                                src={officer.image}
+                                                src={headshot_dir + officer.image}
                                                 alt={`Headshot of ${officer.name}`}
                                                 fill
                                                 className="object-cover"
@@ -389,7 +389,7 @@ export default function OfficerTeam() {
                                     <div className="flex flex-col sm:flex-row">
                                         <div className="relative h-80 w-full sm:h-auto sm:w-5/12">
                                             <Image
-                                                src={officer.image}
+                                                src={headshot_dir + officer.image}
                                                 alt={officer.name}
                                                 fill
                                                 className="rounded-t-lg object-cover sm:rounded-l-lg sm:rounded-tr-none"
