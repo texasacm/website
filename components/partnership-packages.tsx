@@ -13,48 +13,129 @@ import {
 import { Check, Copy } from 'lucide-react';
 import { useState } from 'react';
 
-export default function PartnershipPackages() {
+export default function RecruitingPackages() {
     const [isCopied, setIsCopied] = useState(false);
 
     const tableRows = [
-        { label: 'Number of Recruiting Events', gold: '4', silver: '2' },
-        { label: 'Priority for September events', gold: true, silver: false },
         {
-            label: 'Demographics and emails of event attendees',
+            label: 'Goals: Host more engaging events with the community',
+            silver: true,
             gold: true,
+            platinum: true,
+        },
+        {
+            label: "Goals: Increase your company's exposure to competitive CS hires",
+            silver: true,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Goals: Make lasting, deep connections with competitive CS hires',
             silver: false,
-        },
-        { label: 'Access to ACM-wide resume book', gold: true, silver: false },
-        {
-            label: 'Corporate banquet & banquet resume book',
             gold: true,
-            silver: true,
+            platinum: true,
         },
         {
-            label: 'Access to on-campus marketing channels',
-            gold: true,
-            silver: true,
+            label: 'Goals: Target number of hires based on historical results from our partners',
+            silver: '2-6',
+            gold: '6-12',
+            platinum: '12-20',
         },
         {
-            label: 'Access to 1,000+ Members on our socials',
-            gold: true,
-            silver: true,
+            label: 'Events: Host in-person events with Texas ACM',
+            description: 'Examples include workshop, panel, talk, etc.',
+            silver: '2 per year',
+            gold: '2 per year',
+            platinum: '4 per year',
         },
-        { label: 'Distribute Merch to ACM Members', gold: true, silver: true },
+        {
+            label: 'Events: Host a company-branded Hack Night',
+            description: 'Two to four hour min-hackathon event',
+            silver: 'N/A',
+            gold: '1 per year',
+            platinum: '2 per year',
+        },
+        {
+            label: 'Events: Attend Fall Corporate Networking Banquet',
+            description: 'Attracts 90 - 100 students',
+            silver: '2 tickets',
+            gold: '4 tickets',
+            platinum: '6 tickets and Platinum Partner perks',
+        },
+        {
+            label: 'Perks: Be listed and promoted as a partner of Texas ACM during general meetings and Instagram',
+            silver: true,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Perks: Access to our marketing channels',
+            description:
+                'Access to over 1000+ members on our online platforms (Discord, Instagram stories, email newsletter)',
+            silver: '1 message blast',
+            gold: '3 message blasts',
+            platinum: '5 message blasts',
+        },
+        {
+            label: 'Perks: Access Corporate Banquet resume book',
+            description: 'Hire corporate banquet attendees on time for the recruiting season',
+            silver: true,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Perks: Access to ACM-wide resume book',
+            description:
+                'Diverse range of resumes from freshman to seniors looking for internships, exploratory programs, and new grad positions',
+            silver: false,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Perks: Your merch & flyers in the org office',
+            description: 'Distribute shirts, stickers, etc. to ACM members and increase exposure',
+            silver: false,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: "Perks: Join Texas ACM's Discord",
+            description: 'Reach students faster through their preferred platform',
+            silver: false,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Perks: Demographics and email collection at every event',
+            description:
+                'Access opt-in email collection at event-sign in to directly reach out to them, and receive demographic reports after the event',
+            silver: false,
+            gold: true,
+            platinum: true,
+        },
+        {
+            label: 'Perks: Priority for September events',
+            description: 'Gold tier sponsors get higher priority for September events',
+            silver: false,
+            gold: 'high priority',
+            platinum: 'highest priority',
+        },
     ];
 
-    // This function copies the email to the clipboard and handles the visual feedback.
     const handleCopy = () => {
-        // Use the Clipboard API to copy the text
         navigator.clipboard.writeText('corporate@texasacm.org');
-
-        // Set the copied state to true to show the "Copied!" popup
         setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 2000);
+    };
 
-        // Reset the state after 2 seconds
-        setTimeout(() => {
-            setIsCopied(false);
-        }, 2000);
+    const renderCellContent = (value: string | boolean) => {
+        if (value === true) {
+            return <Check className="mx-auto h-6 w-6 text-green-500" />;
+        }
+        if (value === false) {
+            return <span className="text-gray-400">—</span>;
+        }
+        return <span className="font-semibold">{value}</span>;
     };
 
     return (
@@ -92,63 +173,59 @@ export default function PartnershipPackages() {
                         </li>
                     </ul>
                 </div>
-                <div className="mx-auto max-w-4xl">
-                    <Card className="shadow-md drop-shadow">
+                <div className="mx-auto max-w-7xl">
+                    <Card className="shadow-lg drop-shadow-lg">
                         <CardHeader className="text-center">
-                            <CardTitle className="text-2xl font-bold">
-                                Partnership Packages
+                            <CardTitle className="text-3xl font-bold">
+                                Recruiting Packages
                             </CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="overflow-x-auto">
                             <Table>
                                 <TableHeader>
                                     <TableRow>
-                                        <TableHead className="w-1/3"></TableHead>
-                                        <TableHead className="text-center">
-                                            <div className="text-xl font-bold text-yellow-600">
-                                                GOLD
-                                            </div>
-                                            <div className="text-sm text-gray-700">$7,000</div>
-                                        </TableHead>
-                                        <TableHead className="text-center">
+                                        <TableHead className="w-2/5"></TableHead>
+                                        <TableHead className="w-1/5 text-center">
                                             <div className="text-xl font-bold text-gray-500">
                                                 SILVER
                                             </div>
-                                            <div className="text-sm text-gray-700">$2,500</div>
+                                            <div className="text-lg text-gray-800">$2000/yr</div>
+                                        </TableHead>
+                                        <TableHead className="w-1/5 text-center">
+                                            <div className="text-xl font-bold text-yellow-600">
+                                                GOLD
+                                            </div>
+                                            <div className="text-lg text-gray-800">$4000/yr</div>
+                                        </TableHead>
+                                        <TableHead className="w-1/5 text-center">
+                                            <div className="text-xl font-bold text-blue-600">
+                                                PLATINUM
+                                            </div>
+                                            <div className="text-lg text-gray-800">$8000/yr</div>
                                         </TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
                                     {tableRows.map((row) => (
-                                        <TableRow key={row.label}>
-                                            <TableCell className="font-medium text-gray-700">
-                                                {row.label}
-                                            </TableCell>
-                                            <TableCell className="text-center">
-                                                {typeof row.gold === 'boolean' ? (
-                                                    row.gold ? (
-                                                        <Check className="mx-auto h-5 w-5 text-green-500" />
-                                                    ) : (
-                                                        <span className="text-gray-400">—</span>
-                                                    )
-                                                ) : (
-                                                    <span className="font-semibold">
-                                                        {row.gold}
-                                                    </span>
+                                        <TableRow key={row.label} className="border-b">
+                                            <TableCell className="py-4">
+                                                <p className="font-semibold text-gray-800">
+                                                    {row.label}
+                                                </p>
+                                                {row.description && (
+                                                    <p className="mt-1 text-sm text-gray-500">
+                                                        {row.description}
+                                                    </p>
                                                 )}
                                             </TableCell>
                                             <TableCell className="text-center">
-                                                {typeof row.silver === 'boolean' ? (
-                                                    row.silver ? (
-                                                        <Check className="mx-auto h-5 w-5 text-green-500" />
-                                                    ) : (
-                                                        <span className="text-gray-400">—</span>
-                                                    )
-                                                ) : (
-                                                    <span className="font-semibold">
-                                                        {row.silver}
-                                                    </span>
-                                                )}
+                                                {renderCellContent(row.silver)}
+                                            </TableCell>
+                                            <TableCell className="text-center">
+                                                {renderCellContent(row.gold)}
+                                            </TableCell>
+                                            <TableCell className="text-center">
+                                                {renderCellContent(row.platinum)}
                                             </TableCell>
                                         </TableRow>
                                     ))}
