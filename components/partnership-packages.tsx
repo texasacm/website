@@ -186,19 +186,19 @@ export default function RecruitingPackages() {
                                     <TableRow>
                                         <TableHead className="w-2/5"></TableHead>
                                         <TableHead className="w-1/5 text-center">
-                                            <div className="text-xl font-bold text-gray-500">
+                                            <div className="text-xl font-bold text-gray-400">
                                                 SILVER
                                             </div>
                                             <div className="text-lg text-gray-800">$2000/yr</div>
                                         </TableHead>
                                         <TableHead className="w-1/5 text-center">
-                                            <div className="text-xl font-bold text-yellow-600">
+                                            <div className="animate-shimmer bg-gradient-to-r from-yellow-500 via-yellow-200 to-yellow-500 bg-[length:200%_auto] bg-clip-text text-xl font-bold text-transparent">
                                                 GOLD
                                             </div>
                                             <div className="text-lg text-gray-800">$4000/yr</div>
                                         </TableHead>
                                         <TableHead className="w-1/5 text-center">
-                                            <div className="text-xl font-bold text-blue-600">
+                                            <div className="animate-shimmer-fast bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 bg-[length:200%_auto] bg-clip-text text-xl font-bold text-transparent">
                                                 PLATINUM
                                             </div>
                                             <div className="text-lg text-gray-800">$8000/yr</div>

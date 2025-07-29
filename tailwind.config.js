@@ -59,17 +59,25 @@ module.exports = {
             },
             keyframes: {
                 'accordion-down': {
-                    from: { height: 0 },
+                    from: { height: '0' },
                     to: { height: 'var(--radix-accordion-content-height)' },
                 },
                 'accordion-up': {
                     from: { height: 'var(--radix-accordion-content-height)' },
-                    to: { height: 0 },
+                    to: { height: '0' },
+                },
+                shimmer: {
+                    '50%': { backgroundPosition: '-200% center' },
+                },
+                'shimmer-fast': {
+                    '50%': { backgroundPosition: '-100% center' },
                 },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
+                'shimmer': 'shimmer 8s ease-in-out infinite',
+                'shimmer-fast': 'shimmer 4s ease-in-out infinite',
             },
         },
     },
