@@ -63,7 +63,7 @@ export default function JoinSection() {
                             <p className="text-sm text-gray-500">
                                 Questions about membership?{' '}
                                 <Link
-                                    href="mailto:president@texasacm.org"
+                                    href="mailto:pres@texasacm.org"
                                     className="text-primary hover:underline"
                                 >
                                     Contact us

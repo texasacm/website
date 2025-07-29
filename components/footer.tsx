@@ -139,7 +139,7 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li className="text-gray-400 hover:text-white">
                                 <Link
-                                    href="mailto:president@texasacm.org"
+                                    href="mailto:pres@texasacm.org"
                                     className="flex items-center gap-2"
                                 >
                                     <Mail size={16} className="min-h-4 min-w-4" />
