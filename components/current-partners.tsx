@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { FC, JSX } from 'react';
 
-type Tier = 'Gold' | 'Silver' | 'Bronze';
+type Tier = 'Platinum' | 'Gold' | 'Silver';
 
 interface Partner {
     name: string;
@@ -13,40 +13,32 @@ interface Partner {
 
 const currentPartners: Partner[] = [
     {
+        name: 'Atlassian',
+        logo: '/partners/atlassian.png',
+        tier: 'Platinum',
+        url: 'https://www.atlassian.com',
+    },
+    {
+        name: 'Dell',
+        logo: '/partners/dell.png',
+        tier: 'Silver',
+        url: 'https://www.dell.com',
+    },
+    {
         name: 'Paycom',
         logo: '/partners/paycom.png',
-        tier: 'Silver',
+        tier: 'Gold',
         url: 'https://www.paycom.com',
-    },
-    {
-        name: 'Intuit',
-        logo: '/partners/intuit.svg',
-        tier: 'Bronze',
-        url: 'https://www.intuit.com',
-    },
-    {
-        name: 'PwC',
-        logo: '/partners/pwc.png',
-        tier: 'Bronze',
-        url: 'https://www.pwc.com',
-    },
-    {
-        name: 'YPropel',
-        logo: '/partners/ypropel.png',
-        tier: 'Bronze',
-        url: 'https://www.ypropel.com/',
     },
 ];
 
 export const CurrentPartners: FC = (): JSX.Element => {
-    // map each tier to a text color
     const tierColors: Record<Tier, string> = {
+        Platinum: 'text-blue-600',
         Gold: 'text-yellow-600',
         Silver: 'text-gray-400',
-        Bronze: 'text-amber-600',
     };
 
-    // group partners by tier
     const partnersByTier = currentPartners.reduce<Partial<Record<Tier, Partner[]>>>(
         (acc, partner) => {
             if (!acc[partner.tier]) acc[partner.tier] = [];
@@ -56,8 +48,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
         {},
     );
 
-    // define the order you want tiers to appear
-    const tierOrder: Tier[] = ['Silver', 'Bronze'];
+    const tierOrder: Tier[] = ['Platinum', 'Gold', 'Silver'];
 
     return (
         <section className="bg-gray-50 py-16">
@@ -98,7 +89,6 @@ export const CurrentPartners: FC = (): JSX.Element => {
                                                 <p className="text-lg font-medium">
                                                     {partner.name}
                                                 </p>
-                                                <p className="text-xs text-gray-500"></p>
                                             </div>
                                         </div>
                                     ))}
