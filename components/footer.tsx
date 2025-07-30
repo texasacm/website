@@ -143,7 +143,7 @@ export default function Footer() {
                                     className="flex items-center gap-2"
                                 >
                                     <Mail size={16} className="min-h-4 min-w-4" />
-                                    president@texasacm.org
+                                    pres@texasacm.org
                                 </Link>
                             </li>
                             <li>
