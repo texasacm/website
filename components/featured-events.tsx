@@ -18,6 +18,7 @@ export interface CalendarEvent {
     location?: string;
     start: CalendarDateTime;
     end?: CalendarDateTime;
+    htmlLink?: string;
 }
 
 export interface FeaturedEventsProps {
@@ -44,9 +45,9 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
 
     return (
         <section className="bg-white py-20">
-            <div className="mx-auto mt-16 max-w-5xl">
-                <h2 className="mb-8 text-center text-2xl font-bold">Featured Events</h2>
-                <div className="grid gap-6 md:grid-cols-2">
+            <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
+                <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     {events.map((event) => {
                         const startRaw = event.start.dateTime ?? event.start.date!;
                         const endRaw = event.end?.dateTime ?? event.end?.date;
@@ -54,33 +55,42 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                         const endDate = endRaw ? new Date(endRaw) : null;
 
                         return (
-                            <Card key={event.id}>
-                                <CardHeader>
-                                    <CardTitle>{event.summary}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    {event.description && (
-                                        <p className="mb-4 text-gray-700">{event.description}</p>
-                                    )}
-                                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                                        <CalendarIcon className="h-4 w-4" />
-                                        <span>
-                                            {format(startDate, 'MMMM d, yyyy')}
-                                            {event.start.dateTime && endDate
-                                                ? ` • ${format(startDate, 'h:mm a')} – ${format(
-                                                      endDate,
-                                                      'h:mm a',
-                                                  )}`
-                                                : ''}
-                                        </span>
-                                    </div>
-                                    {event.location && (
-                                        <div className="mt-1 text-sm text-gray-500">
-                                            {event.location}
+                            <Link
+                                key={event.id}
+                                href={event.htmlLink || '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Card className="shadow-md transition-shadow duration-200 hover:shadow-lg">
+                                    <CardHeader>
+                                        <CardTitle>{event.summary}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        {event.description && (
+                                            <p className="mb-4 text-gray-700">
+                                                {event.description}
+                                            </p>
+                                        )}
+                                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                                            <CalendarIcon className="h-4 w-4" />
+                                            <span>
+                                                {format(startDate, 'MMMM d, yyyy')}
+                                                {event.start.dateTime && endDate
+                                                    ? ` • ${format(startDate, 'h:mm a')} - ${format(
+                                                          endDate,
+                                                          'h:mm a',
+                                                      )}`
+                                                    : ''}
+                                            </span>
                                         </div>
-                                    )}
-                                </CardContent>
-                            </Card>
+                                        {event.location && (
+                                            <div className="mt-1 text-sm text-gray-500">
+                                                {event.location}
+                                            </div>
+                                        )}
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         );
                     })}
                 </div>
