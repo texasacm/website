@@ -1,13 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { BookOpen, Building2, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function WhatWeDo() {
     return (
         <section className="bg-white py-16">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl">
-                    <h2 className="mb-6 text-3xl font-bold">Our Mission 🚀</h2>
+                    <h2 className="mb-6 flex items-center gap-3 text-3xl font-bold">Our Mission</h2>
                     <p className="mb-6 text-lg text-gray-700">
                         Texas ACM is dedicated to promoting computing knowledge and career readiness
                         among UT Austin students. We strive to create a supportive community where
@@ -20,11 +20,9 @@ export default function WhatWeDo() {
                         academic and professional development of our members.
                     </p>
                 </div>
-
-                {/* Three Pillars */}
                 <div className="mx-auto max-w-5xl">
                     <p className="mb-8 text-center text-2xl font-bold">
-                        At ACM, we support our members by our three pillars:
+                        At ACM, we support our members by our three pillars
                     </p>
 
                     <div className="grid gap-8 md:grid-cols-3">
@@ -32,14 +30,17 @@ export default function WhatWeDo() {
                         <div className="relative pb-16">
                             <Card className="h-full shadow-md">
                                 <CardHeader>
-                                    <CardTitle>Industry 🏢</CardTitle>
+                                    <CardTitle className="flex items-center gap-3">
+                                        Industry
+                                        <Building2 className="h-6 w-6 text-blue-600" />
+                                    </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="list-disc space-y-2 pl-5">
-                                        <li>Events with our partners 🤝</li>
-                                        <li>Resume workshops 📄</li>
-                                        <li>ACM resume book 📕</li>
-                                        <li className="font-bold">ACM Corporate Banquet 💼</li>
+                                        <li>Events with our partners</li>
+                                        <li>Professional workshops</li>
+                                        <li>ACM resume book</li>
+                                        <li className="font-bold">ACM Corporate Banquet</li>
                                     </ul>
                                 </CardContent>
                             </Card>
@@ -52,19 +53,21 @@ export default function WhatWeDo() {
                                 />
                             </div>
                         </div>
-
                         {/* Academics Pillar */}
                         <div className="relative pb-16">
                             <Card className="h-full shadow-md">
                                 <CardHeader>
-                                    <CardTitle>Academics 📚</CardTitle>
+                                    <CardTitle className="flex items-center gap-3">
+                                        Academics
+                                        <BookOpen className="h-6 w-6 text-blue-600" />
+                                    </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="list-disc space-y-2 pl-5">
-                                        <li>Custom hackathons 👥</li>
-                                        <li>Technical workshops 🛠️</li>
-                                        <li>Academic resources 📘</li>
-                                        <li className="font-bold">Pancakes with Professors 🥞</li>
+                                        <li>Custom hackathons</li>
+                                        <li>Technical workshops</li>
+                                        <li>Guest speaker talks</li>
+                                        <li className="font-bold">Pancakes with Professors</li>
                                     </ul>
                                 </CardContent>
                             </Card>
@@ -77,19 +80,21 @@ export default function WhatWeDo() {
                                 />
                             </div>
                         </div>
-
                         {/* Community Pillar */}
                         <div className="relative pb-16">
                             <Card className="h-full shadow-md">
                                 <CardHeader>
-                                    <CardTitle>Community 🤝</CardTitle>
+                                    <CardTitle className="flex items-center gap-3">
+                                        Community
+                                        <Users className="h-6 w-6 text-blue-600" />
+                                    </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="list-disc space-y-2 pl-5">
-                                        <li>Socials and game nights 🎉</li>
-                                        <li>Mentorship programs 🎓</li>
-                                        <li>Open source projects 🏗️</li>
-                                        <li className="font-bold">CS Week 🌟</li>
+                                        <li>Socials and game nights</li>
+                                        <li>Mentorship programs</li>
+                                        <li>Open source projects</li>
+                                        <li className="font-bold">CS Week</li>
                                     </ul>
                                 </CardContent>
                             </Card>
