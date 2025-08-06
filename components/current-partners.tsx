@@ -31,6 +31,12 @@ const currentPartners: Partner[] = [
         tier: 'Gold',
         url: 'https://www.paycom.com',
     },
+    {
+        name: 'FUTO',
+        logo: '/partners/futo.svg',
+        tier: 'Gold',
+        url: 'https://futo.org/',
+    },
 ];
 
 export const CurrentPartners: FC = (): JSX.Element => {
