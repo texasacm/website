@@ -27,6 +27,17 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, [images.length]);
 
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const targetElement = document.getElementById('join');
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
     return (
         <section className="relative flex h-screen items-center justify-center overflow-hidden">
             <Header />
@@ -68,7 +79,9 @@ export default function Hero() {
                     </p>
                     <div className="flex flex-col justify-center gap-4 sm:flex-row">
                         <Button asChild size="lg" className="text-lg">
-                            <Link href="#join">Join Us</Link>
+                            <a href="#join" onClick={handleSmoothScroll}>
+                                Join Us
+                            </a>
                         </Button>
                         <Button
                             asChild
