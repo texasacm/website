@@ -37,7 +37,7 @@ const faqItems = [
 
 export default function FAQ() {
     return (
-        <section className="bg-gray-50 py-16 sm:py-24">
+        <section className="bg-gray-50">
             <div className="container mx-auto max-w-4xl px-4">
                 <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
                     Frequently Asked Questions
@@ -59,7 +59,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         <Collapsible
             open={isOpen}
             onOpenChange={setIsOpen}
-            className="rounded-lg border-b shadow-md last:border-b-0"
+            className="rounded-lg border-b shadow-sm drop-shadow last:border-b-0"
         >
             <CollapsibleTrigger asChild>
                 <button className="flex w-full items-center justify-between p-4 text-left">

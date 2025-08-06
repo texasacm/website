@@ -59,50 +59,48 @@ const guideSections = [
 
 export default function CSGuide() {
     return (
-        <div className="bg-gray-50">
-            <section className="py-16 sm:py-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="mb-8 text-center">
-                        <h2 className="text-3xl font-bold text-gray-900">Quick Access</h2>
-                    </div>
+        <section>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mb-8 text-center">
+                    <h2 className="text-3xl font-bold text-gray-900">Quick Access</h2>
                 </div>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {guideSections.map((section) => (
-                            <Card key={section.theme} className="flex flex-col shadow-md">
-                                <CardHeader>
-                                    <CardTitle className="flex flex-row items-center gap-3">
-                                        {' '}
-                                        {section.icon} {section.theme}
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <p className="text-muted-foreground">{section.description}</p>
-                                </CardContent>
-                                <CardFooter>
-                                    <ul className="w-full space-y-3">
-                                        {section.links.map((link) => (
-                                            <li key={link.name}>
-                                                <Link
-                                                    href={link.href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
-                                                >
-                                                    {link.name}
-                                                    <span className="ml-2">
-                                                        <ExternalLink size={16} />
-                                                    </span>
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
+            </div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {guideSections.map((section) => (
+                        <Card key={section.theme} className="flex flex-col shadow-md">
+                            <CardHeader>
+                                <CardTitle className="flex flex-row items-center gap-3">
+                                    {' '}
+                                    {section.icon} {section.theme}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <p className="text-muted-foreground">{section.description}</p>
+                            </CardContent>
+                            <CardFooter>
+                                <ul className="w-full space-y-3">
+                                    {section.links.map((link) => (
+                                        <li key={link.name}>
+                                            <Link
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
+                                            >
+                                                {link.name}
+                                                <span className="ml-2">
+                                                    <ExternalLink size={16} />
+                                                </span>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </CardFooter>
+                        </Card>
+                    ))}
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }

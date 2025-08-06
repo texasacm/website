@@ -3,7 +3,7 @@ import { CalendarIcon } from 'lucide-react';
 
 export default function GoogleCalendar() {
     return (
-        <section className="bg-white py-16">
+        <section>
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-8">

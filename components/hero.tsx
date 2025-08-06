@@ -41,8 +41,6 @@ export default function Hero() {
     return (
         <section className="relative flex h-screen items-center justify-center overflow-hidden">
             <Header />
-
-            {/* Background Images */}
             <div className="absolute inset-0 z-0">
                 {images.map((image, index) => (
                     <div
@@ -62,8 +60,6 @@ export default function Hero() {
                 ))}
                 <div className="absolute inset-0 bg-black/60" />
             </div>
-
-            {/* Content */}
             <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

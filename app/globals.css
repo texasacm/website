@@ -92,3 +92,13 @@ body {
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    section {
+        @apply bg-white py-16;
+    }
+
+    .hero-banner {
+        @apply relative bg-primary pb-12 pt-20;
+    }
+}

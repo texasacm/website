@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function WhatWeDo() {
     return (
-        <section className="bg-white py-16">
+        <section>
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl">
                     <h2 className="mb-6 flex items-center gap-3 text-3xl font-bold">Our Mission</h2>

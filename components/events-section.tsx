@@ -29,7 +29,7 @@ export default function EventsSection({
     signatureImage,
 }: EventsSectionProps) {
     return (
-        <section className="relative bg-white py-16">
+        <section className="relative">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
                     <h2 className="mb-4 text-4xl font-bold text-gray-900">{mainCard.title}</h2>

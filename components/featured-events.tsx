@@ -28,7 +28,7 @@ export interface FeaturedEventsProps {
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     if (events.length === 0) {
         return (
-            <section className="bg-white py-16">
+            <section>
                 <div className="mx-auto max-w-5xl text-center">
                     <h2 className="mb-4 text-2xl font-bold">Featured Events</h2>
                     <div className="py-4">
@@ -44,7 +44,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     }
 
     return (
-        <section className="bg-white py-20">
+        <section>
             <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

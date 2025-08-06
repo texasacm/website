@@ -129,7 +129,7 @@ export default function RecruitingPackages() {
     };
 
     return (
-        <section className="bg-white py-16">
+        <section>
             <div className="container px-4 sm:px-6 lg:px-8">
                 <Card className="mx-auto max-w-7xl shadow-lg drop-shadow-lg">
                     <CardHeader className="text-center">

@@ -1,4 +1,3 @@
-// components/EmailSignupForm.tsx
 'use client';
 
 import * as React from 'react';
@@ -21,7 +20,6 @@ export default function EmailSignupForm() {
 
     const onSubmit = (data: Inputs) => {
         console.log('got email:', data.email);
-        // call your API / newsletter service…
     };
 
     return (

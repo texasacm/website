@@ -351,7 +351,7 @@ const officers: Officer[] = [
 
 export default function OfficerTeam() {
     return (
-        <section className="bg-white py-16">
+        <section>
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl text-center">
                     <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">

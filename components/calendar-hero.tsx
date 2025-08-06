@@ -3,7 +3,7 @@ import { CalendarIcon } from 'lucide-react';
 
 export default function CalendarHero() {
     return (
-        <section className="relative bg-primary pb-12 pt-20">
+        <section className="hero-banner">
             <Header />
             <div className="container px-4 pt-12 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-3xl text-center">
