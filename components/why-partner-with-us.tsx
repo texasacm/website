@@ -23,7 +23,10 @@ export default function WhyPartnerWithUs() {
                     </li>
                     <li className="flex items-start gap-2">
                         <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
-                        <span>Direct recruiting opportunities through events and resume book</span>
+                        <span>
+                            Direct recruiting opportunities through large-scale events, 1:1 events,
+                            our marketing channels, and resume book access
+                        </span>
                     </li>
                     <li className="flex items-start gap-2">
                         <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
