@@ -31,6 +31,12 @@ const currentPartners: Partner[] = [
         tier: 'Gold',
         url: 'https://www.paycom.com',
     },
+    {
+        name: 'FUTO',
+        logo: '/partners/futo.svg',
+        tier: 'Gold',
+        url: 'https://futo.org/',
+    },
 ];
 
 export const CurrentPartners: FC = (): JSX.Element => {
@@ -62,50 +68,46 @@ export const CurrentPartners: FC = (): JSX.Element => {
 
     return (
         <section className="bg-gray-50 py-16">
-            <div className="container px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-6xl">
-                    <h3 className="mb-12 text-center text-2xl font-bold">Our Current Partners</h3>
+            <div className="mx-auto max-w-6xl">
+                <h3 className="mb-12 text-center text-2xl font-bold">Our Current Partners</h3>
 
-                    {tierOrder.map((tier) => {
-                        const list = partnersByTier[tier];
-                        if (!list || list.length === 0) return null;
+                {tierOrder.map((tier) => {
+                    const list = partnersByTier[tier];
+                    if (!list || list.length === 0) return null;
 
-                        return (
-                            <div key={tier} className="mb-12 text-center">
-                                <h4
-                                    className={`mb-6 text-xl font-semibold ${tierStyles[tier].text}`}
-                                >
-                                    {tier} Partners
-                                </h4>
-                                <div className="flex flex-wrap justify-center gap-12">
-                                    {list.map((partner) => (
-                                        <Link
-                                            key={partner.name}
-                                            href={partner.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="transition-transform duration-300 hover:-translate-y-1"
+                    return (
+                        <div key={tier} className="mb-12 text-center">
+                            <h4 className={`mb-6 text-xl font-semibold ${tierStyles[tier].text}`}>
+                                {tier} Partners
+                            </h4>
+                            <div className="flex flex-wrap justify-center gap-12">
+                                {list.map((partner) => (
+                                    <Link
+                                        key={partner.name}
+                                        href={partner.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="transition-transform duration-300 hover:-translate-y-1"
+                                    >
+                                        <Card
+                                            className={`h-60 w-60 cursor-pointer items-center justify-center p-6 transition-all ${tierStyles[partner.tier].shadow}`}
                                         >
-                                            <Card
-                                                className={`h-60 w-60 cursor-pointer items-center justify-center p-6 transition-all ${tierStyles[partner.tier].shadow}`}
-                                            >
-                                                <CardContent className="flex h-full w-full items-center justify-center p-0">
-                                                    <Image
-                                                        src={partner.logo}
-                                                        alt={`${partner.name} logo`}
-                                                        width={150}
-                                                        height={150}
-                                                        className="object-contain"
-                                                    />
-                                                </CardContent>
-                                            </Card>
-                                        </Link>
-                                    ))}
-                                </div>
+                                            <CardContent className="flex h-full w-full items-center justify-center p-0">
+                                                <Image
+                                                    src={partner.logo}
+                                                    alt={`${partner.name} logo`}
+                                                    width={150}
+                                                    height={150}
+                                                    className="object-contain"
+                                                />
+                                            </CardContent>
+                                        </Card>
+                                    </Link>
+                                ))}
                             </div>
-                        );
-                    })}
-                </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );

@@ -1,13 +1,15 @@
 import CurrentPartners from '@/components/current-partners';
 import Footer from '@/components/footer';
+import PartnerWithUs from '@/components/partner-with-us';
 import PartnershipHero from '@/components/partnership-hero';
-import PartnershipPackages from '@/components/partnership-packages';
+import WhyPartnerWithUs from '@/components/why-partner-with-us';
 
 export default function PartnershipPage() {
     return (
         <main className="min-h-screen">
             <PartnershipHero />
-            <PartnershipPackages />
+            <WhyPartnerWithUs />
+            <PartnerWithUs />
             <CurrentPartners />
             <Footer />
         </main>
