@@ -14,9 +14,12 @@ export default function CorporateEvents() {
                 ],
             }}
             images={[
-                { src: '/events-page/flyer.jpeg', alt: 'Corporate Event 1' },
-                { src: '/events-page/flyer.jpeg', alt: 'Corporate Event 2' },
-                { src: '/events-page/flyer.jpeg', alt: 'Corporate Event 3' },
+                {
+                    src: '/events-page/pwc-linkedin-workshop.png',
+                    alt: 'PwC LinkedIn workshop flyer',
+                },
+                { src: '/events-page/paycom.png', alt: 'Paycom x ACM x HACS event flyer ' },
+                { src: '/events-page/intuit-gaming-night.png', alt: 'Intuit Gaming Night flyer' },
             ]}
             signatureCard={{
                 title: 'Corporate Banquet',
@@ -27,8 +30,8 @@ export default function CorporateEvents() {
                 ],
             }}
             signatureImage={{
-                src: '/events-page/flyer.jpeg',
-                alt: 'placeholder',
+                src: '/events-page/corporate-banquet.jpg',
+                alt: 'Coporate banquet picture',
             }}
         />
     );

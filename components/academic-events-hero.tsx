@@ -7,10 +7,10 @@ export default function AcademicEventsHero() {
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/home-page-slides/pancakes_and_professors_24.jpg"
-                    alt=""
+                    alt="Picture from ACM Pancakes and Professors Fall 2024"
                     fill
                     priority
-                    className="absolute inset-0 object-cover"
+                    className="absolute inset-0 object-cover object-[center_25%]"
                 />
                 <div className="absolute inset-0 bg-black/40" />
             </div>

@@ -14,9 +14,9 @@ export default function AcademicEvents() {
                 ],
             }}
             images={[
-                { src: '/events-page/flyer.jpeg', alt: 'Academic Event 1' },
-                { src: '/events-page/flyer.jpeg', alt: 'Academic Event 2' },
-                { src: '/events-page/flyer.jpeg', alt: 'Academic Event 3' },
+                { src: '/events-page/leetcode.png', alt: 'Leetcode workshop flyer' },
+                { src: '/events-page/alum-panel.png', alt: 'ACM Alumni panel flyer' },
+                { src: '/events-page/union.png', alt: "Alphabet Workers' Union flyer" },
             ]}
             signatureCard={{
                 title: 'Pancakes with Professors',
@@ -27,8 +27,8 @@ export default function AcademicEvents() {
                 ],
             }}
             signatureImage={{
-                src: '/events-page/flyer.jpeg',
-                alt: 'placeholder',
+                src: '/events-page/pwp.jpeg',
+                alt: 'Pancakes with professors picture',
             }}
         />
     );

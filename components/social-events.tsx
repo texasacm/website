@@ -14,21 +14,21 @@ export default function SocialEvents() {
                 ],
             }}
             images={[
-                { src: '/events-page/flyer.jpeg', alt: 'Social Event 1' },
-                { src: '/events-page/flyer.jpeg', alt: 'Social Event 2' },
-                { src: '/events-page/flyer.jpeg', alt: 'Social Event 3' },
+                { src: '/events-page/acm-formal.png', alt: 'ACM Formal Flyer' },
+                { src: '/events-page/trivia.png', alt: 'ACM Trivia Flyer' },
+                { src: '/events-page/fall-retreat.png', alt: 'ACM Fall Retreat Flyer' },
             ]}
             signatureCard={{
                 title: 'CS Week',
                 subTitle: 'Signature Social Event',
                 bulletPoints: [
-                    'As the academic year nears its end, we celebrate with a week of fun activities hosted by organizations across the CS community',
-                    'Fill in your event bingo card to earn UT swag and a chance to win sponsored prizes',
+                    'As the academic year nears its end, we celebrate with a week of fun activities hosted by orgs across the CS community',
+                    'Attend the must-see family feud showdown between students and professors (pictured left)!',
                 ],
             }}
             signatureImage={{
-                src: '/events-page/flyer.jpeg',
-                alt: 'placeholder',
+                src: '/events-page/family-feud.JPG',
+                alt: 'ACM Family Feud at CS Week picture',
             }}
         />
     );
