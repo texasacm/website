@@ -57,7 +57,7 @@ const guideSections = [
     },
 ];
 
-export default function CSGuide() {
+export default function QuickAccess() {
     return (
         <section>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,12 +66,14 @@ export default function CSGuide() {
                 </div>
             </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="mx-auto grid max-w-4xl grid-cols-1 justify-items-center gap-4 lg:grid-cols-2">
                     {guideSections.map((section) => (
-                        <Card key={section.theme} className="flex flex-col shadow-md">
+                        <Card
+                            key={section.theme}
+                            className="flex w-full max-w-lg flex-col shadow-md"
+                        >
                             <CardHeader>
                                 <CardTitle className="flex flex-row items-center gap-3">
-                                    {' '}
                                     {section.icon} {section.theme}
                                 </CardTitle>
                             </CardHeader>
