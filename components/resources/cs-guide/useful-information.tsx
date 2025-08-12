@@ -102,8 +102,8 @@ export default function UsefulInformation() {
                                 majors
                             </li>
                             <li>
-                                If you're at all interested in something outside of CS, do check
-                                them out
+                                If you&apos;re at all interested in something outside of CS, do
+                                check them out
                             </li>
                             <li>
                                 More info on X+CS programs can be found{' '}
@@ -134,7 +134,9 @@ export default function UsefulInformation() {
                                 Because of that, Austin has a lot of job opportunities across the CS
                                 discipline
                             </li>
-                            <li>There's lots of amazing food and live music to experience here!</li>
+                            <li>
+                                There&apos;s lots of amazing food and live music to experience here!
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +174,7 @@ export default function UsefulInformation() {
                         <h3 className="mb-2 text-lg font-medium text-gray-800">CS Pod Program</h3>
                         <ul className="list-disc space-y-1 pl-6 text-gray-700">
                             <li>
-                                A first semester only program that you'll register for during
+                                A first semester only program that you&apos;ll register for during
                                 orientation
                             </li>
                             <li>
@@ -181,8 +183,8 @@ export default function UsefulInformation() {
                             </li>
                             <li>Everyone in your pod is taking the same class as you!</li>
                             <li>
-                                This class does not add to your schedule's credit hours and assigns
-                                no homework
+                                This class does not add to your schedule&apos;s credit hours and
+                                assigns no homework
                             </li>
                             <li>
                                 We recommend going to make friends and learn about opportunities
@@ -210,12 +212,13 @@ export default function UsefulInformation() {
                         </h3>
                         <ul className="list-disc space-y-1 pl-6 text-gray-700">
                             <li>
-                                In your first year, you'll have reserved spots for core CS classes
+                                In your first year, you&apos;ll have reserved spots for core CS
+                                classes
                             </li>
                             <li>Make sure to meet with your advisor if you have any questions</li>
                             <li>
-                                It's common to not get all of the classes you want. Plan ahead with
-                                backup schedules
+                                It&apos;s common to not get all of the classes you want. Plan ahead
+                                with backup schedules
                             </li>
                             <li>
                                 For registration planning, we highly recommend the{' '}
@@ -249,7 +252,7 @@ export default function UsefulInformation() {
                                     rel="noopener noreferrer"
                                     className="text-primary hover:text-primary/80 hover:underline"
                                 >
-                                    UT's CMHC
+                                    UT&apos;s CMHC
                                 </Link>
                             </li>
                         </ul>
@@ -381,8 +384,8 @@ export default function UsefulInformation() {
                                 are available for upper div courses
                             </li>
                             <li>
-                                <strong>ACM's Pancakes with Professors</strong>: An even where you
-                                can learn more about upper division courses directly from their
+                                <strong>ACM&apos;s Pancakes with Professors</strong>: An even where
+                                you can learn more about upper division courses directly from their
                                 professors
                             </li>
                         </ul>
@@ -393,12 +396,13 @@ export default function UsefulInformation() {
                             Job Search Advice
                         </h3>
                         <ul className="list-disc space-y-1 pl-6 text-gray-700">
-                            <li>Start early - it's tough out there!</li>
+                            <li>Start early - it&apos;s tough out there!</li>
                             <li>Attend career fairs, info sessions, and networking events</li>
                             <li>Practice coding interviews regularly on platforms like LeetCode</li>
                             <li>Consider both large tech companies and local Austin startups</li>
                             <li>
-                                Don't neglect soft skills - communication is crucial in tech roles
+                                Don&apos;t neglect soft skills - communication is crucial in tech
+                                roles
                             </li>
                         </ul>
                     </div>
@@ -438,7 +442,7 @@ export default function UsefulInformation() {
 
                     <div>
                         <h3 className="mb-2 text-lg font-medium text-gray-800">
-                            UT Online Master's Programs
+                            UT Online Master&apos;s Programs
                         </h3>
                         <ul className="list-disc space-y-1 pl-6 text-gray-700">
                             <li>

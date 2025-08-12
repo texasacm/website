@@ -1,17 +1,15 @@
 'use client';
 
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
 import {
     Form,
+    FormControl,
     FormField,
     FormItem,
     FormLabel,
-    FormControl,
-    FormDescription,
     FormMessage,
 } from '@/components/ui/form';
-import { Button } from '@/components/ui/button';
+import { useForm } from 'react-hook-form';
 
 type Inputs = { email: string };
 
