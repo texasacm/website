@@ -5,7 +5,7 @@ import React from 'react';
 
 const CollapsibleInfo = ({ title, children }: { title: string; children: React.ReactNode }) => {
     return (
-        <Collapsible className="mb-6 overflow-hidden rounded-lg border border-gray-200">
+        <Collapsible className="mb-6 overflow-hidden rounded-lg border border-gray-200 shadow-md">
             <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100">
                 <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
                 <ChevronDown className="h-5 w-5 text-gray-600 transition-transform group-data-[state=open]:rotate-180" />

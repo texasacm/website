@@ -2,7 +2,6 @@
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
-import * as React from 'react';
 
 const faqItems = [
     {
@@ -37,12 +36,14 @@ const faqItems = [
 
 export default function FAQ() {
     return (
-        <section className="bg-gray-50">
-            <div className="container mx-auto max-w-4xl px-4">
-                <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
-                    Frequently Asked Questions
-                </h2>
-                <div className="space-y-4 rounded-xl bg-white p-6 shadow-md">
+        <section>
+            <div className="mx-auto max-w-4xl p-6">
+                <div className="mb-8 text-center">
+                    <h2 className="mb-2 text-3xl font-bold text-gray-900">
+                        Frequently Asked Questions
+                    </h2>
+                </div>
+                <div className="space-y-6">
                     {faqItems.map((item, index) => (
                         <FaqItem key={index} question={item.question} answer={item.answer} />
                     ))}
@@ -53,27 +54,16 @@ export default function FAQ() {
 }
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
-    const [isOpen, setIsOpen] = React.useState(false);
-
     return (
-        <Collapsible
-            open={isOpen}
-            onOpenChange={setIsOpen}
-            className="rounded-lg border-b shadow-sm drop-shadow last:border-b-0"
-        >
-            <CollapsibleTrigger asChild>
-                <button className="flex w-full items-center justify-between p-4 text-left">
-                    <h4 className="text-lg font-semibold">{question}</h4>
-                    <ChevronDown
-                        className={`transform transition-transform duration-300 ${
-                            isOpen ? 'rotate-180' : ''
-                        }`}
-                        size={20}
-                    />
-                </button>
+        <Collapsible className="mb-6 overflow-hidden rounded-lg border border-gray-200 shadow-md">
+            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100">
+                <h4 className="text-xl font-semibold text-gray-800">{question}</h4>
+                <ChevronDown className="h-5 w-5 text-gray-600 transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
-            <CollapsibleContent className="px-4 pb-4">
-                <p className="text-gray-700">{answer}</p>
+            <CollapsibleContent className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden">
+                <div className="bg-white px-6 py-4">
+                    <p className="text-gray-700">{answer}</p>
+                </div>
             </CollapsibleContent>
         </Collapsible>
     );
