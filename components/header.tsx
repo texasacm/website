@@ -9,6 +9,7 @@ import { useState } from 'react';
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [showResources, setShowResources] = useState(false);
+    const [isLogoHovered, setIsLogoHovered] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -19,14 +20,34 @@ export default function Header() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center">
-                            <Image
-                                src="/texasacm-logo-black.svg"
-                                alt="Texas ACM Logo"
-                                width={120}
-                                height={40}
-                                className="h-8 w-auto"
-                            />
+                        <Link
+                            href="/"
+                            className="flex items-center"
+                            onMouseEnter={() => setIsLogoHovered(true)}
+                            onMouseLeave={() => setIsLogoHovered(false)}
+                        >
+                            <div className="relative">
+                                <Image
+                                    src="/texasacm-logo-black.svg"
+                                    alt="Texas ACM Logo"
+                                    width={120}
+                                    height={40}
+                                    className={cn(
+                                        'h-8 w-auto transition-opacity duration-200',
+                                        isLogoHovered ? 'opacity-0' : 'opacity-100',
+                                    )}
+                                />
+                                <Image
+                                    src="/texasacm-logo-primary.svg"
+                                    alt="Texas ACM Logo"
+                                    width={120}
+                                    height={40}
+                                    className={cn(
+                                        'absolute left-0 top-0 h-8 w-auto transition-opacity duration-200',
+                                        isLogoHovered ? 'opacity-100' : 'opacity-0',
+                                    )}
+                                />
+                            </div>
                         </Link>
                     </div>
                     {/* Desktop Navigation */}
