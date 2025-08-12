@@ -10,6 +10,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [showResources, setShowResources] = useState(false);
     const [isLogoHovered, setIsLogoHovered] = useState(false);
+    const [isResourcesHovered, setIsResourcesHovered] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -85,36 +86,42 @@ export default function Header() {
                             </Link>
                         </div>
                         <div className="flex h-full items-center px-4">
-                            <div className="flex h-full cursor-pointer items-center">
-                                <span className="group relative flex items-center font-medium text-gray-700 transition hover:text-primary">
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsResourcesHovered(true)}
+                                onMouseLeave={() => setIsResourcesHovered(false)}
+                            >
+                                <button className="flex h-full items-center font-medium text-gray-700 transition hover:text-primary">
                                     Resources <ChevronDown className="ml-1 h-4 w-4" />
-                                    <div className="absolute left-0 top-full z-50 mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex">
+                                </button>
+                                {isResourcesHovered && (
+                                    <div className="absolute left-0 top-full z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 slide-in-from-top-2">
                                         <Link
                                             href="/cs-guide"
-                                            className="block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                                         >
                                             CS Guide
                                         </Link>
                                         <Link
                                             href="/faq"
-                                            className="block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                                         >
                                             FAQ
                                         </Link>
                                         <Link
                                             href="/forms"
-                                            className="block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                                         >
                                             Forms
                                         </Link>
                                         <Link
                                             href="/resume-book"
-                                            className="block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                                         >
                                             Resume Book
                                         </Link>
                                     </div>
-                                </span>
+                                )}
                             </div>
                         </div>
                     </div>
