@@ -27,7 +27,7 @@ export default function Footer() {
                                 href="https://www.instagram.com/texas_acm"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white"
+                                className="text-gray-400 transition hover:text-white"
                             >
                                 <FaInstagram size={20} />
                             </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
                                 href="https://www.linkedin.com/company/utexas-acm/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white"
+                                className="text-gray-400 transition hover:text-white"
                             >
                                 <FaLinkedin size={20} />
                             </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
                                 href="https://github.com/caseycharleston/texasacm-website"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white"
+                                className="text-gray-400 transition hover:text-white"
                             >
                                 <FaGithub size={20} />
                             </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
                                 href="https://x.com/utexasACM"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white"
+                                className="text-gray-400 transition hover:text-white"
                             >
                                 <FaXTwitter size={20} />
                             </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                                 href="https://discord.gg/tspJCpFFKx"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white"
+                                className="text-gray-400 transition hover:text-white"
                             >
                                 <FaDiscord size={20} />
                             </Link>
@@ -70,24 +70,33 @@ export default function Footer() {
                         <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/about" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/about"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/calendar" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/calendar"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     Calendar
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/events" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/events"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     Events
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     href="/partnership"
-                                    className="text-gray-400 hover:text-white"
+                                    className="text-gray-400 transition hover:text-white"
                                 >
                                     Partnership
                                 </Link>
@@ -99,24 +108,33 @@ export default function Footer() {
                         <h3 className="mb-4 text-lg font-semibold">Resources</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/cs-guide" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/cs-guide"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     CS Guide
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/faq" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/faq"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     FAQ
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/forms" className="text-gray-400 hover:text-white">
+                                <Link
+                                    href="/forms"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
                                     Forms
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     href="/resume-book"
-                                    className="text-gray-400 hover:text-white"
+                                    className="text-gray-400 transition hover:text-white"
                                 >
                                     Resume Book
                                 </Link>
@@ -126,7 +144,7 @@ export default function Footer() {
                                     href="https://www.acm.org/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-white"
+                                    className="text-gray-400 transition hover:text-white"
                                 >
                                     ACM National
                                 </Link>
@@ -137,7 +155,7 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
                         <ul className="space-y-2">
-                            <li className="text-gray-400 hover:text-white">
+                            <li className="text-gray-400 transition hover:text-white">
                                 <Link
                                     href="mailto:pres@texasacm.org"
                                     className="flex items-center gap-2"

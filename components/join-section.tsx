@@ -80,41 +80,41 @@ export default function JoinSection() {
                                 href="https://www.instagram.com/texas_acm"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-600 hover:text-primary"
+                                className="text-gray-600 transition hover:text-primary"
                             >
-                                <FaInstagram size={32} />
+                                <FaInstagram size={40} />
                             </Link>
                             <Link
                                 href="https://www.linkedin.com/company/utexas-acm/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-600 hover:text-primary"
+                                className="text-gray-600 transition hover:text-primary"
                             >
-                                <FaLinkedin size={32} />
+                                <FaLinkedin size={40} />
                             </Link>
                             <Link
                                 href="https://github.com/texasacm"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-600 hover:text-primary"
+                                className="text-gray-600 transition hover:text-primary"
                             >
-                                <FaGithub size={32} />
+                                <FaGithub size={40} />
                             </Link>
                             <Link
                                 href="https://x.com/utexasACM"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-600 hover:text-primary"
+                                className="text-gray-600 transition hover:text-primary"
                             >
-                                <FaXTwitter size={32} />
+                                <FaXTwitter size={40} />
                             </Link>
                             <Link
                                 href="https://discord.gg/tspJCpFFKx"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-600 hover:text-primary"
+                                className="text-gray-600 transition hover:text-primary"
                             >
-                                <FaDiscord size={32} />
+                                <FaDiscord size={40} />
                             </Link>
                         </CardContent>
                     </Card>

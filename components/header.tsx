@@ -34,7 +34,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/about"
-                                className="font-medium text-gray-700 hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary"
                             >
                                 About
                             </Link>
@@ -42,7 +42,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/calendar"
-                                className="font-medium text-gray-700 hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary"
                             >
                                 Calendar
                             </Link>
@@ -50,7 +50,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/events"
-                                className="font-medium text-gray-700 hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary"
                             >
                                 Events
                             </Link>
@@ -58,14 +58,14 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/partnership"
-                                className="font-medium text-gray-700 hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary"
                             >
                                 Partnership
                             </Link>
                         </div>
                         <div className="flex h-full items-center px-4">
                             <div className="flex h-full cursor-pointer items-center">
-                                <span className="group relative flex items-center font-medium text-gray-700 hover:text-primary">
+                                <span className="group relative flex items-center font-medium text-gray-700 transition hover:text-primary">
                                     Resources <ChevronDown className="ml-1 h-4 w-4" />
                                     <div className="absolute left-0 top-full z-50 mt-0 hidden w-48 flex-col rounded-md bg-white shadow-md group-hover:flex">
                                         <Link
@@ -102,7 +102,7 @@ export default function Header() {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-gray-700 hover:text-primary"
+                            className="text-gray-700 transition hover:text-primary"
                             aria-label="Toggle menu"
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
