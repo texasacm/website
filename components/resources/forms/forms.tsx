@@ -1,6 +1,6 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { SIGNIN_URL } from '@/lib/constants';
-import { Calendar, ExternalLink, FileText, LogIn, Users } from 'lucide-react';
+import { Award, ExternalLink, LogIn, User, Users } from 'lucide-react';
 import Link from 'next/link';
 
 const pinnedForms = [
@@ -12,7 +12,7 @@ const pinnedForms = [
         dateAdded: '2025-08-08',
     },
     {
-        icon: <Users size={28} className="text-blue-500" />,
+        icon: <Award size={28} className="text-blue-500" />,
         title: 'Officer Application',
         description:
             'Apply to become an officer and help build a better Texas ACM. The deadline to apply is [deadline].',
@@ -23,18 +23,18 @@ const pinnedForms = [
 
 const latestForms = [
     {
-        icon: <Calendar size={28} className="text-indigo-500" />,
-        title: 'Other example latest form',
-        description: 'example latest form.',
+        icon: <Users size={28} className="text-indigo-500" />,
+        title: 'Mentor Sign Up',
+        description: 'Sign up here to become a mentor for the Texas ACM Mentorship Program.',
         link: { name: 'Sign Up', href: '#' },
-        dateAdded: '2024-07-15',
+        dateAdded: '2025-08-17',
     },
     {
-        icon: <FileText size={28} className="text-teal-500" />,
-        title: 'example latest form',
-        description: 'Example latest form.',
+        icon: <User size={28} className="text-teal-500" />,
+        title: 'Mentee Sign Up',
+        description: 'Sign up here to become a mentee for the Texas ACM Mentorship Program.',
         link: { name: 'Sign Up', href: '#' },
-        dateAdded: '2024-07-10',
+        dateAdded: '2025-08-17',
     },
 ];
 
