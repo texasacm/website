@@ -23,7 +23,7 @@ export default function Header() {
                     <div className="flex items-center">
                         <Link
                             href="/"
-                            className="flex items-center"
+                            className="group flex items-center"
                             onMouseEnter={() => setIsLogoHovered(true)}
                             onMouseLeave={() => setIsLogoHovered(false)}
                         >
@@ -34,9 +34,12 @@ export default function Header() {
                                     width={120}
                                     height={40}
                                     className={cn(
-                                        'h-8 w-auto transition-opacity duration-200',
+                                        'h-8 w-auto transition-all duration-200 ease-out',
                                         isLogoHovered ? 'opacity-0' : 'opacity-100',
                                     )}
+                                    style={{
+                                        transition: isLogoHovered ? 'all 200ms ease-out' : 'none',
+                                    }}
                                 />
                                 <Image
                                     src="/texasacm-logo-primary.svg"
@@ -44,9 +47,12 @@ export default function Header() {
                                     width={120}
                                     height={40}
                                     className={cn(
-                                        'absolute left-0 top-0 h-8 w-auto transition-opacity duration-200',
+                                        'absolute left-0 top-0 h-8 w-auto',
                                         isLogoHovered ? 'opacity-100' : 'opacity-0',
                                     )}
+                                    style={{
+                                        transition: isLogoHovered ? 'all 200ms ease-out' : 'none',
+                                    }}
                                 />
                             </div>
                         </Link>
