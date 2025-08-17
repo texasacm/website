@@ -1,6 +1,6 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { SIGNIN_URL } from '@/lib/constants';
-import { Award, ExternalLink, LogIn, User, Users } from 'lucide-react';
+import { Award, ExternalLink, LogIn, User, Users, Volleyball } from 'lucide-react';
 import Link from 'next/link';
 
 const pinnedForms = [
@@ -9,7 +9,7 @@ const pinnedForms = [
         title: 'Event Sign In',
         description: 'A catch-all form for signing in to Texas ACM events.',
         link: { name: 'Sign In', href: SIGNIN_URL },
-        dateAdded: '2025-08-08',
+        dateAdded: '08/08/2025',
     },
     {
         icon: <Award size={28} className="text-blue-500" />,
@@ -17,7 +17,7 @@ const pinnedForms = [
         description:
             'Apply to become an officer and help build a better Texas ACM. The deadline to apply is [deadline].',
         link: { name: 'Apply Here', href: '#' },
-        dateAdded: '2025-08-08',
+        dateAdded: '08/08/2025',
     },
 ];
 
@@ -27,14 +27,21 @@ const latestForms = [
         title: 'Mentor Sign Up',
         description: 'Sign up here to become a mentor for the Texas ACM Mentorship Program.',
         link: { name: 'Sign Up', href: '#' },
-        dateAdded: '2025-08-17',
+        dateAdded: '08/17/2025',
     },
     {
         icon: <User size={28} className="text-teal-500" />,
         title: 'Mentee Sign Up',
         description: 'Sign up here to become a mentee for the Texas ACM Mentorship Program.',
         link: { name: 'Sign Up', href: '#' },
-        dateAdded: '2025-08-17',
+        dateAdded: '08/17/2025',
+    },
+    {
+        icon: <Volleyball size={28} className="text-purple-500" />,
+        title: 'Intramural Sports Sign Up',
+        description: 'Want to play sports for Texas ACM? Sign up here! ',
+        link: { name: 'Sign Up', href: 'https://forms.gle/jVPQ2nd2nvPxKVD7A' },
+        dateAdded: '08/17/2025',
     },
 ];
 
@@ -76,7 +83,7 @@ export default function Forms() {
                                         </span>
                                     </Link>
                                     <span className="text-sm text-muted-foreground">
-                                        Added {new Date(form.dateAdded).toLocaleDateString()}
+                                        {form.dateAdded}
                                     </span>
                                 </CardFooter>
                             </Card>
@@ -115,7 +122,7 @@ export default function Forms() {
                                         </span>
                                     </Link>
                                     <span className="text-sm text-muted-foreground">
-                                        {new Date(form.dateAdded).toLocaleDateString()}
+                                        {form.dateAdded}
                                     </span>
                                 </CardFooter>
                             </Card>
