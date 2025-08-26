@@ -56,7 +56,7 @@ const latestForms: FormItem[] = [
         icon: <School size={28} className="text-primary" />,
         title: 'Academic Workshop Interest Form',
         description:
-            'Want to learn and engage in projects outside of what your classes are teaching you? Show your interest regarding different CS topics here so we can cater our workshops to you.',
+            'Show your interest regarding different CS topics so we can cater our workshops to you.',
         link: { name: 'Show Your Interest', href: WORKSHOP_INTEREST_FORM_URL },
         dateAdded: '08/25/2025',
         deadline: 'Sunday, September 8th @ 11:59pm',
