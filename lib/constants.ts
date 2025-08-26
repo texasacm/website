@@ -4,4 +4,4 @@ export const IM_APPLICATION_URL = 'https://forms.gle/M8wQEumurioESSfi7';
 export const MENTOR_APPLICATION_URL = 'https://forms.gle/M8wQEumurioESSfi7';
 export const MENTEE_APPLICATION_URL = 'https://forms.gle/M8wQEumurioESSfi7';
 export const IM_SPORTS_SIGNUP_URL = 'https://forms.gle/jVPQ2nd2nvPxKVD7A';
-export const WORKSHOP_INTEREST_FORM_URL = '#';
+export const WORKSHOP_INTEREST_FORM_URL = 'https://forms.gle/6JbYaY9QP394xssd6';
