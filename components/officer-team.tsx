@@ -1,12 +1,4 @@
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from '@/components/ui/dialog';
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -366,69 +358,70 @@ export default function OfficerTeam() {
                 <div className="mx-auto max-w-6xl">
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {officers.map((officer) => (
-                            <Dialog key={officer.name}>
-                                <DialogTrigger asChild>
-                                    <Card className="group flex cursor-pointer flex-col overflow-hidden text-center shadow-md drop-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                        <div className="relative aspect-square w-full">
-                                            <Image
-                                                src={headshot_dir + officer.image}
-                                                alt={`Headshot of ${officer.name}`}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                        <CardHeader className="flex-grow">
-                                            <CardTitle className="text-xl">
-                                                {officer.name}
-                                            </CardTitle>
-                                            <CardDescription>{officer.position}</CardDescription>
-                                        </CardHeader>
-                                    </Card>
-                                </DialogTrigger>
-                                <DialogContent className="min-h-80 p-0 sm:max-w-2xl">
-                                    <div className="flex flex-col sm:flex-row">
-                                        <div className="relative h-80 w-full sm:h-auto sm:w-5/12">
-                                            <Image
-                                                src={headshot_dir + officer.image}
-                                                alt={officer.name}
-                                                fill
-                                                className="rounded-t-lg object-cover sm:rounded-l-lg sm:rounded-tr-none"
-                                            />
-                                        </div>
-                                        <div className="flex flex-col p-6 sm:w-7/12">
-                                            <DialogHeader className="text-left">
-                                                <DialogTitle className="text-2xl font-bold">
-                                                    {officer.name}
-                                                </DialogTitle>
-                                                <DialogDescription className="text-md">
-                                                    {officer.position}
-                                                </DialogDescription>
-                                            </DialogHeader>
+                            // <Dialog key={officer.name}>
+                            // <DialogTrigger asChild>
+                            <Card
+                                key={officer.name}
+                                className="group flex flex-col overflow-hidden text-center shadow-md drop-shadow"
+                            >
+                                <div className="relative aspect-square w-full">
+                                    <Image
+                                        src={headshot_dir + officer.image}
+                                        alt={`Headshot of ${officer.name}`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <CardHeader className="flex-grow">
+                                    <CardTitle className="text-xl">{officer.name}</CardTitle>
+                                    <CardDescription>{officer.position}</CardDescription>
+                                </CardHeader>
+                            </Card>
+                            // </DialogTrigger>
+                            //     <DialogContent className="min-h-80 p-0 sm:max-w-2xl">
+                            //         <div className="flex flex-col sm:flex-row">
+                            //             <div className="relative h-80 w-full sm:h-auto sm:w-5/12">
+                            //                 <Image
+                            //                     src={headshot_dir + officer.image}
+                            //                     alt={officer.name}
+                            //                     fill
+                            //                     className="rounded-t-lg object-cover sm:rounded-l-lg sm:rounded-tr-none"
+                            //                 />
+                            //             </div>
+                            //             <div className="flex flex-col p-6 sm:w-7/12">
+                            //                 <DialogHeader className="text-left">
+                            //                     <DialogTitle className="text-2xl font-bold">
+                            //                         {officer.name}
+                            //                     </DialogTitle>
+                            //                     <DialogDescription className="text-md">
+                            //                         {officer.position}
+                            //                     </DialogDescription>
+                            //                 </DialogHeader>
 
-                                            <p className="my-4 flex-grow text-gray-700">
-                                                {officer.bio}
-                                            </p>
+                            //                 <p className="my-4 flex-grow text-gray-700">
+                            //                     {officer.bio}
+                            //                 </p>
 
-                                            <div className="mt-auto flex space-x-4 pt-4">
-                                                {officer.socials.map((social) => (
-                                                    <a
-                                                        key={social.url}
-                                                        href={social.url}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="text-gray-600 transition-opacity hover:opacity-80"
-                                                        aria-label={`Visit ${officer.name}'s ${social.name}`}
-                                                    >
-                                                        {React.cloneElement(
-                                                            social.icon as React.ReactElement,
-                                                        )}
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </DialogContent>
-                            </Dialog>
+                            //                 <div className="mt-auto flex space-x-4 pt-4">
+                            //                     {officer.socials.map((social) => (
+                            //                         <a
+                            //                             key={social.url}
+                            //                             href={social.url}
+                            //                             target="_blank"
+                            //                             rel="noopener noreferrer"
+                            //                             className="text-gray-600 transition-opacity hover:opacity-80"
+                            //                             aria-label={`Visit ${officer.name}'s ${social.name}`}
+                            //                         >
+                            //                             {React.cloneElement(
+                            //                                 social.icon as React.ReactElement,
+                            //                             )}
+                            //                         </a>
+                            //                     ))}
+                            //                 </div>
+                            //             </div>
+                            //         </div>
+                            //     </DialogContent>
+                            // </Dialog>
                         ))}
                     </div>
                 </div>
