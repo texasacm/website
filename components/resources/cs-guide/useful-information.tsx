@@ -169,43 +169,6 @@ export default function UsefulInformation() {
                             </li>
                         </ul>
                     </div>
-
-                    <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">CS Pod Program</h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
-                            <li>
-                                A first semester only program that you&apos;ll register for during
-                                orientation
-                            </li>
-                            <li>
-                                You will choose your pod based on your first CS class in the fall
-                                semester
-                            </li>
-                            <li>Everyone in your pod is taking the same class as you!</li>
-                            <li>
-                                This class does not add to your schedule&apos;s credit hours and
-                                assigns no homework
-                            </li>
-                            <li>
-                                We recommend going to make friends and learn about opportunities
-                                outside of your classes!
-                            </li>
-                            <li>
-                                More info about Pods can be found{' '}
-                                <Link
-                                    href={
-                                        'https://www.cs.utexas.edu/undergraduate-program/student-support/first-year-connections/cs-pods'
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-primary hover:text-primary/80 hover:underline"
-                                >
-                                    here
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
                     <div>
                         <h3 className="mb-2 text-lg font-medium text-gray-800">
                             Registration Tips
