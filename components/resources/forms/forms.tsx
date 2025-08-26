@@ -29,8 +29,7 @@ const pinnedForms: FormItem[] = [
     {
         icon: <Award size={28} className="text-blue-500" />,
         title: 'Operational Officer Application',
-        description:
-            'Apply to become an officer and help build a better Texas ACM.',
+        description: 'Apply to become an officer and help build a better Texas ACM.',
         link: { name: 'Apply Here', href: OO_APPLICATION_URL },
         dateAdded: '08/25/2025',
         deadline: 'Thursday, September 11th @ 11:59pm',
@@ -51,12 +50,13 @@ const latestForms: FormItem[] = [
         description: 'Want to play sports for Texas ACM? Sign up here! ',
         link: { name: 'Sign Up', href: IM_SPORTS_SIGNUP_URL },
         dateAdded: '08/25/2025',
-        deadline: 'Sunday, September 8th @ 11:59pm'
+        deadline: 'Sunday, September 8th @ 11:59pm',
     },
     {
         icon: <School size={28} className="text-primary" />,
         title: 'Academic Workshop Interest Form',
-        description: 'Want to learn and engage in projects outside of what your classes are teaching you? Show your interest regarding different CS topics here so we can cater our workshops to you.',
+        description:
+            'Want to learn and engage in projects outside of what your classes are teaching you? Show your interest regarding different CS topics here so we can cater our workshops to you.',
         link: { name: 'Show Your Interest', href: WORKSHOP_INTEREST_FORM_URL },
         dateAdded: '08/25/2025',
     },
