@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { SIGNIN_URL } from '@/lib/constants';
+import { IM_SPORTS_SIGNUP_URL, MENTEE_APPLICATION_URL, MENTOR_APPLICATION_URL, OO_APPLICATION_URL, SIGNIN_URL } from '@/lib/constants';
 import { Award, ExternalLink, LogIn, User, Users, Volleyball } from 'lucide-react';
 import Link from 'next/link';
 
@@ -13,11 +13,11 @@ const pinnedForms = [
     },
     {
         icon: <Award size={28} className="text-blue-500" />,
-        title: 'Officer Application',
+        title: 'Operational Officer Application',
         description:
-            'Apply to become an officer and help build a better Texas ACM. The deadline to apply is [deadline].',
-        link: { name: 'Apply Here', href: '#' },
-        dateAdded: '08/08/2025',
+            'Apply to become an officer and help build a better Texas ACM. The deadline to apply is September 11th, 2025.',
+        link: { name: 'Apply Here', href: OO_APPLICATION_URL },
+        dateAdded: '08/25/2025',
     },
 ];
 
@@ -26,22 +26,22 @@ const latestForms = [
         icon: <Users size={28} className="text-indigo-500" />,
         title: 'Mentor Sign Up',
         description: 'Sign up here to become a mentor for the Texas ACM Mentorship Program.',
-        link: { name: 'Sign Up', href: '#' },
-        dateAdded: '08/17/2025',
+        link: { name: 'Sign Up', href: MENTOR_APPLICATION_URL },
+        dateAdded: '08/25/2025',
     },
     {
         icon: <User size={28} className="text-teal-500" />,
         title: 'Mentee Sign Up',
         description: 'Sign up here to become a mentee for the Texas ACM Mentorship Program.',
-        link: { name: 'Sign Up', href: '#' },
-        dateAdded: '08/17/2025',
+        link: { name: 'Sign Up', href: MENTEE_APPLICATION_URL },
+        dateAdded: '08/25/2025',
     },
     {
         icon: <Volleyball size={28} className="text-purple-500" />,
         title: 'Intramural Sports Sign Up',
         description: 'Want to play sports for Texas ACM? Sign up here! ',
-        link: { name: 'Sign Up', href: 'https://forms.gle/jVPQ2nd2nvPxKVD7A' },
-        dateAdded: '08/17/2025',
+        link: { name: 'Sign Up', href: IM_SPORTS_SIGNUP_URL },
+        dateAdded: '08/25/2025',
     },
 ];
 
