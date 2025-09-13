@@ -5,6 +5,37 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from './ui/button';
 
+function cleanEventDescription(description: string): string {
+    if (!description) return '';
+
+    return (
+        description
+            // Replace <br> tags with double line breaks
+            .replace(/<br\s*\/?>/gi, '\n\n')
+            // Remove any text surrounded by angle brackets
+            .replace(/<[^>]*>/g, '')
+            // Decode common HTML entities
+            .replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, "'")
+            .replace(/&nbsp;/g, ' ')
+            .replace(/&apos;/g, "'")
+            .replace(/&hellip;/g, '...')
+            .replace(/&mdash;/g, '—')
+            .replace(/&ndash;/g, '–')
+            .replace(/&copy;/g, '©')
+            .replace(/&reg;/g, '®')
+            .replace(/&trade;/g, '™')
+            // Clean up line breaks and formatting
+            .replace(/\n\s*\n/g, '\n\n')
+            .replace(/\r/g, '\n')
+            .replace(/[ \t]+/g, ' ')
+            .trim()
+    );
+}
+
 export interface CalendarDateTime {
     dateTime?: string;
     date?: string;
@@ -65,7 +96,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
             </section>
         );
     }
-
+    console.log('Events found, rendering event cards:', events);
     return (
         <section>
             <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
@@ -86,12 +117,14 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                             >
                                 <Card className="shadow-md transition-shadow duration-200 hover:shadow-lg">
                                     <CardHeader>
-                                        <CardTitle>{event.summary}</CardTitle>
+                                        <CardTitle>
+                                            {cleanEventDescription(event.summary)}
+                                        </CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         {event.description && (
-                                            <p className="mb-4 text-gray-700">
-                                                {event.description}
+                                            <p className="mb-4 whitespace-pre-line text-gray-700">
+                                                {cleanEventDescription(event.description)}
                                             </p>
                                         )}
                                         <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -113,7 +146,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                                         </div>
                                         {event.location && (
                                             <div className="mt-1 text-sm text-gray-500">
-                                                {event.location}
+                                                {cleanEventDescription(event.location)}
                                             </div>
                                         )}
                                     </CardContent>

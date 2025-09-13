@@ -10,7 +10,7 @@ import SocialEvents from '@/components/social-events';
 import SocialEventsHero from '@/components/social-events-hero';
 import { getUpcomingEvents } from '@/lib/calendar';
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 export default async function EventsPage() {
     const events = await getUpcomingEvents(2);
