@@ -103,6 +103,12 @@ export default function Header() {
                                 {isResourcesHovered && (
                                     <div className="absolute left-0 top-full z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 slide-in-from-top-2">
                                         <Link
+                                            href="/atoz"
+                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                        >
+                                            CS A-to-Z
+                                        </Link>
+                                        <Link
                                             href="/cs-guide"
                                             className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
                                         >

@@ -9,7 +9,6 @@ const guideSections = [
         theme: 'Getting Started at UTCS',
         description: 'Everything you need to know to get through your first year in UTCS.',
         links: [
-            { name: 'CS A to Z Guide', href: '/atoz' },
             { name: 'Creating a CS Account', href: 'https://www.cs.utexas.edu/faq/691' },
             {
                 name: 'SSHing into the Computer Labs',
