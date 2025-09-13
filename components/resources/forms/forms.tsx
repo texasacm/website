@@ -10,6 +10,7 @@ import {
 } from '@/lib/constants';
 import { Award, ExternalLink, LogIn, School, Users, Volleyball } from 'lucide-react';
 import Link from 'next/link';
+import React from 'react';
 
 type FormItem = {
     icon: React.ReactElement;

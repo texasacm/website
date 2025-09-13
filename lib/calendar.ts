@@ -29,23 +29,15 @@ export async function getUpcomingEvents(maxResults = 2): Promise<CalendarEvent[]
         res = await fetch(url.toString(), {
             cache: 'no-store',
         });
-        console.log('Response status:', res.status);
 
         if (!res.ok) {
-            const errorText = await res.text();
-            console.error('Calendar API error:', errorText);
-            console.error('URL:', url.toString());
             return [];
         }
-    } catch (error) {
-        console.error('Failed to fetch calendar events:', error);
+    } catch {
         return [];
     }
 
     const data = (await res.json()) as { items?: CalendarEvent[] };
-    console.log('Parsed data:', JSON.stringify(data, null, 2));
-    console.log('Current time:', new Date().toISOString());
-    console.log('Events fetched at:', new Date().toLocaleString());
 
     return data.items ?? [];
 }

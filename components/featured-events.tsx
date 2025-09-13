@@ -96,17 +96,19 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
             </section>
         );
     }
-    console.log('Events found, rendering event cards:', events);
     return (
         <section>
             <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     {events.map((event) => {
-                        const startRaw = event.start.dateTime ?? event.start.date!;
+                        const startRaw = event.start.dateTime ?? event.start.date;
                         const endRaw = event.end?.dateTime ?? event.end?.date;
-                        const startDate = new Date(startRaw);
-                        const endDate = endRaw ? new Date(endRaw) : null;
+                        if (!startRaw) {
+                            return null;
+                        }
+                        const startDate = new Date(startRaw as string);
+                        const endDate = endRaw ? new Date(endRaw as string) : null;
 
                         return (
                             <Link

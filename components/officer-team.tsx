@@ -392,7 +392,7 @@ export default function OfficerTeam() {
                                                     >
                                                         {React.cloneElement(
                                                             social.icon as React.ReactElement,
-                                                            { size: iconSize } as any,
+                                                            { size: iconSize } as React.Attributes,
                                                         )}
                                                     </a>
                                                 ))}

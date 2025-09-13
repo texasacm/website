@@ -70,7 +70,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
     const partnersByTier = currentPartners.reduce<Partial<Record<Tier, Partner[]>>>(
         (acc, partner) => {
             if (!acc[partner.tier]) acc[partner.tier] = [];
-            acc[partner.tier]!.push(partner);
+            acc[partner.tier]?.push(partner);
             return acc;
         },
         {},
