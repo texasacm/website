@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
     Dialog,
@@ -10,6 +12,30 @@ import {
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub, FaGlobe, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
+const useResponsiveIconSize = () => {
+    const [size, setSize] = React.useState(20);
+
+    React.useEffect(() => {
+        const updateSize = () => {
+            if (window.innerWidth >= 1280) {
+                // xl breakpoint
+                setSize(36);
+            } else if (window.innerWidth >= 1024) {
+                // lg breakpoint
+                setSize(28);
+            } else {
+                setSize(20);
+            }
+        };
+
+        updateSize();
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+
+    return size;
+};
 
 interface SocialLink {
     url: string;
@@ -291,6 +317,8 @@ const officers: Officer[] = [
 ];
 
 export default function OfficerTeam() {
+    const iconSize = useResponsiveIconSize();
+
     return (
         <section>
             <div className="container px-4 sm:px-6 lg:px-8">
@@ -305,7 +333,7 @@ export default function OfficerTeam() {
                 </div>
 
                 <div className="mx-auto max-w-6xl">
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {officers.map((officer) => (
                             <Dialog key={officer.name}>
                                 <DialogTrigger asChild>
@@ -319,10 +347,12 @@ export default function OfficerTeam() {
                                             />
                                         </div>
                                         <CardHeader className="flex-grow">
-                                            <CardTitle className="text-xl">
+                                            <CardTitle className="text-xl lg:text-2xl">
                                                 {officer.name}
                                             </CardTitle>
-                                            <CardDescription>{officer.position}</CardDescription>
+                                            <CardDescription className="lg:text-lg">
+                                                {officer.position}
+                                            </CardDescription>
                                         </CardHeader>
                                     </Card>
                                 </DialogTrigger>
@@ -338,15 +368,15 @@ export default function OfficerTeam() {
                                         </div>
                                         <div className="flex flex-col p-6 sm:w-7/12">
                                             <DialogHeader className="text-left">
-                                                <DialogTitle className="text-2xl font-bold">
+                                                <DialogTitle className="text-2xl font-bold lg:text-3xl">
                                                     {officer.name}
                                                 </DialogTitle>
-                                                <DialogDescription className="text-md">
+                                                <DialogDescription className="text-lg lg:text-xl">
                                                     {officer.position}
                                                 </DialogDescription>
                                             </DialogHeader>
 
-                                            <p className="my-4 flex-grow text-gray-700">
+                                            <p className="my-4 flex-grow text-gray-700 lg:text-lg">
                                                 {officer.bio}
                                             </p>
 
@@ -362,6 +392,7 @@ export default function OfficerTeam() {
                                                     >
                                                         {React.cloneElement(
                                                             social.icon as React.ReactElement,
+                                                            { size: iconSize } as any,
                                                         )}
                                                     </a>
                                                 ))}
