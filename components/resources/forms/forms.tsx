@@ -19,6 +19,7 @@ type FormItem = {
     link: { name: string; href: string };
     dateAdded: string;
     deadline?: string;
+    internalDeadline?: string; // YYYY-MM-DDTHh:Mm:Ss format
 };
 
 const pinnedForms: FormItem[] = [
@@ -36,6 +37,7 @@ const pinnedForms: FormItem[] = [
         link: { name: 'Apply Here', href: OO_APPLICATION_URL },
         dateAdded: '08/25/2025',
         deadline: 'Thursday, September 11th @ 11:59pm',
+        internalDeadline: '2025-09-11T23:59:00',
     },
 ];
 
@@ -47,6 +49,7 @@ const latestForms: FormItem[] = [
         link: { name: 'Sign Up', href: IM_SPORTS_SIGNUP_URL },
         dateAdded: '08/25/2025',
         deadline: 'Sunday, September 8th @ 11:59pm',
+        internalDeadline: '2025-09-08T23:59:00',
     },
     {
         icon: <School size={28} className="text-primary" />,
@@ -56,6 +59,7 @@ const latestForms: FormItem[] = [
         link: { name: 'Show Your Interest', href: WORKSHOP_INTEREST_FORM_URL },
         dateAdded: '08/25/2025',
         deadline: 'Sunday, September 8th @ 11:59pm',
+        internalDeadline: '2025-09-08T23:59:00',
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -64,6 +68,7 @@ const latestForms: FormItem[] = [
         link: { name: 'Sign Up', href: MENTOR_APPLICATION_URL },
         dateAdded: '08/27/2025',
         deadline: 'Friday, September 19th @ 11:59pm',
+        internalDeadline: '2025-09-19T23:59:00',
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -72,6 +77,7 @@ const latestForms: FormItem[] = [
         link: { name: 'Sign Up', href: MENTEE_APPLICATION_URL },
         dateAdded: '08/27/2025',
         deadline: 'Friday, September 19th @ 11:59pm',
+        internalDeadline: '2025-09-19T23:59:00',
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -80,103 +86,121 @@ const latestForms: FormItem[] = [
         link: { name: 'Sign Up', href: CORPORATE_BANQUET_RSVP_URL },
         dateAdded: '08/28/2025',
         deadline: 'Wednesday, September 10th @ 11:59pm',
+        internalDeadline: '2025-09-10T23:59:00',
     },
 ];
 
+const isFormActive = (form: FormItem): boolean => {
+    // if no deadline, always active
+    if (!form.internalDeadline) {
+        return true;
+    }
+    const now = new Date();
+    const deadline = new Date(form.internalDeadline);
+    return now <= deadline;
+};
+
 export default function Forms() {
+    const activePinnedForms = pinnedForms.filter(isFormActive);
+    const activeLatestForms = latestForms.filter(isFormActive);
+
     return (
         <section>
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-                <div className="mb-12">
-                    <div className="mb-8 text-center">
-                        <h2 className="text-3xl font-bold text-gray-900">Pinned Forms</h2>
-                        <p className="mt-2 text-muted-foreground">
-                            Forms most important to our members
-                        </p>
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        {pinnedForms.map((form) => (
-                            <Card
-                                key={form.title}
-                                className="flex w-full max-w-sm flex-col border-l-4 border-l-primary shadow-md"
-                            >
-                                <CardHeader>
-                                    <CardTitle className="flex flex-row items-center gap-3">
-                                        {form.icon} {form.title}
-                                    </CardTitle>
-                                    {form.deadline && (
-                                        <p className="mt-1 text-sm font-medium text-red-600">
-                                            Deadline: {form.deadline}
-                                        </p>
-                                    )}
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <p className="text-muted-foreground">{form.description}</p>
-                                </CardContent>
-                                <CardFooter className="flex items-center justify-between">
-                                    <Link
-                                        href={form.link.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
-                                    >
-                                        {form.link.name}
-                                        <span className="ml-2">
-                                            <ExternalLink size={16} />
+                {activePinnedForms.length > 0 && (
+                    <div className="mb-12">
+                        <div className="mb-8 text-center">
+                            <h2 className="text-3xl font-bold text-gray-900">Pinned Forms</h2>
+                            <p className="mt-2 text-muted-foreground">
+                                Forms most important to our members
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {activePinnedForms.map((form) => (
+                                <Card
+                                    key={form.title}
+                                    className="flex w-full max-w-sm flex-col border-l-4 border-l-primary shadow-md"
+                                >
+                                    <CardHeader>
+                                        <CardTitle className="flex flex-row items-center gap-3">
+                                            {form.icon} {form.title}
+                                        </CardTitle>
+                                        {form.deadline && (
+                                            <p className="mt-1 text-sm font-medium text-red-600">
+                                                Deadline: {form.deadline}
+                                            </p>
+                                        )}
+                                    </CardHeader>
+                                    <CardContent className="flex-grow">
+                                        <p className="text-muted-foreground">{form.description}</p>
+                                    </CardContent>
+                                    <CardFooter className="flex items-center justify-between">
+                                        <Link
+                                            href={form.link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
+                                        >
+                                            {form.link.name}
+                                            <span className="ml-2">
+                                                <ExternalLink size={16} />
+                                            </span>
+                                        </Link>
+                                        <span className="text-sm text-muted-foreground">
+                                            {form.dateAdded}
                                         </span>
-                                    </Link>
-                                    <span className="text-sm text-muted-foreground">
-                                        {form.dateAdded}
-                                    </span>
-                                </CardFooter>
-                            </Card>
-                        ))}
+                                    </CardFooter>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div className="mb-8 text-center">
-                        <h2 className="text-3xl font-bold text-gray-900">Latest Forms</h2>
-                        <p className="mt-2 text-muted-foreground">All ACM-related forms</p>
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        {latestForms.map((form) => (
-                            <Card
-                                key={form.title}
-                                className="flex w-full max-w-sm flex-col shadow-md"
-                            >
-                                <CardHeader>
-                                    <CardTitle className="flex flex-row items-center gap-3">
-                                        {form.icon} {form.title}
-                                    </CardTitle>
-                                    {form.deadline && (
-                                        <p className="mt-1 text-sm font-medium text-red-600">
-                                            Deadline: {form.deadline}
-                                        </p>
-                                    )}
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <p className="text-muted-foreground">{form.description}</p>
-                                </CardContent>
-                                <CardFooter className="flex items-center justify-between">
-                                    <Link
-                                        href={form.link.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
-                                    >
-                                        {form.link.name}
-                                        <span className="ml-2">
-                                            <ExternalLink size={16} />
+                )}
+                {activeLatestForms.length > 0 && (
+                    <div>
+                        <div className="mb-8 text-center">
+                            <h2 className="text-3xl font-bold text-gray-900">Latest Forms</h2>
+                            <p className="mt-2 text-muted-foreground">All ACM-related forms</p>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {activeLatestForms.map((form) => (
+                                <Card
+                                    key={form.title}
+                                    className="flex w-full max-w-sm flex-col shadow-md"
+                                >
+                                    <CardHeader>
+                                        <CardTitle className="flex flex-row items-center gap-3">
+                                            {form.icon} {form.title}
+                                        </CardTitle>
+                                        {form.deadline && (
+                                            <p className="mt-1 text-sm font-medium text-red-600">
+                                                Deadline: {form.deadline}
+                                            </p>
+                                        )}
+                                    </CardHeader>
+                                    <CardContent className="flex-grow">
+                                        <p className="text-muted-foreground">{form.description}</p>
+                                    </CardContent>
+                                    <CardFooter className="flex items-center justify-between">
+                                        <Link
+                                            href={form.link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group inline-flex items-center font-medium text-primary hover:text-primary/80 hover:underline"
+                                        >
+                                            {form.link.name}
+                                            <span className="ml-2">
+                                                <ExternalLink size={16} />
+                                            </span>
+                                        </Link>
+                                        <span className="text-sm text-muted-foreground">
+                                            {form.dateAdded}
                                         </span>
-                                    </Link>
-                                    <span className="text-sm text-muted-foreground">
-                                        {form.dateAdded}
-                                    </span>
-                                </CardFooter>
-                            </Card>
-                        ))}
+                                    </CardFooter>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </section>
     );
