@@ -20,15 +20,17 @@ type FormItem = {
     dateAdded: string;
     deadline?: string;
     internalDeadline?: string; // YYYY-MM-DDTHh:Mm:Ss format
+    isPinned: boolean;
 };
 
-const pinnedForms: FormItem[] = [
+const allForms: FormItem[] = [
     {
         icon: <LogIn size={28} className="text-red-500" />,
         title: 'Event Sign In',
         description: 'A catch-all form for signing in to Texas ACM events.',
         link: { name: 'Sign In', href: SIGNIN_URL },
         dateAdded: '08/08/2025',
+        isPinned: true,
     },
     {
         icon: <Award size={28} className="text-blue-500" />,
@@ -38,10 +40,8 @@ const pinnedForms: FormItem[] = [
         dateAdded: '08/25/2025',
         deadline: 'Thursday, September 11th @ 11:59pm',
         internalDeadline: '2025-09-11T23:59:00',
+        isPinned: true,
     },
-];
-
-const latestForms: FormItem[] = [
     {
         icon: <Volleyball size={28} className="text-purple-500" />,
         title: 'Intramural Sports Sign Up',
@@ -50,6 +50,7 @@ const latestForms: FormItem[] = [
         dateAdded: '08/25/2025',
         deadline: 'Sunday, September 8th @ 11:59pm',
         internalDeadline: '2025-09-08T23:59:00',
+        isPinned: false,
     },
     {
         icon: <School size={28} className="text-primary" />,
@@ -60,6 +61,7 @@ const latestForms: FormItem[] = [
         dateAdded: '08/25/2025',
         deadline: 'Sunday, September 8th @ 11:59pm',
         internalDeadline: '2025-09-08T23:59:00',
+        isPinned: false,
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -69,6 +71,7 @@ const latestForms: FormItem[] = [
         dateAdded: '08/27/2025',
         deadline: 'Friday, September 19th @ 11:59pm',
         internalDeadline: '2025-09-19T23:59:00',
+        isPinned: false,
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -78,6 +81,7 @@ const latestForms: FormItem[] = [
         dateAdded: '08/27/2025',
         deadline: 'Friday, September 19th @ 11:59pm',
         internalDeadline: '2025-09-19T23:59:00',
+        isPinned: false,
     },
     {
         icon: <Users size={28} className="text-indigo-500" />,
@@ -87,6 +91,7 @@ const latestForms: FormItem[] = [
         dateAdded: '08/28/2025',
         deadline: 'Wednesday, September 10th @ 11:59pm',
         internalDeadline: '2025-09-10T23:59:00',
+        isPinned: false,
     },
 ];
 
@@ -101,8 +106,8 @@ const isFormActive = (form: FormItem): boolean => {
 };
 
 export default function Forms() {
-    const activePinnedForms = pinnedForms.filter(isFormActive);
-    const activeLatestForms = latestForms.filter(isFormActive);
+    const activePinnedForms = allForms.filter((form) => isFormActive(form) && form.isPinned);
+    const activeLatestForms = allForms.filter((form) => isFormActive(form) && !form.isPinned);
 
     return (
         <section>
