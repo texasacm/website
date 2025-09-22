@@ -1,100 +1,8 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-    CORPORATE_BANQUET_RSVP_URL,
-    IM_SPORTS_SIGNUP_URL,
-    MENTEE_APPLICATION_URL,
-    MENTOR_APPLICATION_URL,
-    OO_APPLICATION_URL,
-    SIGNIN_URL,
-    WORKSHOP_INTEREST_FORM_URL,
-} from '@/lib/constants';
+import { allForms, FormItem } from '@/lib/forms-data';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible';
-import { Award, ChevronDown, ExternalLink, LogIn, School, Users, Volleyball } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
-
-type FormItem = {
-    icon: React.ReactElement;
-    title: string;
-    description: string;
-    link: { name: string; href: string };
-    dateAdded: string;
-    deadline?: string;
-    internalDeadline?: string; // YYYY-MM-DDTHh:Mm:Ss format
-    isPinned: boolean;
-};
-
-const allForms: FormItem[] = [
-    {
-        icon: <LogIn size={28} className="text-red-500" />,
-        title: 'Event Sign In',
-        description: 'A catch-all form for signing in to Texas ACM events.',
-        link: { name: 'Sign In', href: SIGNIN_URL },
-        dateAdded: '08/08/2025',
-        isPinned: true,
-    },
-    {
-        icon: <Award size={28} className="text-blue-500" />,
-        title: 'Operational Officer Application',
-        description: 'Apply to become an officer and help build a better Texas ACM.',
-        link: { name: 'Apply Here', href: OO_APPLICATION_URL },
-        dateAdded: '08/25/2025',
-        deadline: 'Thursday, September 11th @ 11:59pm',
-        internalDeadline: '2025-09-11T23:59:00',
-        isPinned: true,
-    },
-    {
-        icon: <Volleyball size={28} className="text-purple-500" />,
-        title: 'Intramural Sports Sign Up',
-        description: 'Want to play sports for Texas ACM? Sign up here! ',
-        link: { name: 'Sign Up', href: IM_SPORTS_SIGNUP_URL },
-        dateAdded: '08/25/2025',
-        deadline: 'Sunday, September 8th @ 11:59pm',
-        internalDeadline: '2025-09-08T23:59:00',
-        isPinned: false,
-    },
-    {
-        icon: <School size={28} className="text-primary" />,
-        title: 'Academic Workshop Interest Form',
-        description:
-            'Show your interest regarding different CS topics so we can cater our workshops to you.',
-        link: { name: 'Show Your Interest', href: WORKSHOP_INTEREST_FORM_URL },
-        dateAdded: '08/25/2025',
-        deadline: 'Sunday, September 8th @ 11:59pm',
-        internalDeadline: '2025-09-08T23:59:00',
-        isPinned: false,
-    },
-    {
-        icon: <Users size={28} className="text-indigo-500" />,
-        title: 'Mentor Sign Up',
-        description: 'Sign up here to become a mentor for the Texas ACM Mentorship Program.',
-        link: { name: 'Sign Up', href: MENTOR_APPLICATION_URL },
-        dateAdded: '08/27/2025',
-        deadline: 'Friday, September 19th @ 11:59pm',
-        internalDeadline: '2025-09-19T23:59:00',
-        isPinned: false,
-    },
-    {
-        icon: <Users size={28} className="text-indigo-500" />,
-        title: 'Mentee Sign Up',
-        description: 'Sign up here to become a mentee for the Texas ACM Mentorship Program.',
-        link: { name: 'Sign Up', href: MENTEE_APPLICATION_URL },
-        dateAdded: '08/27/2025',
-        deadline: 'Friday, September 19th @ 11:59pm',
-        internalDeadline: '2025-09-19T23:59:00',
-        isPinned: false,
-    },
-    {
-        icon: <Users size={28} className="text-indigo-500" />,
-        title: 'Industry Banquet RSVP',
-        description: 'RSVP for the Industry Banquet!',
-        link: { name: 'Sign Up', href: CORPORATE_BANQUET_RSVP_URL },
-        dateAdded: '08/28/2025',
-        deadline: 'Wednesday, September 10th @ 11:59pm',
-        internalDeadline: '2025-09-10T23:59:00',
-        isPinned: false,
-    },
-];
 
 const isFormActive = (form: FormItem): boolean => {
     // if no deadline, always active
@@ -102,10 +10,12 @@ const isFormActive = (form: FormItem): boolean => {
         return true;
     }
     const now = new Date();
+    const nowCDT = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
     const deadline = new Date(form.internalDeadline);
-    return now <= deadline;
+    return nowCDT <= deadline;
 };
 
+// forms are imported from forms-data.tsx
 export default function Forms() {
     const activePinnedForms = allForms.filter((form) => isFormActive(form) && form.isPinned);
     const activeLatestForms = allForms.filter((form) => isFormActive(form) && !form.isPinned);
