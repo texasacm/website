@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 const hero_slides_dir = '/home-page-slides';
 
 export default function Hero() {
+    // Carousel Images
     const [currentImage, setCurrentImage] = useState(0);
 
     const images = [
@@ -20,6 +21,7 @@ export default function Hero() {
         hero_slides_dir + '/paycom_fa24.jpeg',
     ];
 
+    // Update carousel image
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
@@ -27,6 +29,7 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, [images.length]);
 
+    // Handle smooth scrolling when pressing link
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         const targetElement = document.getElementById('join');

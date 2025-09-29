@@ -5,10 +5,13 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import DarkModeToggle from "@/components/dark-mode-toggle"
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [showResources, setShowResources] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); // check if Nav toggle in sm-screen is open
+    const [showResources, setShowResources] = useState(false); // check resources toggle (for dropdown menu) should be open
+    
+    // Hover effect booleans for logo & resources
     const [isLogoHovered, setIsLogoHovered] = useState(false);
     const [isResourcesHovered, setIsResourcesHovered] = useState(false);
 
@@ -17,7 +20,7 @@ export default function Header() {
     };
 
     return (
-        <nav className={cn('fixed top-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-md')}>
+        <nav className={cn('fixed top-0 z-50 w-full bg-white/90 dark:bg-black/50 shadow-sm backdrop-blur-md')}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
@@ -148,6 +151,8 @@ export default function Header() {
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
+
+                    <DarkModeToggle />
                 </div>
             </div>
 
