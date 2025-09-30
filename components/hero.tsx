@@ -63,7 +63,7 @@ export default function Hero() {
                 ))}
                 <div className="absolute inset-0 bg-black/60" />
             </div>
-            <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8">
+            <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8m">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

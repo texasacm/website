@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import DarkModeToggle from "@/components/dark-mode-toggle"
+import { useTheme } from "next-themes";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false); // check if Nav toggle in sm-screen is open
@@ -14,6 +15,8 @@ export default function Header() {
     // Hover effect booleans for logo & resources
     const [isLogoHovered, setIsLogoHovered] = useState(false);
     const [isResourcesHovered, setIsResourcesHovered] = useState(false);
+
+    const { theme } = useTheme();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -32,7 +35,7 @@ export default function Header() {
                         >
                             <div className="relative">
                                 <Image
-                                    src="/texasacm-logo-black.svg"
+                                    src={ theme === "light" ? "/texasacm-logo-black.svg" : "/texasacm-logo-white.svg" }
                                     alt="Texas ACM Logo"
                                     width={120}
                                     height={40}
@@ -65,7 +68,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/about"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 About
                             </Link>
@@ -73,7 +76,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/calendar"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Calendar
                             </Link>
@@ -81,7 +84,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/events"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Events
                             </Link>
@@ -89,7 +92,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/partnership"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Partnership
                             </Link>
@@ -100,7 +103,7 @@ export default function Header() {
                                 onMouseEnter={() => setIsResourcesHovered(true)}
                                 onMouseLeave={() => setIsResourcesHovered(false)}
                             >
-                                <button className="flex h-full items-center font-medium text-gray-700 transition hover:text-primary">
+                                <button className="flex h-full items-center font-medium text-gray-700 transition dark:text-white hover:text-primary dark:hover:text-primary">
                                     Resources <ChevronDown className="ml-1 h-4 w-4" />
                                 </button>
                                 {isResourcesHovered && (
