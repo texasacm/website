@@ -77,7 +77,7 @@ export default function Hero() {
                         The largest computer science student organization @ UT Austin 🤘
                     </p>
                     <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                        <Button asChild size="lg" className="text-lg">
+                        <Button asChild size="lg" className="text-lg text-white">
                             <a href="#join" onClick={handleSmoothScroll}>
                                 Join Us
                             </a>

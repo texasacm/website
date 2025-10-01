@@ -58,7 +58,7 @@ export interface FeaturedEventsProps {
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     if (events.length === 0) {
         return (
-            <section>
+            <section className="dark:bg-slate-800">
                 <div className="mx-auto max-w-5xl text-center">
                     <h2 className="mb-4 text-2xl font-bold">Featured Events</h2>
                     <div className="py-4">
