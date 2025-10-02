@@ -297,7 +297,7 @@ export const officers: Officer[] = [
         name: 'Cienna Ferguson',
         position: 'Operational Marketing Officer',
         image: '/cienna.jpg',
-        bio: "Hello! I’m Cienna and i’m from Houston. I am a ‘28 CS major. I like to play the guitar 🎸, find memes, and watch anime 📺!!",
+        bio: 'Hello! I’m Cienna and i’m from Houston. I am a ‘28 CS major. I like to play the guitar 🎸, find memes, and watch anime 📺!!',
         socials: [
             {
                 url: 'https://instagram.com/ciennajaye',
@@ -308,7 +308,7 @@ export const officers: Officer[] = [
                 url: 'https://www.linkedin.com/in/cienna-ferguson-ba7833284/',
                 iconType: 'linkedin',
                 name: 'LinkedIn',
-            }
+            },
         ],
     },
     {
@@ -351,7 +351,7 @@ export const officers: Officer[] = [
         name: 'Stephanie Kuo',
         position: 'Operational Marketing Officer',
         image: '/stephaniek.jpeg',
-        bio: "Hiii! I’m Stephanie! I’m from El Paso, Texas, pursuing a degree in CS and a minor in SDS. I loveee traveling around and documenting memorable events with people. I also really like Jellyfish 🪼 Feel free to reach out if you want to connect or want to get to know me!!😋",
+        bio: 'Hiii! I’m Stephanie! I’m from El Paso, Texas, pursuing a degree in CS and a minor in SDS. I loveee traveling around and documenting memorable events with people. I also really like Jellyfish 🪼 Feel free to reach out if you want to connect or want to get to know me!!😋',
         socials: [
             {
                 url: 'https://instagram.com/stephaniett_kuo',
@@ -369,7 +369,7 @@ export const officers: Officer[] = [
         name: 'Joshua Vento-Jones',
         position: 'Operational Internal Officer',
         image: '/joshua.jpeg',
-        bio: "Hiya there! The name’s Josh. I’m a Class of 2029 CS Major from San Antonio, TX! When I’m not messing with computers and cyber, I love listening to music (huge fan of rock, anything with good drums), taking photos, playing games and watching the stars :)",
+        bio: 'Hiya there! The name’s Josh. I’m a Class of 2029 CS Major from San Antonio, TX! When I’m not messing with computers and cyber, I love listening to music (huge fan of rock, anything with good drums), taking photos, playing games and watching the stars :)',
         socials: [
             {
                 url: 'http://linkedin.com/in/joshua-vento-jones/',
@@ -395,5 +395,5 @@ export const officers: Officer[] = [
                 name: 'LinkedIn',
             },
         ],
-    },    
+    },
 ];
