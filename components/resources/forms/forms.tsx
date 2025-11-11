@@ -67,12 +67,12 @@ export default function Forms() {
     );
 
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                 {activePinnedForms.length > 0 && (
                     <div className="mb-12">
                         <div className="mb-8 text-center">
-                            <h2 className="text-3xl font-bold text-gray-900">Pinned Forms</h2>
+                            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Pinned Forms</h2>
                             <p className="mt-2 text-muted-foreground">
                                 Forms most important to our members
                             </p>
@@ -83,9 +83,9 @@ export default function Forms() {
                     </div>
                 )}
                 {activeLatestForms.length > 0 && (
-                    <div className="mb-12">
+                    <div className="mb-12 dark:bg-slate-950">
                         <div className="mb-8 text-center">
-                            <h2 className="text-3xl font-bold text-gray-900">Latest Forms</h2>
+                            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Latest Forms</h2>
                             <p className="mt-2 text-muted-foreground">All ACM-related forms</p>
                         </div>
                         <div className="flex flex-wrap justify-center gap-6">
@@ -96,9 +96,9 @@ export default function Forms() {
                 {archivedForms.length > 0 && (
                     <div>
                         <Collapsible className="overflow-hidden rounded-lg border border-gray-200 shadow-md">
-                            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100">
+                            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100 dark:bg-slate-900">
                                 <div className="flex-grow text-center">
-                                    <h2 className="text-3xl font-bold text-gray-900">
+                                    <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                                         Archived Forms
                                     </h2>
                                     <p className="mt-2 text-muted-foreground">
@@ -108,7 +108,7 @@ export default function Forms() {
                                 <ChevronDown className="ml-4 h-5 w-5 text-gray-600 transition-transform group-data-[state=open]:rotate-180" />
                             </CollapsibleTrigger>
                             <CollapsibleContent className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden">
-                                <div className="bg-white px-6 py-8">
+                                <div className="bg-white px-6 py-8 dark:bg-slate-800">
                                     <div className="flex flex-wrap justify-center gap-6">
                                         {archivedForms.map((form) => renderFormCard(form, true))}
                                     </div>

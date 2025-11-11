@@ -19,9 +19,9 @@ const CollapsibleInfo = ({ title, children }: { title: string; children: React.R
 
 export default function UsefulInformation() {
     return (
-        <div className="mx-auto max-w-4xl p-6">
+        <div className="mx-auto p-6 dark:bg-slate-800">
             <div className="mb-8 text-center">
-                <h1 className="mb-2 text-3xl font-bold text-gray-900">Useful Information</h1>
+                <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Useful Information</h1>
             </div>
             <CollapsibleInfo title="Prospective Students">
                 <div className="space-y-4">

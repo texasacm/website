@@ -36,10 +36,10 @@ const faqItems = [
 
 export default function FAQ() {
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="mx-auto max-w-4xl p-6">
                 <div className="mb-8 text-center">
-                    <h2 className="mb-2 text-3xl font-bold text-gray-900">
+                    <h2 className="mb-2 text-3xl font-bold text-gray-900 dark:text-gray-100">
                         Frequently Asked Questions
                     </h2>
                 </div>
@@ -56,13 +56,13 @@ export default function FAQ() {
 function FaqItem({ question, answer }: { question: string; answer: string }) {
     return (
         <Collapsible className="mb-6 overflow-hidden rounded-lg border border-gray-200 shadow-md">
-            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100">
-                <h4 className="text-xl font-semibold text-gray-800">{question}</h4>
+            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100 dark:bg-gray-800">
+                <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{question}</h4>
                 <ChevronDown className="h-5 w-5 text-gray-600 transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
             <CollapsibleContent className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden">
-                <div className="bg-white px-6 py-4">
-                    <p className="text-gray-700">{answer}</p>
+                <div className="bg-white px-6 py-4 dark:bg-gray-700">
+                    <p className="text-gray-700 dark:text-gray-200">{answer}</p>
                 </div>
             </CollapsibleContent>
         </Collapsible>

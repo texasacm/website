@@ -1,14 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { CalendarIcon } from 'lucide-react';
 
-export default function GoogleCalendar() {
+interface GoogleCalenderProps {
+    theme: string;
+}
+
+export default function GoogleCalendar(props: GoogleCalenderProps) {
+
+    const calendarStyle = {
+        border: 0,
+        filter: props.theme == 'light' ? 'invert(0%)' : 'invert(90%)'
+    }
+
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-8">
                         <h2 className="mb-4 text-2xl font-bold">Event Calendar</h2>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 dark:text-gray-100">
                             Use the arrows to view future and past events. Add our calendar to yours
                             to stay updated!
                         </p>
@@ -17,7 +27,7 @@ export default function GoogleCalendar() {
                         <div className="aspect-[3/4] w-full sm:aspect-video">
                             <iframe
                                 src="https://calendar.google.com/calendar/embed?src=utacm.org_tblt9l9gskpcunjovsjfh8ei0g%40group.calendar.google.com&ctz=America%2FChicago"
-                                style={{ border: 0 }}
+                                style={calendarStyle}
                                 width="100%"
                                 height="100%"
                                 title="Texas ACM Google Calendar"

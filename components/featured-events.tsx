@@ -58,12 +58,12 @@ export interface FeaturedEventsProps {
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     if (events.length === 0) {
         return (
-            <section className="dark:bg-slate-800">
-                <div className="mx-auto max-w-5xl text-center">
+            <section className="dark:bg-neutral-900">
+                <div className="mx-auto max-w-5xl text-center dark:text-white-800">
                     <h2 className="mb-4 text-2xl font-bold">Featured Events</h2>
                     <div className="py-4">
                         <h3>No Upcoming Events</h3>
-                        <p className="mt-1 italic text-gray-600">but stay tuned! :)</p>
+                        <p className="mt-1 italic text-gray-600 dark:text-yellow-100">but stay tuned! :)</p>
                     </div>
                     <Button asChild>
                         <Link href="/calendar">View Past Events</Link>
@@ -98,7 +98,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     }
     return (
         <section>
-            <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
+            <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4 dark:text-white-800">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     {events.map((event) => {

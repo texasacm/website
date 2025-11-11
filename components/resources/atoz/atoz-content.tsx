@@ -708,8 +708,8 @@ function SectionContent({ items }: { items: { term: string; description: string 
         <div className="space-y-4">
             {items.map((item) => (
                 <div key={item.term} className="border-b border-gray-200 pb-4">
-                    <h3 className="mb-2 text-lg font-semibold text-gray-900">{item.term}</h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">{item.term}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
                 </div>
             ))}
         </div>
@@ -718,7 +718,7 @@ function SectionContent({ items }: { items: { term: string; description: string 
 
 export default function AtoZContent() {
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
                     <div className="space-y-6">
@@ -727,13 +727,13 @@ export default function AtoZContent() {
                                 key={section.title}
                                 className="rounded-lg border border-gray-200 shadow-sm"
                             >
-                                <div className="flex items-center space-x-3 bg-gray-50 px-6 py-4">
+                                <div className="flex items-center space-x-3 bg-gray-50 px-6 py-4 dark:bg-slate-800">
                                     {section.icon}
-                                    <h3 className="text-xl font-semibold text-gray-800">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                                         {section.title}
                                     </h3>
                                 </div>
-                                <div className="bg-white px-6 py-4">
+                                <div className="bg-white px-6 py-4 dark:bg-slate-900">
                                     <SectionContent items={section.items} />
                                 </div>
                             </div>
