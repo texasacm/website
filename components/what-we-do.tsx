@@ -1,20 +1,26 @@
+'use client'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookOpen, Building2, Users } from 'lucide-react';
 import Image from 'next/image';
+import { useTheme } from "next-themes";
 
 export default function WhatWeDo() {
+
+    const { theme } = useTheme();
+    const pillarUrl = theme == 'light' ? '/pillar.png': '/pillar - white.png';
+
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl">
                     <h2 className="mb-6 flex items-center gap-3 text-3xl font-bold">Our Mission</h2>
-                    <p className="mb-6 text-lg text-gray-700">
+                    <p className="mb-6 text-lg text-gray-700 dark:text-white">
                         Texas ACM is dedicated to promoting computing knowledge and career readiness
                         among UT Austin students. We strive to create a supportive community where
                         students can develop technical skills, connect with industry professionals,
                         and prepare for successful careers in technology.
                     </p>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-lg text-gray-700 dark:text-white">
                         As the largest computer science student organization at UT Austin, we
                         organize a wide range of events and activities designed to enhance the
                         academic and professional development of our members.
@@ -46,7 +52,7 @@ export default function WhatWeDo() {
                             </Card>
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 transform">
                                 <Image
-                                    src="/pillar.png"
+                                    src={pillarUrl}
                                     alt="Industry Pillar"
                                     width={120}
                                     height={120}
@@ -73,7 +79,7 @@ export default function WhatWeDo() {
                             </Card>
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 transform">
                                 <Image
-                                    src="/pillar.png"
+                                    src={pillarUrl}
                                     alt="Academics Pillar"
                                     width={120}
                                     height={120}
@@ -100,7 +106,7 @@ export default function WhatWeDo() {
                             </Card>
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 transform">
                                 <Image
-                                    src="/pillar.png"
+                                    src={pillarUrl}
                                     alt="Community Pillar"
                                     width={120}
                                     height={120}

@@ -38,20 +38,20 @@ export default function EventsSection({
     signatureImage,
 }: EventsSectionProps) {
     return (
-        <section className="relative">
+        <section className="relative dark:bg-slate-950">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-                    <h2 className="mb-4 text-4xl font-bold text-gray-900">{mainCard.title}</h2>
+                    <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">{mainCard.title}</h2>
                 </div>
                 <div className="mx-auto mt-16 max-w-4xl">
                     <Card className="mx-auto max-w-2xl">
                         <CardHeader>
-                            <CardTitle className="align-middle text-gray-700">
+                            <CardTitle className="align-middle text-gray-700 dark:text-white">
                                 {mainCard.cardTitle}
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <ul className="list-disc space-y-4 pl-6 text-left text-gray-700">
+                            <ul className="list-disc space-y-4 pl-6 text-left text-gray-700 dark:text-gray-100">
                                 {mainCard.bulletPoints.map((point, index) => (
                                     <li key={index}>{point}</li>
                                 ))}
@@ -59,7 +59,7 @@ export default function EventsSection({
                         </CardContent>
                     </Card>
                     <div className="mx-auto mt-12 max-w-2xl">
-                        <h3 className="mb-6 text-center text-2xl font-semibold text-gray-900">
+                        <h3 className="mb-6 text-center text-2xl font-semibold text-gray-900 dark:text-white">
                             Events from 2024-25
                         </h3>
                         <div className="grid grid-cols-3 gap-6">
@@ -98,15 +98,15 @@ export default function EventsSection({
                         <div className="grid grid-cols-2 gap-6">
                             <Card className="h-full">
                                 <CardHeader>
-                                    <CardTitle className="text-gray-700">
+                                    <CardTitle className="text-gray-700 dark:text-gray-200">
                                         {signatureCard.title}
                                     </CardTitle>
-                                    <CardDescription className="text-gray-500">
+                                    <CardDescription className="text-gray-500 dark:text-gray-400">
                                         {signatureCard.subTitle}
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
-                                    <ul className="list-disc space-y-4 pl-6 text-left text-gray-700">
+                                    <ul className="list-disc space-y-4 pl-6 text-left text-gray-700 dark:text-gray-100">
                                         {signatureCard.bulletPoints.map((point, index) => (
                                             <li key={index}>{point}</li>
                                         ))}

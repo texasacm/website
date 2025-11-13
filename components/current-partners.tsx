@@ -55,15 +55,15 @@ export const CurrentPartners: FC = (): JSX.Element => {
     const tierStyles: Record<Tier, { text: string; shadow: string }> = {
         Platinum: {
             text: 'text-blue-600',
-            shadow: 'shadow-[0_0_20px_rgba(59,130,246,0.5)]',
+            shadow: 'shadow-[0_0_20px_rgba(59,130,246,0.5)] dark:shadow-[0_0_25px_rgba(59,130,246,0.5)]',
         },
         Gold: {
             text: 'text-yellow-600',
-            shadow: 'shadow-[0_0_20px_rgba(234,179,8,0.5)]',
+            shadow: 'shadow-[0_0_20px_rgba(234,179,8,0.5)] dark:shadow-[0_0_15px_rgba(234,179,8,1)]',
         },
         Silver: {
             text: 'text-gray-400',
-            shadow: 'shadow-[0_0_20px_rgba(156,163,175,0.5)]',
+            shadow: 'shadow-[0_0_20px_rgba(156,163,175,0.5)] dark:shadow-[0_0_15px_rgba(156,163,175,1)]',
         },
     };
 
@@ -79,7 +79,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
     const tierOrder: Tier[] = ['Platinum', 'Gold', 'Silver'];
 
     return (
-        <section className="bg-gray-50 py-16">
+        <section className="bg-gray-50 py-16 dark:bg-slate-950">
             <div className="mx-auto max-w-6xl">
                 <h3 className="mb-12 text-center text-2xl font-bold">Our Current Partners</h3>
 
@@ -102,7 +102,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
                                         className="transition-transform duration-300 hover:-translate-y-1"
                                     >
                                         <Card
-                                            className={`h-60 w-60 cursor-pointer items-center justify-center p-6 transition-all ${tierStyles[partner.tier].shadow}`}
+                                            className={`h-60 w-60 cursor-pointer items-center justify-center p-6 transition-all ${tierStyles[partner.tier].shadow} dark:bg-slate-300`}
                                         >
                                             <CardContent className="flex h-full w-full items-center justify-center p-0">
                                                 <Image

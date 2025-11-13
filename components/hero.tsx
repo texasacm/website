@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 const hero_slides_dir = '/home-page-slides';
 
 export default function Hero() {
+    // Carousel Images
     const [currentImage, setCurrentImage] = useState(0);
 
     const images = [
@@ -20,6 +21,7 @@ export default function Hero() {
         hero_slides_dir + '/paycom_fa24.jpeg',
     ];
 
+    // Update carousel image
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
@@ -27,6 +29,7 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, [images.length]);
 
+    // Handle smooth scrolling when pressing link
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         const targetElement = document.getElementById('join');
@@ -60,7 +63,7 @@ export default function Hero() {
                 ))}
                 <div className="absolute inset-0 bg-black/60" />
             </div>
-            <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8">
+            <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8m">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -74,7 +77,7 @@ export default function Hero() {
                         The largest computer science student organization @ UT Austin 🤘
                     </p>
                     <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                        <Button asChild size="lg" className="text-lg">
+                        <Button asChild size="lg" className="text-lg text-white">
                             <a href="#join" onClick={handleSmoothScroll}>
                                 Join Us
                             </a>

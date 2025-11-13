@@ -58,13 +58,13 @@ export default function OfficerTeam() {
     const iconSize = useResponsiveIconSize();
 
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto mb-12 max-w-3xl text-center">
                     <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
                         Leadership Team
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-gray-600 dark:text-gray-100">
                         Our officers are dedicated to serving the UT Austin CS community. Feel free
                         to reach out!
                     </p>
@@ -114,7 +114,7 @@ export default function OfficerTeam() {
                                                 </DialogDescription>
                                             </DialogHeader>
 
-                                            <p className="my-4 flex-grow text-gray-700 lg:text-lg">
+                                            <p className="my-4 flex-grow text-gray-700 lg:text-lg dark:text-white">
                                                 {officer.bio}
                                             </p>
 

@@ -13,10 +13,10 @@ export default function PartnerWithUs() {
         setTimeout(() => setIsCopied(false), 2000);
     };
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-16 dark:bg-slate-800">
             <div className="mb-12 text-center">
                 <h3 className="mb-4 text-2xl font-bold">Interested in Partnering with Us?</h3>
-                <p className="mx-auto mb-8 max-w-2xl text-gray-700">
+                <p className="mx-auto mb-8 max-w-2xl text-gray-700 dark:text-gray-100">
                     We&apos;d love to discuss how we can create a partnership that meets your
                     recruiting and branding goals while supporting our mission to prepare students
                     for successful careers.

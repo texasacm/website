@@ -2,15 +2,15 @@ import { Check } from 'lucide-react';
 
 export default function WhyPartnerWithUs() {
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-16 dark:bg-slate-950">
             <div className="mx-auto max-w-3xl">
                 <h2 className="mb-6 text-3xl font-bold">Why Partner With Us?</h2>
-                <p className="mb-6 text-lg text-gray-700">
+                <p className="mb-6 text-lg text-gray-700 dark:text-gray-100">
                     Texas ACM is the largest computer science student organization at UT Austin,
                     with over 500 active members. Our members are passionate, talented students who
                     are eager to make an impact.
                 </p>
-                <p className="mb-6 text-lg text-gray-700">
+                <p className="mb-6 text-lg text-gray-700 dark:text-gray-100">
                     Texas ACM&apos;s events and initiatives are fully funded by our amazing
                     corporate partners.
                 </p>

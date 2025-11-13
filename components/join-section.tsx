@@ -8,13 +8,13 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 export default function JoinSection() {
     return (
-        <section id="join" className="bg-gray-50">
+        <section id="join" className="bg-gray-50 dark:bg-zinc-900">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="mb-12 text-center">
                     <h2 className="mb-4 text-3xl font-bold md:text-4xl">
                         Stay Connected with Texas ACM
                     </h2>
-                    <p className="mx-auto max-w-3xl text-xl text-gray-600">
+                    <p className="mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300">
                         Become a part of the largest computer science student organization at UT
                         Austin
                     </p>
@@ -31,7 +31,7 @@ export default function JoinSection() {
                         <CardContent>
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 {/* Mailing List Section */}
-                                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-6">
+                                <div className="flex flex-col items-center justify-center rounded-lg bg-white p-6 dark:bg-slate-800 dark:text-white">
                                     <h3 className="mb-4 text-lg font-semibold">
                                         Join our mailing list:
                                     </h3>
@@ -39,7 +39,7 @@ export default function JoinSection() {
                                 </div>
 
                                 {/* Discord Section */}
-                                <div className="mb-6 flex flex-col items-center justify-center rounded-lg bg-white p-6">
+                                <div className="h-full mb-6 flex flex-col items-center justify-center rounded-lg bg-white p-6 dark:bg-slate-800 dark:text-white">
                                     <h3 className="mb-2 text-lg font-semibold">
                                         Join our Discord:
                                     </h3>

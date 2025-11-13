@@ -5,19 +5,25 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import DarkModeToggle from "@/components/dark-mode-toggle"
+import { useTheme } from "next-themes";
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [showResources, setShowResources] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); // check if Nav toggle in sm-screen is open
+    const [showResources, setShowResources] = useState(false); // check resources toggle (for dropdown menu) should be open
+    
+    // Hover effect booleans for logo & resources
     const [isLogoHovered, setIsLogoHovered] = useState(false);
     const [isResourcesHovered, setIsResourcesHovered] = useState(false);
+
+    const { theme } = useTheme();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <nav className={cn('fixed top-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-md')}>
+        <nav className={cn('fixed top-0 z-50 w-full bg-white/90 dark:bg-black/50 shadow-sm backdrop-blur-md')}>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
@@ -29,7 +35,7 @@ export default function Header() {
                         >
                             <div className="relative">
                                 <Image
-                                    src="/texasacm-logo-black.svg"
+                                    src={ theme === "light" ? "/texasacm-logo-black.svg" : "/texasacm-logo-white.svg" }
                                     alt="Texas ACM Logo"
                                     width={120}
                                     height={40}
@@ -62,7 +68,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/about"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 About
                             </Link>
@@ -70,7 +76,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/calendar"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Calendar
                             </Link>
@@ -78,7 +84,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/events"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Events
                             </Link>
@@ -86,7 +92,7 @@ export default function Header() {
                         <div className="flex h-full items-center px-4">
                             <Link
                                 href="/partnership"
-                                className="font-medium text-gray-700 transition hover:text-primary"
+                                className="font-medium text-gray-700 transition hover:text-primary dark:hover:text-primary dark:text-white"
                             >
                                 Partnership
                             </Link>
@@ -97,7 +103,7 @@ export default function Header() {
                                 onMouseEnter={() => setIsResourcesHovered(true)}
                                 onMouseLeave={() => setIsResourcesHovered(false)}
                             >
-                                <button className="flex h-full items-center font-medium text-gray-700 transition hover:text-primary">
+                                <button className="flex h-full items-center font-medium text-gray-700 transition dark:text-white hover:text-primary dark:hover:text-primary">
                                     Resources <ChevronDown className="ml-1 h-4 w-4" />
                                 </button>
                                 {isResourcesHovered && (
@@ -148,6 +154,8 @@ export default function Header() {
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
+
+                    <DarkModeToggle />
                 </div>
             </div>
 

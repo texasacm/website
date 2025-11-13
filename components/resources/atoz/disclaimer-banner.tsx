@@ -1,6 +1,6 @@
 export default function DisclaimerBanner() {
     return (
-        <div className="border-l-4 border-yellow-500 bg-yellow-100 p-4">
+        <div className="border-l-4 border-yellow-500 bg-yellow-100 p-4 dark:bg-yellow-300">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-center">
                     <div className="py-1">
@@ -20,7 +20,7 @@ export default function DisclaimerBanner() {
                         </svg>
                     </div>
                     <div className="ml-3">
-                        <p className="text-yellow-700">
+                        <p className="text-yellow-700 dark:text-yellow-900">
                             This information is currently being updated. Some content may be
                             outdated.
                         </p>

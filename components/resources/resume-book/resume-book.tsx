@@ -5,12 +5,12 @@ import Link from 'next/link';
 
 export default function ResumeBook() {
     return (
-        <section>
+        <section className="dark:bg-slate-950">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="mb-8 flex flex-row items-center justify-center gap-2">
                     <h3 className="text-center text-2xl font-bold">ACM Resume Book</h3>
                 </div>
-                <p className="mb-4 text-center text-gray-700">
+                <p className="mb-4 text-center text-gray-700 dark:text-gray-200">
                     Submit your resume to our resume book, which is shared with our corporate
                     partners. This is a great way to get your resume in front of recruiters from top
                     tech companies.
@@ -19,7 +19,7 @@ export default function ResumeBook() {
                     <Card className="shadow-md">
                         <CardContent className="p-8">
                             <div className="space-y-6">
-                                <div className="mb-4 rounded-lg bg-gray-100 p-4">
+                                <div className="mb-4 rounded-lg bg-gray-100 p-4 dark:bg-gray-900">
                                     <h5 className="mb-1 font-semibold">
                                         Submission Recommendations
                                     </h5>

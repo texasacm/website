@@ -58,12 +58,12 @@ export interface FeaturedEventsProps {
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
     if (events.length === 0) {
         return (
-            <section>
-                <div className="mx-auto max-w-5xl text-center">
+            <section className="dark:bg-neutral-900">
+                <div className="mx-auto max-w-5xl text-center dark:text-white-800">
                     <h2 className="mb-4 text-2xl font-bold">Featured Events</h2>
                     <div className="py-4">
                         <h3>No Upcoming Events</h3>
-                        <p className="mt-1 italic text-gray-600">but stay tuned! :)</p>
+                        <p className="mt-1 italic text-gray-600 dark:text-yellow-100">but stay tuned! :)</p>
                     </div>
                     <Button asChild>
                         <Link href="/calendar">View Past Events</Link>
@@ -97,8 +97,8 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
         );
     }
     return (
-        <section>
-            <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
+        <section className="dark:bg-neutral-950">
+            <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4 dark:text-white-800">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     {events.map((event) => {
@@ -125,13 +125,13 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                                     </CardHeader>
                                     <CardContent>
                                         {event.description && (
-                                            <p className="mb-4 whitespace-pre-line text-gray-700">
+                                            <p className="mb-4 whitespace-pre-line text-gray-700 dark:text-gray-100">
                                                 {cleanEventDescription(event.description)}
                                             </p>
                                         )}
                                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                                            <CalendarIcon className="h-4 w-4" />
-                                            <span>
+                                            <CalendarIcon className="h-4 w-4 dark:text-gray-200" />
+                                            <span className="dark:text-gray-200">
                                                 {formatInTimeZone(
                                                     startDate,
                                                     'America/Chicago',
