@@ -6,12 +6,12 @@ import React from 'react';
 const CollapsibleInfo = ({ title, children }: { title: string; children: React.ReactNode }) => {
     return (
         <Collapsible className="mb-6 overflow-hidden rounded-lg border border-gray-200 shadow-md">
-            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100">
-                <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+            <CollapsibleTrigger className="group flex w-full items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100 dark:bg-slate-900 dark:border-black">
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{title}</h2>
                 <ChevronDown className="h-5 w-5 text-gray-600 transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
             <CollapsibleContent className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden">
-                <div className="bg-white px-6 py-4">{children}</div>
+                <div className="bg-white px-6 py-4 dark:bg-slate-700 dark:text-gray-100">{children}</div>
             </CollapsibleContent>
         </Collapsible>
     );
@@ -23,13 +23,13 @@ export default function UsefulInformation() {
             <div className="mb-8 text-center">
                 <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Useful Information</h1>
             </div>
-            <CollapsibleInfo title="Prospective Students">
+            <CollapsibleInfo title="Prospective Students" >
                 <div className="space-y-4">
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100 dark:text-gray-100">
                             FRI (Freshman Research Initiative)
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>Hands-on experience in a research field of your choosing</li>
                             <li>
                                 CS-related FRI streams include Robotics Quantum Computing, and Big
@@ -54,10 +54,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             CS Honors Programs
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 UTCS offers two types of honors programs: CSB and Turing Scholars.
                             </li>
@@ -93,10 +93,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             X+CS Dual Degree Programs
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 Aside from CSB, UTCS provides specialized support for certain dual
                                 majors
@@ -122,10 +122,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             First time in Austin?
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 Austin is a fast-growing tech hub with a variety of big tech
                                 companies and small startups
@@ -145,10 +145,10 @@ export default function UsefulInformation() {
             <CollapsibleInfo title="First Year Good-to-Knows">
                 <div className="space-y-4">
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Degree Plan Resources
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>Read your degree plan fully to know what to expect</li>
                             <li>
                                 Meet with your academic advisor if you have any questions or
@@ -170,10 +170,10 @@ export default function UsefulInformation() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Registration Tips
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 In your first year, you&apos;ll have reserved spots for core CS
                                 classes
@@ -201,8 +201,8 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">General UT Tips</h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">General UT Tips</h3>
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 Attend office hours - professors and TAs want to help you succeed!
                             </li>
@@ -226,10 +226,10 @@ export default function UsefulInformation() {
             <CollapsibleInfo title="UTCS Good-to-Knows">
                 <div className="space-y-4">
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Department Job Opportunities
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 <strong>Teaching Assistant (TA):</strong> Help with grading, office
                                 hours, and exam proctoring
@@ -256,10 +256,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Research Opportunities
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 Every semester, CS professors offer CS 370 electives as research
                                 opportunities
@@ -293,10 +293,10 @@ export default function UsefulInformation() {
             <CollapsibleInfo title="Upperclassmen Good-to-Knows">
                 <div className="space-y-4">
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Upper Division Course Selection
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>CS majors are required to take upper division courses.</li>
                             <li>
                                 Popular courses fill quickly - expect to take them later in your
@@ -335,10 +335,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             Job Search Advice
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>Start early - it&apos;s tough out there!</li>
                             <li>Attend career fairs, info sessions, and networking events</li>
                             <li>Practice coding interviews regularly on platforms like LeetCode</li>
@@ -355,10 +355,10 @@ export default function UsefulInformation() {
             <CollapsibleInfo title="Graduate School Good-to-Knows">
                 <div className="space-y-4">
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             UT Austin Programs
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 <strong>Integrated BS/MS Program:</strong> Complete both a Bachelors
                                 and Masters in CS in 5 years total
@@ -384,10 +384,10 @@ export default function UsefulInformation() {
                     </div>
 
                     <div>
-                        <h3 className="mb-2 text-lg font-medium text-gray-800">
+                        <h3 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
                             UT Online Master&apos;s Programs
                         </h3>
-                        <ul className="list-disc space-y-1 pl-6 text-gray-700">
+                        <ul className="list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-200">
                             <li>
                                 UT offers online MS in Computer Science and AI for working
                                 professionals

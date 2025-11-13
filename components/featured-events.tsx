@@ -97,7 +97,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
         );
     }
     return (
-        <section>
+        <section className="dark:bg-neutral-950">
             <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4 dark:text-white-800">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -125,13 +125,13 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                                     </CardHeader>
                                     <CardContent>
                                         {event.description && (
-                                            <p className="mb-4 whitespace-pre-line text-gray-700">
+                                            <p className="mb-4 whitespace-pre-line text-gray-700 dark:text-gray-100">
                                                 {cleanEventDescription(event.description)}
                                             </p>
                                         )}
                                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                                            <CalendarIcon className="h-4 w-4" />
-                                            <span>
+                                            <CalendarIcon className="h-4 w-4 dark:text-gray-200" />
+                                            <span className="dark:text-gray-200">
                                                 {formatInTimeZone(
                                                     startDate,
                                                     'America/Chicago',
