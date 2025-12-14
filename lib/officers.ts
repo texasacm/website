@@ -154,19 +154,6 @@ export const officers: Officer[] = [
         ],
     },
     {
-        name: 'Niken Patel',
-        position: 'Senior Finance Officer',
-        image: '/niken.jpeg',
-        bio: "Hey yall, my name's Niken and I'm from College Station, TX. I'm a sophomore CS major at UT. I really enjoy basketball 🏀 and tennis 🎾",
-        socials: [
-            {
-                url: 'https://instagram.com/niken_p_29',
-                iconType: 'instagram',
-                name: 'Instagram',
-            },
-        ],
-    },
-    {
         name: 'Stephanie Nguyen',
         position: 'Senior Marketing Officer',
         image: '/stephanie.jpeg',

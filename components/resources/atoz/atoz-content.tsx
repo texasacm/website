@@ -15,7 +15,6 @@ import {
     GitBranch,
     History,
     Laptop,
-    Monitor,
     Terminal,
     User,
     Users,
@@ -32,9 +31,9 @@ const allSections = [
                     "The yellow brick road that runs down the middle of campus. Most of the buildings you'll need to go to will probably be right off of Speedway.",
             },
             {
-                term: 'PMA/RLM',
+                term: 'PMA',
                 description:
-                    'The building between Dean Keeton and the EERC, which you will probably have math classes in. The ground floor is actually the 4th floor, and you have to use the escalators to get to levels 5-7 since the elevators only go to level 8 and above. While the building is officially called the RLM, there has been a push to call it the PMA (Physics, Math, and Astronomy building) since the professor the RLM was named after was notoriously racist.',
+                    'The building at the interesction of Speedway and Dean Keaton, which you will probably have math classes in. The ground floor is actually the 4th floor, and you have to use the escalators to get to levels 5-7 since the elevators only go to level 8 and above.',
             },
             {
                 term: 'UTC',
@@ -47,9 +46,9 @@ const allSections = [
                     "The Perry-Castañeda Library, which is the largest library on campus. It's technically not open 24/7, but if you are already in the library before closing time you won't be kicked out. There are quiet floors and collaboration floors so make sure you go to the one that suits your study needs best!",
             },
             {
-                term: 'SAC/WCP',
+                term: 'WCP',
                 description:
-                    'The Student Activity Center, one of the two Student Unions on campus. It has Chick-Fil-A, Zen, Taco Cabana, Starbucks, and POD, which is like a mini grocery store that you can get snacks and drinks from. It was recently renamed to the William C. Powers Student Activity Center, but a lot of students still just call it the SAC.',
+                    'The Student Activity Center, one of the two Student Unions on campus. It has Chick-Fil-A, Zen, Taco Cabana, Starbucks, and POD, which is like a mini grocery store that you can get snacks and drinks from.',
             },
             {
                 term: 'Gregory Gymnasium',
@@ -113,16 +112,16 @@ const allSections = [
         title: 'Places of UTCS',
         icon: <Building2 className="h-5 w-5 text-green-500" />,
         items: [
-            { term: 'GDC', description: 'Gates Dell Complex' },
+            { term: 'GDC', description: 'The Gates Dell Complex, UT Austin\'s CS building.' },
             {
                 term: '3rd Floor Lab',
                 description:
-                    "The 3rd floor lab (GDC 3.302) has 85 lab machines, 2 printers, lockers, student organization offices, and TA stations. It's accessible 24/7 with your ID card.",
+                    "The 3rd floor lab (GDC 3.302) has lab machines pr,inters, lockers, student organization offices, and TA stations. It's accessible 24/7 with your ID card.",
             },
             {
                 term: '2nd Floor Lab',
                 description:
-                    'The 2nd floor lab (GDC 2.402) is towards the back of the North Tower on the 2nd floor. There are 26 lab machines here.',
+                    'The 2nd floor lab (GDC 2.402) is towards the back of the North Tower on the 2nd floor.',
             },
             {
                 term: 'Atrium',
@@ -132,7 +131,7 @@ const allSections = [
             {
                 term: 'Auditorium',
                 description:
-                    "The Auditorium (GDC 2.216) is the largest lecture hall in the GDC. You'll probably have 312, 311 and/or 314 here.",
+                    "The Auditorium (GDC 2.216) is the largest lecture hall in the GDC.",
             },
             { term: 'Gateshenge', description: 'The circular statue in front of the GDC.' },
             {
@@ -189,6 +188,16 @@ const allSections = [
                 description:
                     'Organizes hackathons including HackTX (24-hour) in fall and a 12-hour themed hackathon in spring.',
             },
+            {
+                term: 'Longhorn Developers',
+                description:
+                    'A group of student developers that update and manage open-source projects serving UT Austin students.',
+            },
+            {
+                term: 'And Many More...',
+                description:
+                    'There are too many orgs to list within this page. Most orgs fall under three categories: identity-based, specialization-based, or software engineering. If you are unsure if an org exists for a specific identity/specialization, ask one of the officers!',
+            },
         ],
     },
     {
@@ -201,7 +210,7 @@ const allSections = [
                     'The most commonly used version control system for tracking changes in code.',
             },
             {
-                term: 'VSCode',
+                term: 'VS Code',
                 description:
                     'A popular code editor made by Microsoft with lots of useful extensions.',
             },
@@ -225,7 +234,7 @@ const allSections = [
             {
                 term: 'SSH',
                 description:
-                    'Secure Shell - allows you to securely access and control remote computers.',
+                    'Secure Shell - allows you to securely access and control remote computers. You can use this to remotely access lab machines in the GDC.',
             },
         ],
     },
@@ -338,10 +347,6 @@ const allSections = [
             {
                 term: 'grep',
                 description: 'Search tool to find text patterns in files.',
-            },
-            {
-                term: 'SSH',
-                description: 'Secure Shell protocol for accessing remote machines securely.',
             },
             {
                 term: 'sudo',
@@ -469,21 +474,9 @@ const allSections = [
                 term: 'Glenn Downing',
                 description: 'Teaches software engineering and object oriented programming.',
             },
-        ],
-    },
-    {
-        title: 'UTCS Machines',
-        icon: <Monitor className="h-5 w-5 text-cyan-500" />,
-        items: [
             {
-                term: 'Lab Machine Names',
-                description:
-                    'You can find a list of all lab machines at apps.cs.utexas.edu/unixlabstatus. They have fun naming conventions like board games, bugs, operas, and more.',
-            },
-            {
-                term: 'Printers',
-                description:
-                    "There are 2 public printers in the GDC 3rd floor lab, lw303 and lw301. To print, run 'lpr -Plw303 <file>' in the terminal from a lab machine.",
+                term: 'And Many More...',
+                description: 'If you hear about a professor and are unsure about who they are, many professors host their own UT webpages with a short bio and their related works. You can also ask a friend or an officer for more information about a particular professor.',
             },
         ],
     },
@@ -494,17 +487,17 @@ const allSections = [
             {
                 term: 'Career Fair',
                 description:
-                    'A career fair put on by the College of Natural Science once per semester. Most companies recruit in fall. Takes place in the Frank Erwin Center with shuttles provided.',
+                    'A career fair put on by the College of Natural Science once per semester. Most companies recruit in fall.',
             },
             {
                 term: 'Div Day',
                 description:
-                    'A conference empowering historically marginalized communities in STEM through discussions, speakers, and workshops. Organized by ABCS and HACS.',
+                    'A conference empowering historically marginalized communities in STEM through discussions, speakers, and workshops.',
             },
             {
                 term: 'HackTX',
                 description:
-                    "UT's annual 24-hour hackathon at the AT&T Conference center. Great for creating side projects and attending workshops.",
+                    "UT's annual 24-hour hackathon. Great for creating side projects and attending workshops.",
             },
             {
                 term: 'WiCS Hacks',
@@ -629,7 +622,7 @@ const allSections = [
                     'Pioneering computer scientist and US Navy Rear Admiral who invented one of the first linkers.',
             },
             {
-                term: 'Edsger Dijkstra',
+                term: 'Edsger W. Dijkstra',
                 description:
                     "Created Dijkstra's algorithm and the semaphore concept. Worked at UT from 1994 to 1999.",
             },
@@ -642,7 +635,7 @@ const allSections = [
             {
                 term: 'FAANG/Big Tech',
                 description:
-                    'Facebook/Meta, Apple, Amazon, Netflix, Google - top tech companies known for high compensation and competitive positions.',
+                    'Facebook/Meta, Apple, Amazon, Netflix, Google - top tech companies known for high compensation and competitive positions. Other companies of note include Nvidia and Microsoft.',
             },
             {
                 term: 'Software Engineer',
