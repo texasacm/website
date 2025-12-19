@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import {  } from 'react-icons/fa6';
 
 export default function JoinSection() {
     return (
@@ -99,14 +99,6 @@ export default function JoinSection() {
                                 className="text-gray-600 transition hover:text-primary"
                             >
                                 <FaGithub size={40} />
-                            </Link>
-                            <Link
-                                href="https://x.com/utexasACM"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-600 transition hover:text-primary"
-                            >
-                                <FaXTwitter size={40} />
                             </Link>
                             <Link
                                 href="https://discord.gg/tspJCpFFKx"
