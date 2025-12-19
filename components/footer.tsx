@@ -2,7 +2,6 @@ import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
     return (
@@ -46,14 +45,6 @@ export default function Footer() {
                                 className="text-gray-400 transition hover:text-white"
                             >
                                 <FaGithub size={20} />
-                            </Link>
-                            <Link
-                                href="https://x.com/utexasACM"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 transition hover:text-white"
-                            >
-                                <FaXTwitter size={20} />
                             </Link>
                             <Link
                                 href="https://discord.gg/tspJCpFFKx"
@@ -107,6 +98,14 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-4 text-lg font-semibold">Resources</h3>
                         <ul className="space-y-2">
+                            <li>
+                                <Link
+                                    href="/atoz"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
+                                    CS A to Z
+                                </Link>
+                            </li>
                             <li>
                                 <Link
                                     href="/cs-guide"

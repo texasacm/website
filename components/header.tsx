@@ -192,6 +192,13 @@ export default function Header() {
                         {showResources && (
                             <div className="ml-4 space-y-1">
                                 <Link
+                                    href="/atoz"
+                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-primary"
+                                    onClick={toggleMenu}
+                                >
+                                    CS A to Z
+                                </Link>
+                                <Link
                                     href="/cs-guide"
                                     className="block px-3 py-2 text-sm text-gray-700 hover:text-primary"
                                     onClick={toggleMenu}

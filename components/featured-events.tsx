@@ -96,11 +96,17 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
             </section>
         );
     }
+    const isSingleEvent = events.length === 1;
+
     return (
         <section>
             <div className="mx-auto mt-16 max-w-5xl justify-items-center px-4">
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div
+                    className={`grid grid-cols-1 gap-8 md:grid-cols-2${
+                        isSingleEvent ? ' justify-items-center md:grid-cols-1' : ''
+                    }`}
+                >
                     {events.map((event) => {
                         const startRaw = event.start.dateTime ?? event.start.date;
                         const endRaw = event.end?.dateTime ?? event.end?.date;
@@ -116,6 +122,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                                 href={event.htmlLink || '#'}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className={isSingleEvent ? 'w-full max-w-2xl' : undefined}
                             >
                                 <Card className="shadow-md transition-shadow duration-200 hover:shadow-lg">
                                     <CardHeader>
