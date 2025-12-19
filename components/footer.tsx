@@ -109,6 +109,14 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li>
                                 <Link
+                                    href="/atoz"
+                                    className="text-gray-400 transition hover:text-white"
+                                >
+                                    CS A to Z
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/cs-guide"
                                     className="text-gray-400 transition hover:text-white"
                                 >
