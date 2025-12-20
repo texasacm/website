@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "@emotion/is-prop-valid": "latest",
+        "@eslint/eslintrc": "^3.3.3",
         "@hookform/resolvers": "^3.9.1",
         "@radix-ui/react-accordion": "^1.2.2",
         "@radix-ui/react-alert-dialog": "^1.1.4",
@@ -68,13 +69,18 @@
         "zod": "^3.24.1"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.39.2",
+        "@next/eslint-plugin-next": "^16.1.0",
         "@types/node": "^22",
         "@types/react": "^19",
         "@types/react-dom": "^19",
+        "@typescript-eslint/eslint-plugin": "^8.50.0",
+        "@typescript-eslint/parser": "^8.50.0",
         "eslint": "^9.35.0",
         "eslint-config-next": "15.3.2",
         "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
         "postcss": "^8",
         "prettier": "^3.6.2",
         "prettier-plugin-tailwindcss": "^0.6.14",

@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import {  } from 'react-icons/fa6';
+import {} from 'react-icons/fa6';
 
 export default function JoinSection() {
     return (

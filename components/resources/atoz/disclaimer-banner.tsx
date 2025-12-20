@@ -21,8 +21,8 @@ export default function DisclaimerBanner() {
                     </div>
                     <div className="ml-3">
                         <p className="text-yellow-700">
-                            It&apos;s possible some content may be outdated. Please check with an officer or online
-                            if you are unsure about information presented here.
+                            It&apos;s possible some content may be outdated. Please check with an
+                            officer or online if you are unsure about information presented here.
                         </p>
                     </div>
                 </div>

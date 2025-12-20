@@ -104,7 +104,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({ events = [] }) => {
                 <h2 className="mb-8 text-2xl font-bold">Featured Events</h2>
                 <div
                     className={`grid grid-cols-1 gap-8 md:grid-cols-2${
-                        isSingleEvent ? ' justify-items-center md:grid-cols-1' : ''
+                        isSingleEvent ? 'justify-items-center md:grid-cols-1' : ''
                     }`}
                 >
                     {events.map((event) => {

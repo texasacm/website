@@ -112,7 +112,7 @@ const allSections = [
         title: 'Places of UTCS',
         icon: <Building2 className="h-5 w-5 text-green-500" />,
         items: [
-            { term: 'GDC', description: 'The Gates Dell Complex, UT Austin\'s CS building.' },
+            { term: 'GDC', description: "The Gates Dell Complex, UT Austin's CS building." },
             {
                 term: '3rd Floor Lab',
                 description:
@@ -130,8 +130,7 @@ const allSections = [
             },
             {
                 term: 'Auditorium',
-                description:
-                    "The Auditorium (GDC 2.216) is the largest lecture hall in the GDC.",
+                description: 'The Auditorium (GDC 2.216) is the largest lecture hall in the GDC.',
             },
             { term: 'Gateshenge', description: 'The circular statue in front of the GDC.' },
             {
@@ -476,7 +475,8 @@ const allSections = [
             },
             {
                 term: 'And Many More...',
-                description: 'If you hear about a professor and are unsure about who they are, many professors host their own UT webpages with a short bio and their related works. You can also ask a friend or an officer for more information about a particular professor.',
+                description:
+                    'If you hear about a professor and are unsure about who they are, many professors host their own UT webpages with a short bio and their related works. You can also ask a friend or an officer for more information about a particular professor.',
             },
         ],
     },
