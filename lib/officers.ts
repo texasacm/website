@@ -154,6 +154,24 @@ export const officers: Officer[] = [
         ],
     },
     {
+        name: 'Adrien Chew',
+        position: 'Senior Finance Officer',
+        image: '/adrien.jpg',
+        bio: "Hey everyone! I'm Adrien and I am from Houston, TX. I'm currently a sophomore studying computer science at UT Austin. In my free time, I love to dance and collect smiskis!",
+        socials: [
+            {
+                url: 'https://instagram.com/mr.meowdrien',
+                iconType: 'instagram',
+                name: 'Instagram',
+            },
+            {
+                url: 'http://linkedin.com/in/adrien-chew/',
+                iconType: 'linkedin',
+                name: 'LinkedIn',
+            },
+        ],
+    },
+    {
         name: 'Stephanie Nguyen',
         position: 'Senior Marketing Officer',
         image: '/stephanie.jpeg',
@@ -263,18 +281,18 @@ export const officers: Officer[] = [
         socials: [],
     },
     {
-        name: 'Adrien Chew',
+        name: 'Manoj Kumar',
         position: 'Operational Finance Officer',
-        image: '/adrien.jpg',
-        bio: "Hey everyone! I'm Adrien and I am from Houston, TX. I'm currently a sophomore studying computer science at UT Austin. In my free time, I love to dance and collect smiskis!",
+        image: '/manoj.jpeg',
+        bio: "Hey y'all! My name is Manoj which sounds similar to My Nose but with a J sound at the end! I'm a '29 CS major. I love to watch anime and read manga/manhwa! My favorite anime/manga is One Piece (fun fact: my college personal essay was about One Piece). I can't wait to connect with y'all :)",
         socials: [
             {
-                url: 'https://instagram.com/mr.meowdrien',
+                url: 'https://instagram.com/ManojAnime',
                 iconType: 'instagram',
                 name: 'Instagram',
             },
             {
-                url: 'http://linkedin.com/in/adrien-chew/',
+                url: 'http://linkedin.com/in/manojatx',
                 iconType: 'linkedin',
                 name: 'LinkedIn',
             },
