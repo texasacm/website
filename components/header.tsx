@@ -6,7 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Header() {
+interface HeaderProps {
+    hideHeader?: boolean;
+}
+
+export default function Header(props: HeaderProps) {
+    const hideHeader = props.hideHeader ?? false;
     const [isOpen, setIsOpen] = useState(false);
     const [showResources, setShowResources] = useState(false);
     const [isLogoHovered, setIsLogoHovered] = useState(false);
@@ -57,11 +62,11 @@ export default function Header() {
                             </div>
                         </Link>
                     </div>
-                    {/* Desktop Navigation */}
-                    <div className="hidden h-16 items-center md:flex">
-                        <div className="flex h-full items-center px-4">
-                            <Link
-                                href="/about"
+                    {!hideHeader && (
+                        <div className="hidden h-16 items-center md:flex">
+                            <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/about"
                                 className="font-medium text-gray-700 transition hover:text-primary"
                             >
                                 About
@@ -137,6 +142,7 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+                    )}
 
                     {/* Mobile Navigation Toggle */}
                     <div className="md:hidden">
