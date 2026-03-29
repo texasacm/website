@@ -9,7 +9,7 @@ export default function ElectionHero() {
                 <div className="mx-auto max-w-3xl text-center">
                     <Vote className="mx-auto mb-4 h-12 w-12 text-white" />
                     <h1 className="mb-4 text-4xl font-bold text-white">
-                        Texas ACM Elections 2026-27
+                        Texas ACM Executive Board Elections 2026-27
                     </h1>
                 </div>
             </div>
