@@ -2,7 +2,7 @@
 import CSWeekHero from '@/components/cs-week/cs-week-hero';
 import CSWeekInfo from '@/components/cs-week/cs-week-info';
 import CSWeekSchedule from '@/components/cs-week/cs-week-schedule';
-import CSWeekSponsors from '@/components/cs-week/cs-week-sponsors';
+import CSWeekSponsors from '@/components/cs-week/cs-week-prize-providers';
 import Footer from '@/components/footer';
 
 export default async function CSGuidePage() {
