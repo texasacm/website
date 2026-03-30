@@ -5,7 +5,7 @@ export default function CSWeekSchedule() {
     return (
         <section className="bg-[#7A8F56]">
             <Header hideHeader={true} />
-            <div className="container px-4 pt-12 sm:px-6 lg:px-8">
+            <div className="text-center container px-4 pt-12 sm:px-6 lg:px-8">
                 <h1 className="mb-4 font-pagkaki text-6xl font-bold text-white">Schedule</h1>
                 <div className="grid grid-cols-5 gap-4 p-8">
                     <Card className="col-span-1 p-8">
