@@ -297,6 +297,7 @@ export default function CSWeekSchedule() {
                         alt=""
                         width={116}
                         height={142}
+                        unoptimized
                         className="schedule-flyer absolute h-auto"
                         style={{
                             left: `${flyer.left}%`,
