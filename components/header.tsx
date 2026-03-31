@@ -6,7 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Header() {
+interface HeaderProps {
+    hideHeader?: boolean;
+}
+
+export default function Header(props: HeaderProps) {
+    const hideHeader = props.hideHeader ?? false;
     const [isOpen, setIsOpen] = useState(false);
     const [showResources, setShowResources] = useState(false);
     const [isLogoHovered, setIsLogoHovered] = useState(false);
@@ -57,86 +62,87 @@ export default function Header() {
                             </div>
                         </Link>
                     </div>
-                    {/* Desktop Navigation */}
-                    <div className="hidden h-16 items-center md:flex">
-                        <div className="flex h-full items-center px-4">
-                            <Link
-                                href="/about"
-                                className="font-medium text-gray-700 transition hover:text-primary"
-                            >
-                                About
-                            </Link>
-                        </div>
-                        <div className="flex h-full items-center px-4">
-                            <Link
-                                href="/calendar"
-                                className="font-medium text-gray-700 transition hover:text-primary"
-                            >
-                                Calendar
-                            </Link>
-                        </div>
-                        <div className="flex h-full items-center px-4">
-                            <Link
-                                href="/events"
-                                className="font-medium text-gray-700 transition hover:text-primary"
-                            >
-                                Events
-                            </Link>
-                        </div>
-                        <div className="flex h-full items-center px-4">
-                            <Link
-                                href="/partnership"
-                                className="font-medium text-gray-700 transition hover:text-primary"
-                            >
-                                Partnership
-                            </Link>
-                        </div>
-                        <div className="flex h-full items-center px-4">
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setIsResourcesHovered(true)}
-                                onMouseLeave={() => setIsResourcesHovered(false)}
-                            >
-                                <button className="flex h-full items-center font-medium text-gray-700 transition hover:text-primary">
-                                    Resources <ChevronDown className="ml-1 h-4 w-4" />
-                                </button>
-                                {isResourcesHovered && (
-                                    <div className="absolute left-0 top-full z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 slide-in-from-top-2">
-                                        <Link
-                                            href="/atoz"
-                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                        >
-                                            CS A-to-Z
-                                        </Link>
-                                        <Link
-                                            href="/cs-guide"
-                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                        >
-                                            CS Guide
-                                        </Link>
-                                        <Link
-                                            href="/faq"
-                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                        >
-                                            FAQ
-                                        </Link>
-                                        <Link
-                                            href="/forms"
-                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                        >
-                                            Forms
-                                        </Link>
-                                        <Link
-                                            href="/resume-book"
-                                            className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                        >
-                                            Resume Book
-                                        </Link>
-                                    </div>
-                                )}
+                    {!hideHeader && (
+                        <div className="hidden h-16 items-center md:flex">
+                            <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/about"
+                                    className="font-medium text-gray-700 transition hover:text-primary"
+                                >
+                                    About
+                                </Link>
+                            </div>
+                            <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/calendar"
+                                    className="font-medium text-gray-700 transition hover:text-primary"
+                                >
+                                    Calendar
+                                </Link>
+                            </div>
+                            <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/events"
+                                    className="font-medium text-gray-700 transition hover:text-primary"
+                                >
+                                    Events
+                                </Link>
+                            </div>
+                            <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/partnership"
+                                    className="font-medium text-gray-700 transition hover:text-primary"
+                                >
+                                    Partnership
+                                </Link>
+                            </div>
+                            <div className="flex h-full items-center px-4">
+                                <div
+                                    className="relative"
+                                    onMouseEnter={() => setIsResourcesHovered(true)}
+                                    onMouseLeave={() => setIsResourcesHovered(false)}
+                                >
+                                    <button className="flex h-full items-center font-medium text-gray-700 transition hover:text-primary">
+                                        Resources <ChevronDown className="ml-1 h-4 w-4" />
+                                    </button>
+                                    {isResourcesHovered && (
+                                        <div className="absolute left-0 top-full z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 slide-in-from-top-2">
+                                            <Link
+                                                href="/atoz"
+                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                            >
+                                                CS A-to-Z
+                                            </Link>
+                                            <Link
+                                                href="/cs-guide"
+                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                            >
+                                                CS Guide
+                                            </Link>
+                                            <Link
+                                                href="/faq"
+                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                            >
+                                                FAQ
+                                            </Link>
+                                            <Link
+                                                href="/forms"
+                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                            >
+                                                Forms
+                                            </Link>
+                                            <Link
+                                                href="/resume-book"
+                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
+                                            >
+                                                Resume Book
+                                            </Link>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
 
                     {/* Mobile Navigation Toggle */}
                     <div className="md:hidden">
