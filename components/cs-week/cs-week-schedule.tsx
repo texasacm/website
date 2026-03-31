@@ -117,7 +117,7 @@ const scheduleDays = [
                 location: 'GDC 2.216',
                 title: 'CS Week Kickoff',
                 description:
-                    'First time attending or need a refresher? Learn everything there is to know about CS Week and how to make the most out of it at our kickoff event!',
+                    "Start CS Week with a high-energy kickoff event featuring food, fun, and a chance to connect with fellow computer science majors. Whether you're here to mingle or just grab a bite, this is the perfect way to launch an exciting week for the UTCS community!",
             },
             {
                 time: '6:00 - 7:00 PM',
@@ -202,7 +202,7 @@ const scheduleDays = [
                 location: 'GDC Atrium',
                 title: 'CNS Pop-Up Resume Reviews (FoCS)',
                 description:
-                    'Get your resume application-ready with resume reviews right at the GDC!',
+                    'Stop by the CNS Pop-Up Resume Review to get quick, personalized feedback from professionals and walk away with a stronger resume for internships, research, and full-time opportunities.',
             },
             {
                 time: '5:00 - 6:00 PM',
@@ -239,10 +239,11 @@ const scheduleDays = [
         date: 'April 16th',
         events: [
             {
-                time: 'idk',
+                time: '4:00 - 5:00 PM',
                 location: 'GDC Atrium',
                 title: 'Undergrad Research Showcase (UTCS)',
-                description: '',
+                description:
+                    'Dive into groundbreaking undergraduate research as students showcase how computer science drives innovation across diverse fields! This is a chance to connect, ask questions, and uncover hands-on opportunities in CS research.',
             },
             {
                 time: '5:00 - 6:00 PM',
@@ -285,7 +286,10 @@ const scheduleDays = [
 export default function CSWeekSchedule() {
     return (
         <section className="relative overflow-hidden bg-[#7A8F56]">
-            <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+            <div
+                className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+                aria-hidden="true"
+            >
                 {floatingFlyers.map((flyer, index) => (
                     <Image
                         key={`${flyer.left}-${index}`}
@@ -306,11 +310,14 @@ export default function CSWeekSchedule() {
                 ))}
             </div>
             <Header hideHeader={true} />
-            <div className="relative z-20 container px-4 pb-96 pt-12 text-center sm:px-6 sm:pb-[26rem] md:pb-[30rem] lg:px-8">
+            <div className="container relative z-20 px-4 pb-96 pt-12 text-center sm:px-6 sm:pb-[26rem] md:pb-[30rem] lg:px-8">
                 <h1 className="mb-4 font-pagkaki text-6xl font-bold text-white">Schedule</h1>
-                <div className="grid grid-cols-1 gap-4 px-0 py-8 sm:px-4 lg:grid-cols-1 lg:px-8">
+                <div className="grid grid-cols-1 gap-4 px-2 py-8 sm:px-4 lg:grid-cols-1 lg:px-8">
                     {scheduleDays.map((day) => (
-                        <Card key={day.day} className="mx-40 p-8 text-left">
+                        <Card
+                            key={day.day}
+                            className="mx-1 p-6 text-left sm:mx-0 sm:p-8 md:mx-8 lg:mx-40"
+                        >
                             <CardTitle className="mb-4 text-center text-lg font-bold text-[#50241A] xl:text-xl">
                                 {day.day}, {day.date}
                             </CardTitle>

@@ -5,7 +5,7 @@ export default function CSWeekInfo() {
     return (
         <section className="bg-[#FCF1DB]">
             <Header hideHeader={true} />
-            <div className="container relative px-4 pb-40 pt-16 text-center sm:px-6 sm:pb-48 sm:py-20 md:pb-56 md:py-24 lg:px-8">
+            <div className="container relative px-4 pb-40 pt-16 text-center sm:px-6 sm:py-20 sm:pb-48 md:py-24 md:pb-56 lg:px-8">
                 <div
                     className="pointer-events-none absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2"
                     aria-hidden="true"
@@ -15,7 +15,7 @@ export default function CSWeekInfo() {
                         alt=""
                         width={280}
                         height={297}
-                        className="absolute left-[-6rem] top-[36%] h-auto w-48 rotate-[-14deg] sm:left-[-7rem] sm:w-56 md:left-[-8rem] md:w-64 lg:left-[-9rem] lg:w-72"
+                        className="absolute left-[-6rem] top-[70%] h-auto w-48 rotate-[-14deg] sm:left-[-7rem] sm:w-56 md:left-[-8rem] md:w-64 lg:left-[-9rem] lg:w-72"
                     />
                     <Image
                         src="/cs-week/assets/flower.png"
@@ -25,7 +25,10 @@ export default function CSWeekInfo() {
                         className="absolute right-[-6rem] top-[30%] h-auto w-48 rotate-[16deg] sm:right-[-7rem] sm:w-56 md:right-[-8rem] md:w-64 lg:right-[-9rem] lg:w-72"
                     />
                 </div>
-                <div className="pointer-events-none absolute inset-x-0 top-10 z-0 h-32" aria-hidden="true">
+                <div
+                    className="pointer-events-none absolute inset-x-0 top-8 z-0 h-40"
+                    aria-hidden="true"
+                >
                     <div className="absolute left-1 top-2 w-28 sm:left-3 sm:w-32 md:left-8 md:w-40 lg:left-16 lg:w-80">
                         <Image
                             src="/cs-week/assets/flower-circle.png"
@@ -59,33 +62,39 @@ export default function CSWeekInfo() {
                         />
                     </div>
                 </div>
-                <h1 className="relative z-10 mx-auto max-w-4xl font-pagkaki font-bold text-[#50241A] text-4xl md:text-7xl">
+                <h1 className="relative z-10 mx-auto max-w-4xl font-pagkaki text-4xl font-bold text-[#50241A] md:text-7xl">
                     What is CS Week?
                 </h1>
-                <div className="relative z-10 mx-auto mt-16 grid max-w-6xl gap-10 pb-8 md:grid-cols-12 md:items-start lg:mt-20 lg:gap-12">
-                    <div className="md:col-span-7 md:col-start-2">
+                <div className="relative z-10 mx-auto mt-20 grid max-w-6xl gap-10 pb-8 md:grid-cols-12 md:items-start lg:mt-28 lg:max-w-7xl lg:gap-x-20 lg:gap-y-24">
+                    <div className="md:col-span-7 md:col-start-2 lg:col-span-8 lg:col-start-1 lg:pt-10">
                         <div
-                            className="mx-auto flex min-h-[21rem] max-w-[40rem] items-center justify-center px-10 py-12 text-white sm:min-h-[25rem] sm:px-14"
+                            className="lg:px-18 mx-auto flex min-h-[21rem] max-w-[40rem] items-center justify-center px-10 py-12 text-white sm:min-h-[25rem] sm:px-14 lg:min-h-[30rem] lg:max-w-[50rem] lg:py-14"
                             style={{
                                 backgroundColor: '#0F6E91',
                                 borderRadius: '38% 62% 46% 54% / 43% 35% 65% 57%',
                             }}
                         >
                             <p className="text-center text-2xl font-semibold">
-                                CS Week is a week-long celebration for all things computer science! Enjoy events hosted by your favorite CS student orgs and a chance to win raffle prizes!
+                                CS Week is a week-long celebration for all things computer science!
+                                Enjoy events hosted by your favorite CS student orgs and a chance to
+                                win raffle prizes!
                             </p>
                         </div>
                     </div>
-                    <div className="md:col-span-5 md:col-start-7 md:pt-20">
+                    <div className="md:col-span-5 md:col-start-7 md:pt-20 lg:col-span-6 lg:col-start-7">
                         <div
-                            className="mx-auto flex min-h-[20rem] max-w-[33rem] items-center justify-center px-10 py-12 text-white sm:min-h-[23rem] sm:px-12"
+                            className="mx-auto flex min-h-[20rem] max-w-[33rem] items-center justify-center px-10 py-12 text-white sm:min-h-[23rem] sm:px-12 lg:min-h-[30rem] lg:max-w-[40rem] lg:px-14"
                             style={{
                                 backgroundColor: '#8A8E62',
                                 borderRadius: '44% 56% 58% 42% / 38% 44% 56% 62%',
                             }}
                         >
-                            <p className="text-center text-2xl font-semibold p-10 sm:text-lg">
-                                CS Week will run from April 13th - 17th with events around GDC every day! Participants will receive a CS week bingo card at the first event they attend. Turn in your bingo card at CS Week&apos;s finale (Family Feud) for a chance to win prizes! Attend our kickoff event for more information.
+                            <p className="p-10 text-center text-2xl font-semibold sm:text-lg">
+                                CS Week will run from April 13th - 17th with events around GDC every
+                                day! Participants will receive a CS week bingo card at the first
+                                event they attend. Turn in your bingo card at CS Week&apos;s finale
+                                (Family Feud) for a chance to win prizes! Attend our kickoff event
+                                for more information.
                             </p>
                         </div>
                     </div>
@@ -106,7 +115,7 @@ export default function CSWeekInfo() {
                         alt=""
                         width={431}
                         height={572}
-                        className="absolute bottom-2 right-[8%] h-auto w-20 scale-x-[-1] rotate-[-8deg] sm:w-24 md:w-28 lg:w-32"
+                        className="absolute bottom-2 right-[8%] h-auto w-20 rotate-[-8deg] scale-x-[-1] sm:w-24 md:w-28 lg:w-32"
                     />
                 </div>
             </div>
