@@ -31,7 +31,7 @@ export default function CSWeekInfo() {
                             }}
                         >
                             <p className="max-w-[15rem] text-center text-lg font-semibold leading-8 sm:text-2xl sm:leading-10">
-                                Placeholder 
+                                Placeholder
                             </p>
                         </div>
                     </div>
