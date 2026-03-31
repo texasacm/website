@@ -4,26 +4,40 @@ import Link from 'next/link';
 import CSWeekScheduleEvent from './cs-week-schedule-event';
 import { Card, CardTitle } from '../ui/card';
 
-const floatingFlyers = [
-    { left: '4%', size: 58, delay: '-3s', duration: '31s', rotation: '-12deg', drift: '48px' },
-    { left: '9%', size: 68, delay: '-16s', duration: '38s', rotation: '11deg', drift: '-62px' },
-    { left: '14%', size: 72, delay: '-8s', duration: '34s', rotation: '-8deg', drift: '56px' },
-    { left: '19%', size: 61, delay: '-22s', duration: '36s', rotation: '13deg', drift: '-44px' },
-    { left: '25%', size: 66, delay: '-12s', duration: '33s', rotation: '-10deg', drift: '60px' },
-    { left: '31%', size: 78, delay: '-27s', duration: '40s', rotation: '15deg', drift: '-68px' },
-    { left: '37%', size: 63, delay: '-6s', duration: '30s', rotation: '-14deg', drift: '52px' },
-    { left: '42%', size: 74, delay: '-19s', duration: '37s', rotation: '9deg', drift: '-58px' },
-    { left: '48%', size: 59, delay: '-10s', duration: '32s', rotation: '-7deg', drift: '46px' },
-    { left: '53%', size: 70, delay: '-24s', duration: '39s', rotation: '12deg', drift: '-72px' },
-    { left: '58%', size: 62, delay: '-5s', duration: '29s', rotation: '-11deg', drift: '50px' },
-    { left: '64%', size: 76, delay: '-18s', duration: '35s', rotation: '10deg', drift: '-64px' },
-    { left: '70%', size: 57, delay: '-13s', duration: '31s', rotation: '-13deg', drift: '54px' },
-    { left: '76%', size: 73, delay: '-29s', duration: '41s', rotation: '14deg', drift: '-70px' },
-    { left: '82%', size: 65, delay: '-9s', duration: '34s', rotation: '-9deg', drift: '58px' },
-    { left: '87%', size: 79, delay: '-21s', duration: '38s', rotation: '8deg', drift: '-60px' },
-    { left: '92%', size: 60, delay: '-14s', duration: '33s', rotation: '-12deg', drift: '47px' },
-    { left: '96%', size: 69, delay: '-26s', duration: '36s', rotation: '11deg', drift: '-66px' },
+const baseFloatingFlyers = [
+    { left: 4, size: 58, delay: -3, duration: 31, rotation: -12, drift: 48 },
+    { left: 96, size: 69, delay: -4, duration: 36, rotation: 11, drift: -66 },
+    { left: 36, size: 69, delay: -5, duration: 36, rotation: 40, drift: 30 },
+    { left: 9, size: 68, delay: -16, duration: 38, rotation: 11, drift: -62 },
+    { left: 14, size: 72, delay: -8, duration: 34, rotation: -8, drift: 56 },
+    { left: 19, size: 61, delay: -22, duration: 36, rotation: 13, drift: -44 },
+    { left: 25, size: 66, delay: -12, duration: 33, rotation: -10, drift: 60 },
+    { left: 31, size: 78, delay: -27, duration: 40, rotation: 15, drift: -68 },
+    { left: 37, size: 63, delay: -6, duration: 30, rotation: -14, drift: 52 },
+    { left: 42, size: 74, delay: -19, duration: 37, rotation: 9, drift: -58 },
+    { left: 48, size: 59, delay: -10, duration: 32, rotation: -7, drift: 46 },
+    { left: 53, size: 70, delay: -24, duration: 39, rotation: 12, drift: -72 },
+    { left: 58, size: 62, delay: -5, duration: 29, rotation: -11, drift: 50 },
+    { left: 64, size: 76, delay: -18, duration: 35, rotation: 10, drift: -64 },
+    { left: 70, size: 57, delay: -13, duration: 31, rotation: -13, drift: 54 },
+    { left: 76, size: 73, delay: -29, duration: 41, rotation: 14, drift: -70 },
+    { left: 82, size: 65, delay: -9, duration: 34, rotation: -9, drift: 58 },
+    { left: 87, size: 79, delay: -21, duration: 38, rotation: 8, drift: -60 },
+    { left: 92, size: 60, delay: -14, duration: 33, rotation: -12, drift: 47 },
+    { left: 96, size: 69, delay: -26, duration: 36, rotation: 11, drift: -66 },
 ] as const;
+
+const floatingFlyers = [
+    ...baseFloatingFlyers,
+    ...baseFloatingFlyers.map((flyer, index) => ({
+        left: Math.min(98, flyer.left + 1.5 + (index % 4) * 1.4),
+        size: Math.max(54, flyer.size - 4 + (index % 5)),
+        delay: flyer.delay - 18 - index,
+        duration: flyer.duration + 2 + (index % 4),
+        rotation: flyer.rotation * -1,
+        drift: flyer.drift * -1.2,
+    })),
+];
 
 const bottomGrassSprites = [
     { src: '/cs-week/assets/grass1.png', width: 125, height: 159, size: '3.75rem' },
@@ -281,12 +295,12 @@ export default function CSWeekSchedule() {
                         height={142}
                         className="schedule-flyer absolute h-auto"
                         style={{
-                            left: flyer.left,
+                            left: `${flyer.left}%`,
                             width: `${flyer.size}px`,
-                            animationDelay: flyer.delay,
-                            animationDuration: flyer.duration,
-                            ['--flyer-rotation' as string]: flyer.rotation,
-                            ['--flyer-drift' as string]: flyer.drift,
+                            animationDelay: `${flyer.delay}s`,
+                            animationDuration: `${flyer.duration}s`,
+                            ['--flyer-rotation' as string]: `${flyer.rotation}deg`,
+                            ['--flyer-drift' as string]: `${flyer.drift}px`,
                         }}
                     />
                 ))}
@@ -357,43 +371,41 @@ export default function CSWeekSchedule() {
             </div>
             <style>{`
                 .schedule-flyer {
-                    top: -12rem;
+                    top: -14rem;
                     animation-name: schedule-flyer-fall;
                     animation-timing-function: linear;
                     animation-iteration-count: infinite;
                     opacity: 1;
-                    transform: translateX(0) rotate(var(--flyer-rotation));
+                    transform: translate3d(0, -240px, 0) rotate(var(--flyer-rotation));
                 }
 
                 @keyframes schedule-flyer-fall {
                     0% {
-                        top: -12rem;
-                        transform: translateX(0) rotate(var(--flyer-rotation));
+                        transform: translate3d(0, -240px, 0) rotate(var(--flyer-rotation));
                     }
 
                     20% {
-                        transform: translateX(var(--flyer-drift))
+                        transform: translate3d(var(--flyer-drift), 800px, 0)
                             rotate(calc(var(--flyer-rotation) + 8deg));
                     }
 
                     40% {
-                        transform: translateX(calc(var(--flyer-drift) * -0.75))
+                        transform: translate3d(calc(var(--flyer-drift) * -0.75), 1700px, 0)
                             rotate(calc(var(--flyer-rotation) - 10deg));
                     }
 
                     60% {
-                        transform: translateX(calc(var(--flyer-drift) * 0.85))
+                        transform: translate3d(calc(var(--flyer-drift) * 0.85), 2550px, 0)
                             rotate(calc(var(--flyer-rotation) + 6deg));
                     }
 
                     80% {
-                        transform: translateX(calc(var(--flyer-drift) * -0.6))
+                        transform: translate3d(calc(var(--flyer-drift) * -0.6), 3400px, 0)
                             rotate(calc(var(--flyer-rotation) - 8deg));
                     }
 
                     100% {
-                        top: calc(100% + 12rem);
-                        transform: translateX(calc(var(--flyer-drift) * 0.5))
+                        transform: translate3d(calc(var(--flyer-drift) * 0.5), 4250px, 0)
                             rotate(calc(var(--flyer-rotation) + 10deg));
                     }
                 }
