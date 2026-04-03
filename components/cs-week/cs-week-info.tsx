@@ -26,7 +26,7 @@ export default function CSWeekInfo() {
                     />
                 </div>
                 <div
-                    className="pointer-events-none absolute inset-x-0 top-8 z-0 h-40"
+                    className="pointer-events-none absolute inset-x-0 top-8 z-0 hidden h-40 sm:block"
                     aria-hidden="true"
                 >
                     <div className="absolute left-1 top-2 w-28 sm:left-3 sm:w-32 md:left-8 md:w-40 lg:left-16 lg:w-80">
@@ -62,10 +62,50 @@ export default function CSWeekInfo() {
                         />
                     </div>
                 </div>
-                <h1 className="relative z-10 mx-auto max-w-4xl font-pagkaki text-4xl font-bold text-[#50241A] md:text-7xl">
-                    What is CS Week?
-                </h1>
-                <div className="relative z-10 mx-auto mt-20 grid max-w-6xl gap-10 pb-8 md:grid-cols-12 md:items-start lg:mt-28 lg:max-w-7xl lg:gap-x-20 lg:gap-y-24">
+                <div className="relative z-10 grid grid-cols-[5.5rem_minmax(0,1fr)_5.5rem] items-center gap-2 sm:block">
+                    <div
+                        className="pointer-events-none relative w-20 justify-self-start sm:hidden"
+                        aria-hidden="true"
+                    >
+                        <Image
+                            src="/cs-week/assets/flower-circle.png"
+                            alt=""
+                            width={522}
+                            height={471}
+                            className="h-auto w-full rotate-[-12deg]"
+                        />
+                        <Image
+                            src="/cs-week/assets/bug.png"
+                            alt=""
+                            width={247}
+                            height={281}
+                            className="absolute left-[8%] top-[6%] h-auto w-8 rotate-[150deg]"
+                        />
+                    </div>
+                    <h1 className="mx-auto max-w-4xl font-pagkaki text-[2rem] font-bold leading-tight text-[#50241A] sm:text-4xl md:text-7xl">
+                        What is CS Week?
+                    </h1>
+                    <div
+                        className="pointer-events-none relative w-20 justify-self-end sm:hidden"
+                        aria-hidden="true"
+                    >
+                        <Image
+                            src="/cs-week/assets/flower-circle.png"
+                            alt=""
+                            width={522}
+                            height={471}
+                            className="h-auto w-full rotate-[12deg]"
+                        />
+                        <Image
+                            src="/cs-week/assets/bug.png"
+                            alt=""
+                            width={247}
+                            height={281}
+                            className="absolute bottom-[10%] left-[10%] h-auto w-8 rotate-[-120deg]"
+                        />
+                    </div>
+                </div>
+                <div className="relative z-10 mx-auto mt-10 grid max-w-6xl gap-10 pb-8 sm:mt-20 md:grid-cols-12 md:items-start lg:mt-28 lg:max-w-7xl lg:gap-x-20 lg:gap-y-24">
                     <div className="md:col-span-7 md:col-start-2 lg:col-span-8 lg:col-start-1 lg:pt-10">
                         <div
                             className="lg:px-18 mx-auto flex min-h-[21rem] max-w-[40rem] items-center justify-center px-10 py-12 text-white sm:min-h-[25rem] sm:px-14 lg:min-h-[30rem] lg:max-w-[50rem] lg:py-14"
@@ -89,7 +129,7 @@ export default function CSWeekInfo() {
                                 borderRadius: '44% 56% 58% 42% / 38% 44% 56% 62%',
                             }}
                         >
-                            <p className="p-10 text-center text-2xl font-semibold sm:text-lg">
+                            <p className="sm:text-md p-10 text-center text-2xl font-semibold">
                                 CS Week will run from April 13th - 17th with events around GDC every
                                 day! Participants will receive a CS week bingo card at the first
                                 event they attend. Turn in your bingo card at CS Week&apos;s finale
