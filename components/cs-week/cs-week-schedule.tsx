@@ -198,13 +198,6 @@ const scheduleDays = [
         date: 'April 15th',
         events: [
             {
-                time: '3:00 - 5:00 PM',
-                location: 'GDC Atrium',
-                title: 'CNS Pop-Up Resume Reviews (FoCS)',
-                description:
-                    'Stop by the CNS Pop-Up Resume Review to get quick, personalized feedback from professionals and walk away with a stronger resume for internships, research, and full-time opportunities.',
-            },
-            {
                 time: '5:00 - 6:00 PM',
                 location: 'GDC 4.304',
                 title: 'Get to know Roadshow!',
@@ -273,7 +266,7 @@ const scheduleDays = [
         date: 'April 17th',
         events: [
             {
-                time: '5:00 - 9:00 PM',
+                time: '5:00 - 7:00 PM',
                 location: 'GDC 2.216',
                 title: 'Family Feud (ACM)',
                 description:
