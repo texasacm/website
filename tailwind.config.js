@@ -27,7 +27,7 @@ module.exports = {
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 primary: {
-                    DEFAULT: '#9e4e00', // UT Austin burnt orange
+                    DEFAULT: '#5C7A54', // ACM Green
                     foreground: 'hsl(var(--primary-foreground))',
                 },
                 secondary: {
