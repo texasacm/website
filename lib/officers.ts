@@ -94,7 +94,7 @@ export const officers: Officer[] = [
     {
         name: 'Akshay Gajjala',
         position: 'Senior Academics Officer',
-        image: '/akshay.PNG',
+        image: '/akshay.png',
         bio: "Hi, I'm Akshay! I'm from Frisco, TX, and studying computer science at UT as a freshman. I love to play volleyball and ultimate frisbee, eat food, and learn songs on the piano.",
         socials: [
             {
@@ -210,7 +210,7 @@ export const officers: Officer[] = [
     {
         name: 'Cienna Ferguson',
         position: 'Senior Marketing Officer',
-        image: '/cienna.PNG',
+        image: '/cienna.png',
         bio: "Hey, guys! I'm Cienna and I'm from the big H 🤘. I am a Junior striving to get a BS in CS. I like playing the guitar (I've been a beginner for 3+ years) and listening to any type of music...except country, sorry. Also, I like anime and documenting the beauty of life. Feel free to reach out 🤭!!",
         socials: [
             {
@@ -358,7 +358,7 @@ export const officers: Officer[] = [
     {
         name: 'Tuhina Das',
         position: 'Internal Officer',
-        image: '/tuhina.PNG',
+        image: '/tuhina.png',
         bio: "Heya, I'm Tuhina! I'm a sophomore from Plano, Texas, and pursuing a degree in CS. In my free time I love to draw, play games and spend time with my friends :) I'm a huge fan of seals too!! ",
         socials: [
             {
