@@ -272,7 +272,7 @@ export const officers: Officer[] = [
         name: 'Aryan Rajpal',
         position: 'Junior Academics Officer',
         image: '/aryan.jpeg',
-        bio: "...",
+        bio: "",
         socials: [],
     },
     {
