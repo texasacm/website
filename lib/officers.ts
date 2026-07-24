@@ -377,7 +377,18 @@ export const officers: Officer[] = [
         name: 'Gabriel Keller',
         position: 'Internal Officer',
         image: '/gabriel.jpeg',
-        bio: "...",
-        socials: [],
+        bio: "Hey! I'm Gabriel! I'm from Austin and I'm a '27 CS major. I love to rock climb, play classical guitar, and code in my free time. Feel free to reach out if you want to connect, have questions about ACM, or want to get to know me!",
+        socials: [
+            {
+                url: 'https://www.linkedin.com/in/gjkeller/',
+                iconType: 'linkedin',
+                name: 'LinkedIn',
+            },
+            {
+                url: 'https://www.instagram.com/atxgabe',
+                iconType: 'instagram',
+                name: 'Instagram',
+            },
+        ],
     },
 ];
