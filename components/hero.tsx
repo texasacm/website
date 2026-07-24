@@ -13,11 +13,11 @@ export default function Hero() {
     const [currentImage, setCurrentImage] = useState(0);
 
     const images = [
-        hero_slides_dir + '/acmformal25.JPG',
-        hero_slides_dir + '/familyfeud25.JPG',
+        hero_slides_dir + '/acmformal25.jpg',
+        hero_slides_dir + '/familyfeud25.jpg',
         hero_slides_dir + '/paycom_fa24.jpeg',
-        hero_slides_dir + '/acmhand25.JPG',
-        hero_slides_dir + '/pancakesprofessors25.JPG',
+        hero_slides_dir + '/acmhand25.jpg',
+        hero_slides_dir + '/pancakesprofessors25.jpg',
     ];
 
     useEffect(() => {
