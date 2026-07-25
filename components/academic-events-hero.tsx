@@ -6,11 +6,11 @@ export default function AcademicEventsHero() {
         <section className="relative pb-24 pt-40">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/home-page-slides/pancakes_and_professors_24.jpg"
+                    src="/home-page-slides/pancakesprofessors25.jpg"
                     alt="Picture from ACM Pancakes and Professors Fall 2024"
                     fill
                     priority
-                    className="absolute inset-0 object-cover object-[center_25%]"
+                    className="absolute inset-0 object-cover object-[center_45%]"
                 />
                 <div className="absolute inset-0 bg-black/40" />
             </div>
