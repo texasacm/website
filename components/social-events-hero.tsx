@@ -6,7 +6,7 @@ export default function SocialEventsHero() {
         <section className="relative pb-24 pt-40">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/home-page-slides/familyfeud25.JPG"
+                    src="/home-page-slides/familyfeud25.jpg"
                     alt="Picture from ACM Family Feud 2025"
                     fill
                     priority
