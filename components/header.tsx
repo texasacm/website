@@ -96,6 +96,15 @@ export default function Header(props: HeaderProps) {
                                     Partnership
                                 </Link>
                             </div>
+
+                             <div className="flex h-full items-center px-4">
+                                <Link
+                                    href="/forms"
+                                    className="font-medium text-gray-700 transition hover:text-primary"
+                                >
+                                    Forms
+                                </Link>
+                            </div>
                             <div className="flex h-full items-center px-4">
                                 <div
                                     className="relative"
@@ -125,12 +134,7 @@ export default function Header(props: HeaderProps) {
                                             >
                                                 FAQ
                                             </Link>
-                                            <Link
-                                                href="/forms"
-                                                className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
-                                            >
-                                                Forms
-                                            </Link>
+                                            
                                             <Link
                                                 href="/resume-book"
                                                 className="relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-gray-100 hover:text-primary"
