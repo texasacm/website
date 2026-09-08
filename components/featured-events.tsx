@@ -74,12 +74,12 @@ interface EventExtras {
  */
 const eventExtras: Record<string, EventExtras> = {
     'Freshman Ice Cream Social': {
-        flyer: '/events-page/freshman-ice-cream-social.png',
+        flyer: '/events-page/icecream.png',
         rsvpUrl: 'https://forms.gle/v4S42NbDWgbtWp8x8',
     },
 
     'Accenture Info Session 101': {
-        flyer: '/events-page/accenture-info-session.png',
+        flyer: '/events-page/accentureInfoSess.png',
     },
 };
 
