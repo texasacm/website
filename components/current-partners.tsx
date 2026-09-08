@@ -43,12 +43,12 @@ const currentPartners: Partner[] = [
     //     tier: 'Gold',
     //     url: 'https://www.paycom.com',
     // },
-    // {
-    //     name: 'PwC',
-    //     logo: '/partners/pwc.png',
-    //     tier: 'Gold',
-    //     url: 'https://www.pwc.com',
-    // },
+    {
+         name: 'PwC',
+        logo: '/partners/pwc.png',
+         tier: 'Gold',
+         url: 'https://www.pwc.com',
+     },
     {
         name: 'Sandia National Laboratories',
         logo: '/partners/sandia.png',

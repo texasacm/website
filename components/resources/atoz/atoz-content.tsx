@@ -121,12 +121,7 @@ const allSections = [
             {
                 term: '3rd Floor Lab',
                 description:
-                    "The 3rd floor lab (GDC 3.302) has lab machines pr,inters, lockers, student organization offices, and TA stations. It's accessible 24/7 with your ID card.",
-            },
-            {
-                term: '2nd Floor Lab',
-                description:
-                    'The 2nd floor lab (GDC 2.402) is towards the back of the North Tower on the 2nd floor.',
+                    "The 3rd floor lab (GDC 3.302) has lab machines printers, lockers, student organization offices, and TA stations. It's accessible 24/7 with your ID card.",
             },
             {
                 term: 'Atrium',
@@ -141,11 +136,11 @@ const allSections = [
             {
                 term: 'North Tower',
                 description:
-                    "The half of the GDC that is to the left of the atrium. Most professors' offices and classrooms are on this side.",
+                    "The half of the GDC that is to the left of the atrium as you enter from Speedway. Most professors' offices and classrooms are on this side.",
             },
             {
                 term: 'South Tower',
-                description: 'The half of the GDC that is to the right of the atrium.',
+                description: 'The half of the GDC that is to the right of the atrium as you enter from Speedway.',
             },
             {
                 term: 'TA Stations',
@@ -208,6 +203,12 @@ const allSections = [
         title: 'Development Tools',
         icon: <Code2 className="h-5 w-5 text-yellow-500" />,
         items: [
+            {
+                term: 'Texas ACM CS101',
+                description:
+                    'Beginner-friendly workshops from Texas ACM covering SSH, Git, the command line, and other essential computer science tools.',
+                url: 'https://github.com/UTACM/CS101',
+            },
             {
                 term: 'Git',
                 description:
@@ -509,14 +510,14 @@ const allSections = [
                     'A career fair put on by the College of Natural Science once per semester. Most companies recruit in fall.',
             },
             {
-                term: 'Div Day',
-                description:
-                    'A conference empowering historically marginalized communities in STEM through discussions, speakers, and workshops.',
-            },
-            {
                 term: 'Recruiting Season',
                 description:
                     'For summer internships, larger companies usually start recruiting the fall beforehand. Prime recruiting season runs September to November.',
+            },
+            {
+                term: 'CS Week',
+                description:
+                    'A week of social, academic, and professional events hosted by organizations across the UTCS community.',
             },
         ],
     },
@@ -705,18 +706,44 @@ const allSections = [
     },
 ];
 
-function SectionContent({ items }: { items: { term: string; description: string }[] }) {
+interface SectionItem {
+    term: string;
+    description: string;
+    url?: string;
+}
+
+function SectionContent({ items }: { items: SectionItem[] }) {
     return (
         <div className="space-y-4">
             {items.map((item) => (
-                <div key={item.term} className="border-b border-gray-200 pb-4">
-                    <h3 className="mb-2 text-lg font-semibold text-gray-900">{item.term}</h3>
-                    <p className="text-gray-600">{item.description}</p>
+                <div
+                    key={item.term}
+                    className="border-b border-gray-200 pb-4"
+                >
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                        {item.term}
+                    </h3>
+
+                    <p className="text-gray-600">
+                        {item.description}
+                    </p>
+
+                    {item.url && (
+                        <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-2 inline-block font-medium text-blue-600 underline-offset-4 hover:underline"
+                        >
+                            View learning resource
+                        </a>
+                    )}
                 </div>
             ))}
         </div>
     );
 }
+
 
 export default function AtoZContent() {
     return (
@@ -746,3 +773,4 @@ export default function AtoZContent() {
         </section>
     );
 }
+
