@@ -113,7 +113,6 @@ export const allForms: FormItem[] = [
             href: CORPORATE_BANQUET_RSVP_URL,
         },
         dateAdded: '09/07/2026',
-        deadline: 'Wednesday, September 10th @ 11:59pm',
         isPinned: false,
     },
 ];
