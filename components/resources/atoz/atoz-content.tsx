@@ -77,6 +77,11 @@ const allSections = [
                     "The first number in a course number is the number of credit hours. Most classes are 300s or 400s. The second number indicates lower division (1-2), upper division (3-7) or graduate (8-9) level. The last number doesn't have specific meaning.",
             },
             {
+                term: 'CS109',
+                description:
+                    "Introduction course that gives you the big picture of CS, the department, and the university. Also helps you start building your CS community early on.",
+            },
+            {
                 term: 'CS312',
                 description:
                     "Introduction to Programming is the first CS course you will take at UT (assuming you don't claim credit for it). You will be programming in Java and learn the basics of programming.",
@@ -319,6 +324,16 @@ const allSections = [
                 description:
                     'Competitive coding events where participants solve algorithmic problems. Includes ICPC and local competitions.',
             },
+            {
+                term: 'HackTX',
+                description:
+                    "UT's annual 24-hour hackathon. Great for creating side projects and attending workshops.",
+            },
+            {
+                term: 'WiCS Hacks',
+                description:
+                    'Annual hackathon by WiCS aimed at female-identifying students. Includes workshops, talks, and project development.',
+            },
         ],
     },
     {
@@ -447,7 +462,7 @@ const allSections = [
             {
                 term: 'Peter Stone',
                 description:
-                    'Head of Learning Agents Research Group (LARG). Research focus on AI and robotics.',
+                    'Head of UT School of Computing. Research focus on AI and robotics.',
             },
             {
                 term: 'Scott Aaronson',
@@ -457,21 +472,25 @@ const allSections = [
             {
                 term: 'Mike Scott',
                 description:
-                    'Teaches CS312 (Introduction to Programming) and CS314 (Data Structures).',
+                    'Teaches CS314 (Data Structures).',
             },
             {
                 term: 'Alison Norman',
                 description:
-                    'Teaches CS439 (Operating Systems). Known for the Pintos project series.',
+                    'Teaches CS439 (Operating Systems) and CS109 (ThinkLab). Known for the Pintos project series.',
             },
             {
                 term: 'Ahmed Gheith',
                 description:
-                    'Teaches CS439 (Operating Systems). Known for individual weekly projects and excellent lectures.',
+                    'Teaches CS439H (Operating Systems: Honors) and CS378 (Symbolic Programming). Known for individual weekly projects and excellent lectures.',
             },
             {
                 term: 'Glenn Downing',
                 description: 'Teaches software engineering and object oriented programming.',
+            },
+            {
+                term: 'Angela Beasley',
+                description: 'Teaches CS312 (Introduction to Programming) and CS363M (Principles of Machine Learning I).',
             },
             {
                 term: 'And Many More...',
@@ -493,16 +512,6 @@ const allSections = [
                 term: 'Div Day',
                 description:
                     'A conference empowering historically marginalized communities in STEM through discussions, speakers, and workshops.',
-            },
-            {
-                term: 'HackTX',
-                description:
-                    "UT's annual 24-hour hackathon. Great for creating side projects and attending workshops.",
-            },
-            {
-                term: 'WiCS Hacks',
-                description:
-                    'Annual hackathon by WiCS aimed at female-identifying students. Includes workshops, talks, and project development.',
             },
             {
                 term: 'Recruiting Season',

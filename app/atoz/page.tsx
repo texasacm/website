@@ -7,7 +7,7 @@ export default function AtoZPage() {
     return (
         <main className="min-h-screen">
             <AtoZHero />
-            <DisclaimerBanner />
+            {/* <DisclaimerBanner /> */}
             <AtoZContent />
             <Footer />
         </main>
