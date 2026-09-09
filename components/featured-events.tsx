@@ -73,7 +73,7 @@ interface EventExtras {
  * used in Google Calendar.
  */
 const eventExtras: Record<string, EventExtras> = {
-    'RTX Info Session': {
+    'Texas ACM x RTX Info Session & Tech Talk': {
         flyer: '/events-page/IMG_0672.jpeg',
         rsvpUrl: 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg',
     },
