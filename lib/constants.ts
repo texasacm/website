@@ -7,3 +7,4 @@ export const IM_SPORTS_SIGNUP_URL = 'https://forms.gle/zFBZVpkCDCPSfJCk7';
 export const FAMS_INTEREST_FORM_URL = 'https://forms.gle/5cmrauriz3z3imnv9';
 export const WORKSHOP_INTEREST_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScRehBINEKxc8ESmWSgsNTtqGVtbURIQLGUI8-CSpLmBz9k8Q/viewform';
 export const OO_APPLICATION_URL = 'https://forms.gle/ifScxsxFT6kqCEiN7';
+export const RTX_INFO_SESS_RSVP = 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg'

@@ -73,9 +73,9 @@ interface EventExtras {
  * used in Google Calendar.
  */
 const eventExtras: Record<string, EventExtras> = {
-    'Freshman Ice Cream Social': {
-        flyer: '/events-page/icecream.png',
-        rsvpUrl: 'https://forms.gle/v4S42NbDWgbtWp8x8',
+    'RTX Info Session': {
+        flyer: '/events-page/IMG_0672.jpeg',
+        rsvpUrl: 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg',
     },
 
     'Accenture Info Session 101': {

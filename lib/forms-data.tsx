@@ -5,6 +5,7 @@ import {
     MENTEE_APPLICATION_URL,
     MENTOR_APPLICATION_URL,
     OO_APPLICATION_URL,
+    RTX_INFO_SESS_RSVP,
     SIGNIN_URL,
     WORKSHOP_INTEREST_FORM_URL,
 } from '@/lib/constants';
@@ -113,6 +114,18 @@ export const allForms: FormItem[] = [
             href: CORPORATE_BANQUET_RSVP_URL,
         },
         dateAdded: '09/07/2026',
+        isPinned: false,
+    },
+
+    {
+        icon: <Users size={28} className="text-blue-500" />,
+        title: 'RTX Info Session RSVP',
+        description: 'RSVP for the RTX Info Session!',
+        link: {
+            name: 'Sign Up',
+            href: RTX_INFO_SESS_RSVP,
+        },
+        dateAdded: '09/09/2026',
         isPinned: false,
     },
 ];
