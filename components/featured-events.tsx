@@ -179,7 +179,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({
                          * Look for a matching flyer and RSVP link using
                          * the Google Calendar event title.
                          */
-                        const extras = eventExtras[event.summary];
+                        const extras = eventExtras[cleanEventDescription(event.summary)];
 
                         return (
                             <Card
