@@ -181,7 +181,7 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({
                          * the Google Calendar event title.
                          */
                         const extras = eventExtras[cleanEventDescription(event.summary)];
-
+                        
                         return (
                             <Card
                                 key={event.id}
@@ -212,14 +212,6 @@ const FeaturedEvents: React.FC<FeaturedEventsProps> = ({
                                         )}
                                     </CardTitle>
                                 </CardHeader>
-	                                {/* TEMPORARY DEBUG — remove after fixing */}
-	                                <pre className="mx-6 overflow-x-auto whitespace-pre-wrap break-all rounded bg-gray-100 p-2 text-xs">
-                                    RAW: {JSON.stringify(event.summary)}
-	                                    {'\n'}
-                                    CLEANED: {JSON.stringify(cleanEventDescription(event.summary))}
-                                    {'\n'}
-                                   MATCHED EXTRAS: {JSON.stringify(Boolean(extras))}
-                                </pre>
 
                                 <CardContent>
                                     {event.description && (
