@@ -78,8 +78,9 @@ const eventExtras: Record<string, EventExtras> = {
         rsvpUrl: 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg',
     },
 
-    'Accenture Info Session 101': {
-        flyer: '/events-page/accentureInfoSess.png',
+    'Industry Banquet Co-Hosted with Texas ACM and Texas HACS': {
+        flyer: '/events-page/industryBanquet.png',
+        rsvpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfaYTeFt4serCJlMmouKuYGcVIpPxJoR6PBblsXIXSv4bAXeQ/viewform',
     },
 };
 
