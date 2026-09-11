@@ -481,6 +481,11 @@ const allSections = [
                     'Teaches CS439 (Operating Systems) and CS109 (ThinkLab). Known for the Pintos project series.',
             },
             {
+                term: 'Devangi Parikh',
+                description:
+                    'Teaches CS311 (Discrete Mathematics) and CS311H (Discrete Mathematics Honors).',
+            },
+            {
                 term: 'Ahmed Gheith',
                 description:
                     'Teaches CS439H (Operating Systems: Honors) and CS378 (Symbolic Programming). Known for individual weekly projects and excellent lectures.',

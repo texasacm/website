@@ -78,6 +78,10 @@ const eventExtras: Record<string, EventExtras> = {
         rsvpUrl: 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg',
     },
 
+    'Operation Officer Coffee Chat': {
+        flyer: '/events-page/oocoffee.png',
+    },
+
     'Industry Banquet Co-Hosted with Texas ACM and Texas HACS': {
         flyer: '/events-page/industryBanquet.png',
         rsvpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfaYTeFt4serCJlMmouKuYGcVIpPxJoR6PBblsXIXSv4bAXeQ/viewform',
