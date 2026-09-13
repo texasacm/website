@@ -86,6 +86,10 @@ const eventExtras: Record<string, EventExtras> = {
         flyer: '/events-page/industryBanquet.png',
         rsvpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfaYTeFt4serCJlMmouKuYGcVIpPxJoR6PBblsXIXSv4bAXeQ/viewform',
     },
+    'Verkada Tech Talk': {
+        flyer: '/events-page/Verkada.png',
+        rsvpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeQhwJ10Jj0Jo6pUWjrSnp4syTsi8rWZj1y3ottUmyueZ-cOQ/viewform',
+    },
 };
 
 const FeaturedEvents: React.FC<FeaturedEventsProps> = ({
