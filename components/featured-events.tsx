@@ -73,11 +73,6 @@ interface EventExtras {
  * used in Google Calendar.
  */
 const eventExtras: Record<string, EventExtras> = {
-    'Texas ACM x RTX Info Session & Tech Talk': {
-        flyer: '/events-page/IMG_0672.jpeg',
-        rsvpUrl: 'https://rtx.yello.co/app/collect/event/38PbzG1sgIiJaLXJF495fg',
-    },
-
     'Operation Officer Coffee Chat': {
         flyer: '/events-page/oocoffee.png',
     },
@@ -89,6 +84,11 @@ const eventExtras: Record<string, EventExtras> = {
     'Verkada Tech Talk': {
         flyer: '/events-page/Verkada.png',
         rsvpUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeQhwJ10Jj0Jo6pUWjrSnp4syTsi8rWZj1y3ottUmyueZ-cOQ/viewform',
+    },
+
+    'Texas ACM x Roblox: Kaiju Cats & Coding Cookies': {
+        flyer: '/events-page/roblox.png',
+        rsvpUrl: 'https://oncampus2026utkaijucatscodingc.splashthat.com/',
     },
 };
 
