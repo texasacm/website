@@ -49,6 +49,12 @@ const currentPartners: Partner[] = [
          tier: 'Gold',
          url: 'https://www.pwc.com',
      },
+      {
+        name: 'Fidelity',
+        logo: '/partners/fidelity.png',
+        tier: 'Silver',
+        url: 'https://www.fidelity.com',
+    },
     {
         name: 'Sandia National Laboratories',
         logo: '/partners/sandia.png',
