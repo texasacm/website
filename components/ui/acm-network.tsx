@@ -72,7 +72,9 @@ export const AcmNetwork: FC = (): JSX.Element => {
                                 alt={i < companies.length ? `${company.name} logo` : ''}
                                 width={140}
                                 height={80}
-                                className="max-h-16 w-auto object-contain opacity-70 transition hover:opacity-100 hover:grayscale-0"
+                                priority={i < companies.length}
+                                loading={i < companies.length ? undefined : 'eager'}
+                                className="max-h-16 w-auto object-contain"
                             />
                         </div>
                     ))}
