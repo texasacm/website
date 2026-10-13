@@ -23,8 +23,6 @@ const companies: Company[] = [
     { name: 'AWS', logo: '/network-comp/aws.png' },
     { name: 'Apple', logo: '/network-comp/apple.png' },
     { name: 'Abbott', logo: '/network-comp/abbott.png' },
-
-
 ];
 
 export const AcmNetwork: FC = (): JSX.Element => {
@@ -38,11 +36,13 @@ export const AcmNetwork: FC = (): JSX.Element => {
                 .acm-marquee-track {
                     animation: acm-marquee 30s linear infinite;
                 }
-                .acm-marquee:hover .acm-marquee-track {
-                    animation-play-state: paused;
+                @media (hover: hover) {
+                    .acm-marquee:hover .acm-marquee-track {
+                        animation-play-state: paused;
+                    }
                 }
                 @media (prefers-reduced-motion: reduce) {
-                    .acm-marquee-track { animation: none; }
+                    .acm-marquee-track { animation-duration: 90s; }
                 }
             `}</style>
 
