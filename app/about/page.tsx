@@ -11,7 +11,6 @@ export default function AboutPage() {
             <AboutHero />
             <WhatWeDo />
             <OfficerHero />
-            <AcmNetwork />
             <OfficerTeam />
             
             <Footer />

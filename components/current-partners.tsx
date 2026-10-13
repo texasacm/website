@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { FC, JSX } from 'react';
 
-type Tier = 'Platinum' | 'Gold' | 'Silver';
+type Tier = 'Platinum' | 'Gold' | 'Silver' | 'Bronze';
 
 interface Partner {
     name: string;
@@ -12,11 +12,6 @@ interface Partner {
     url: string;
 }
 
-interface OnePartner {
-    name: string;
-    logo: string;
-    url: string;
-}
 const currentPartners: Partner[] = [
     {
         name: 'Atlassian',
@@ -66,31 +61,34 @@ const currentPartners: Partner[] = [
         tier: 'Silver',
         url: 'https://www.sandia.gov',
     },
-];
-
-const oneTimePartners: OnePartner[] = [
     {
-         name: 'Roblox',
+        name: 'Roblox',
         logo: '/partners/roblox.png',
-         url: 'https://www.roblox.com',
+        tier: 'Bronze',
+        url: 'https://www.roblox.com', 
      },
      {
          name: 'Bumble',
         logo: '/partners/bumble.png',
-         url: 'https://bumble.com/en-us/',
+        tier: 'Bronze',
+         url: 'https://bumble.com/en-us',
      },
      {
          name: 'Verkada',
         logo: '/partners/verkada.png',
-         url: 'https://www.verkada.com/',
+        tier: 'Bronze',
+         url: 'https://www.verkada.com',
      },
      {
          name: 'RTX',
         logo: '/partners/rtx.png',
-         url: 'https://www.rtx.com/',
+        tier: 'Bronze',
+         url: 'https://www.rtx.com',
      },
-
 ];
+
+
+
 export const CurrentPartners: FC = (): JSX.Element => {
     const tierStyles: Record<Tier, { text: string; shadow: string }> = {
         Platinum: {
@@ -105,6 +103,10 @@ export const CurrentPartners: FC = (): JSX.Element => {
             text: 'text-gray-400',
             shadow: 'shadow-[0_0_20px_rgba(156,163,175,0.5)]',
         },
+        Bronze: {
+            text: 'text-yellow-800',
+            shadow: 'shadow-[0_0_20px_rgba(74,55,27,0.5)]',
+        },
     };
 
     const partnersByTier = currentPartners.reduce<Partial<Record<Tier, Partner[]>>>(
@@ -116,7 +118,7 @@ export const CurrentPartners: FC = (): JSX.Element => {
         {},
     );
 
-    const tierOrder: Tier[] = ['Platinum', 'Gold', 'Silver'];
+    const tierOrder: Tier[] = ['Platinum', 'Gold', 'Silver', 'Bronze'];
 
     return (
         <section className="bg-gray-50 py-16">
@@ -160,32 +162,6 @@ export const CurrentPartners: FC = (): JSX.Element => {
                         </div>
                     );
                 })}
-                <div className="mt-16">
-                    <h3 className="mb-12 text-center text-2xl font-bold">Our One-Time Partners</h3>
-                    <div className="flex flex-wrap justify-center gap-8">
-                        {oneTimePartners.map((partner) => (
-                            <Link
-                                key={partner.name}
-                                href={partner.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform duration-300 hover:-translate-y-1"
-                            >
-                                <Card className="h-40 w-40 cursor-pointer items-center justify-center p-4 shadow-md transition-all hover:shadow-lg">
-                                    <CardContent className="flex h-full w-full items-center justify-center p-0">
-                                        <Image
-                                            src={partner.logo}
-                                            alt={`${partner.name} logo`}
-                                            width={100}
-                                            height={100}
-                                            className="object-contain"
-                                        />
-                                    </CardContent>
-                                </Card>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
             </div>
         </section>
     );
