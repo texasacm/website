@@ -1,3 +1,4 @@
+import CurrentPartners from '@/components/current-partners';
 import FeaturedEvents from '@/components/featured-events';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
@@ -12,6 +13,7 @@ export default async function Home() {
     return (
         <main className="min-h-screen">
             <Hero />
+            <CurrentPartners></CurrentPartners>
             <FeaturedEvents events={events} />
             <JoinSection />
             <Footer />

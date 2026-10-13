@@ -3,6 +3,7 @@ import WhatWeDo from '@/components/what-we-do';
 import Footer from '@/components/footer';
 import OfficerHero from '@/components/officer-hero';
 import OfficerTeam from '@/components/officer-team';
+import AcmNetwork from '@/components/ui/acm-network';
 
 export default function AboutPage() {
     return (
@@ -10,7 +11,9 @@ export default function AboutPage() {
             <AboutHero />
             <WhatWeDo />
             <OfficerHero />
+            <AcmNetwork />
             <OfficerTeam />
+            
             <Footer />
         </main>
     );
